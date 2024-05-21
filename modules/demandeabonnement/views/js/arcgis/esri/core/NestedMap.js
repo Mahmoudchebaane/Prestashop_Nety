@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../chunks/_rollupPluginBabelHelpers"],function(f,h){let k=function(){function e(){this._outer=new Map}var d=e.prototype;d.clear=function(){this._outer.clear()};d.get=function(a,b){return this._outer.get(a)?.get(b)};d.set=function(a,b,c){const g=this._outer.get(a);g?g.set(b,c):this._outer.set(a,new Map([[b,c]]))};d.delete=function(a,b){const c=this._outer.get(a);c&&(c.delete(b),0===c.size&&this._outer.delete(a))};d.forEach=function(a){this._outer.forEach((b,c)=>a(b,c))};h._createClass(e,
+[{key:"empty",get:function(){return 0===this._outer.size}}]);return e}();f.NestedMap=k;Object.defineProperties(f,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

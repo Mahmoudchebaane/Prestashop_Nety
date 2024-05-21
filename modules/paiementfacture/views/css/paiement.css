@@ -1,0 +1,775 @@
+#wrapper-site>.container {
+    padding-top: 3px;
+}
+
+#wrapper-site .container {
+    width: unset !important;
+    background: url("../img/bg-bottom.png") no-repeat 0 100%;
+}
+
+#chk_option_error:lang(ar) {
+    text-align: right !important;
+}
+
+#main {
+    margin-bottom: 0;
+}
+.pageheader {
+    height: 170px;
+    background: url(../img/DesignPaye.png) no-repeat 100% 0%, url(../img/bg-abo-nety.png) no-repeat 4% 100%, #59049D;
+    background-size: contain;
+}
+
+.title-icon {
+    width: auto;
+    height: 50px;
+}
+
+.title-form-page {
+    color: #59049D;
+    line-height: 1.2;
+}
+
+.text-black {
+    color: black;
+}
+
+.btn-default {
+    border-radius: 50px;
+    text-transform: none;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+input:invalid+button {
+    opacity: 0.5;
+    /* pointer-events: none; */
+    cursor: not-allowed;
+}
+
+input:valid+button {
+
+    cursor: pointer;
+}
+
+.donePF:focus {
+    outline: 5px auto #fceb25b0;
+}
+
+.container1 {
+    padding: 50px;
+    flex-direction: column;
+}
+
+#radioBtn .notActive {
+    color: #3276b1;
+    background-color: #fff;
+}
+
+.pfTitle {
+    color: #59049D;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.headerImgBloc {
+    background-color: #59049D;
+    height: 200px;
+    display: flex;
+    width: 100%;
+}
+
+.paiementSection {
+    box-shadow: 0px 3px 12px #00000029;
+    border-radius: 65px;
+    padding: 50px;
+    background-color: white;
+    max-width: 90%;
+    top: -70px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.typeContainer {
+    width: 100%;
+    margin-left: 0px !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    border-bottom: none;
+}
+
+.typeContainer .nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+}
+
+.typeContainer .btn :hover,
+.typeContainer .btn :focus,
+.typeContainer .btn :active {
+    color: white;
+    background-color: #59049D !important;
+
+}
+
+.btn:hover,
+.btn:focus {
+    color: white !important;
+    background-color: #59049D !important;
+}
+
+[type="radio"]:checked+label::after,
+[type="radio"]:not(:checked)+label::after,
+[type="radio"]:checked+label::before,
+[type="radio"]:not(:checked)+label::before {
+    display: none;
+}
+
+.radioList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.typeContainer .nav-tabs .nav-item.show .nav-link,
+.typeContainer .nav-tabs .nav-link,
+.paymentType {
+    border-radius: 10px !important;
+    border: 1px solid #59049D;
+    box-shadow: 0px 3px 12px #00000029;
+    color: black;
+    height: 45px;
+    text-transform: initial !important;
+    margin: 10px 5px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 20px !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    background: white;
+    outline: none;
+
+}
+
+.typeContainer .nav-tabs .nav-item.show .nav-link,
+.typeContainer .nav-tabs .nav-link.active,
+.paymentType :active,
+.paymentType :checked,
+.paymentType .btn :hover,
+.paymentType .btn :focus,
+.paymentType .btn :active {
+    color: white;
+    background-color: #59049D !important;
+
+}
+
+
+.paymentType ::before {
+    content: none !important;
+}
+
+.paymentType :checked {
+    background-color: #59049D;
+    color: white;
+
+}
+
+.inputPF {
+    border-radius: 10px;
+    height: 40px;
+    border: 1px solid #59049D;
+    color: black;
+    width: 60%;
+    font-size: initial;
+    padding: 0 10px;
+}
+
+.p-40 {
+    padding: 40px
+}
+
+.donePFoutline {
+    border: 1px solid #59049D;
+    background-color: transparent;
+    color: #59049D;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* margin-left: 10px; */
+    font-size: initial;
+    outline: none;
+}
+
+.donePFoutline:focus {
+    outline: 5px auto #59049D;
+}
+
+.donePF {
+    cursor: pointer;
+    background-color: #59049D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: initial;
+    outline: none;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #7B1FA2;
+}
+
+.custom-control-input:checked~.custom-control-label.red::before {
+    background-color: red;
+}
+
+.custom-control-input:checked~.custom-control-label.green::before {
+    background-color: green;
+}
+
+
+.firstLabel {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* .tab-content, */
+.inputNumContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #59049D12;
+    padding: 25px;
+    border-radius: 13px;
+    height: auto;
+}
+
+/* .tab-content p, */
+.inputNumContainer p {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+
+.factureCheckbox {
+    padding: 20px 30px;
+    background-color: #59049D12;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: inherit;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+.avoirCheckbox {
+    
+    background-color: #1fbe9d38;
+     
+}
+.leftText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rightText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.numFacture {
+    color: black;
+    font-size: 16px;
+}
+
+.dateFacture {
+    color: #59049D;
+    font-size: 11px;
+}
+
+.voirFacture {
+    background-color: #59049D;
+    border: none;
+    border-radius: 30px;
+    height: 36px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    width: 200px;
+    outline: none;
+}
+
+.voirFacture img {
+    height: 15px !important;
+}
+
+.prixFacture {
+    color: #59049D;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.payerAvant {
+    color: black;
+    font-size: 13px;
+}
+
+.ticBox {
+    width: 20px;
+    accent-color: #59129d1a;
+}
+
+.total {
+    border: 2px solid #59049D;
+    border-radius: 13px;
+    padding: 10px 20px;
+    color: #59049D;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 35px;
+}
+
+.ConfirmPayment {
+    height: 45px;
+    margin: 10px 20px;
+    background-color: #59049D;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 13px;
+    outline: none;
+}
+
+.paiementLabel {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+input[name="paiement"] {
+    background-color: #59049D;
+    accent-color: #59049D;
+    height: 15px;
+    transform: scale(1.5);
+}
+
+.payTopBloc {
+    background-color: #59049D;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payTopBloc img {
+    height: 100%;
+}
+
+.pfNety {
+    width: 300px;
+    height: auto;
+}
+
+
+
+.typeCarte {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.detailFacture {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.client {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.typeCarte button {
+    margin-right: 35px;
+}
+ button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+/* Arabic */
+.typeContainer .nav-tabs .nav-item.show .nav-link:lang(ar),
+.typeContainer .nav-tabs .nav-link:lang(ar),
+.paymentType:lang(ar) {
+    /* margin: 5px 20px; */
+    margin: 10px 5px;
+    font-size: 17px;
+}
+
+.factureCheckbox:lang(ar) {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.voirFacture:lang(ar) {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.paiementLabel:lang(ar) {
+    margin-right: 22px;
+}
+
+.donePF:lang(ar) {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+
+
+.total:lang(ar) {
+    margin-right: 0px;
+    margin-left: 35px;
+}
+
+.typeCarte button:lang(ar) {
+    margin-left: 35px;
+    margin-right: 0;
+}
+
+@media (min-width: 1200px) and (max-width:1140px) {
+    .paiementSection {
+        margin: 0 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .typeContainer .nav-tabs .nav-item.show .nav-link,
+    .typeContainer .nav-tabs .nav-link {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width:1200px) {
+
+    .typeContainer .nav-tabs .nav-item.show .nav-link,
+    .typeContainer .nav-tabs .nav-link,
+    .paymentType {
+        margin: 0 20px;
+    }
+
+    .container1 {
+        padding: 15px;
+    }
+
+    .paiementSection {
+        padding: 30px;
+    }
+
+}
+
+@media (max-width:1065px) {
+    .pfNety {
+        width: 200px;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        width: 95%;
+    }
+
+    .pfNety {
+        display: none;
+    }
+
+    .pfimg {
+        width: 100%;
+    }
+
+    .inputPF {
+        width: 70%
+    }
+
+    /* .tab-content p, */
+    .inputNumContainer p,
+    .firstLabel {
+        font-size: 17px;
+    }
+
+    /* .paiementSection {
+        top: -100px;
+    } */
+}
+
+
+
+/* Style responsive */
+@media (max-width:768px) {
+    #fact_list .alert-danger{margin-top: 3rem;}
+    .typeContainer .nav-tabs .nav-item.show .nav-link,
+    .typeContainer .nav-tabs .nav-link,
+    .paymentType {
+        height: 45px;
+        margin: 10px 5px;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .typeContainer {
+        /* flex-direction: column; */
+        align-items: flex-start;
+        justify-content: space-between;
+        /* margin-top: 50px; */
+    }
+
+
+
+    .inputPF {
+        width: 75%
+    }
+
+    .typeCarte {
+        justify-content: center;
+    }
+
+    .typeCarte p {
+        margin-right: 20px;
+    }
+
+    .typeCarte button {
+        margin-top: 30px;
+        margin-right: 0px !important;
+        width: 50% !important;
+    }
+
+    .prixFacture {
+        font-size: 20px;
+    }
+
+    .payerAvant {
+        font-size: 11px;
+    }
+
+    .leftText {
+        flex-direction: row;
+    }
+
+    .client {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client p {
+        text-align: center;
+    }
+
+    .total {
+        margin-top: 20px;
+        width: fit-content;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width:638px) {
+    .typeContainer {
+        height: 150px;
+    }
+
+    .typeContainer .nav-tabs .nav-link {
+        margin: 10px;
+    }
+}
+
+@media (max-width:600px) {
+    .inputPF {
+        width: 100%;
+        height: 45px;
+    }
+
+    .radioList {
+        margin-top: 30px;
+    }
+
+    .typeContainer {
+        height: auto;
+    }
+
+    .donePF:lang(ar) {
+        margin-right: 0px;
+
+    }
+}
+
+@media (max-width:576px) {
+    .total:lang(ar) {
+        margin-left: 0;
+    }
+
+    .donePF,
+    .donePFoutline {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: initial;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .p-40 {
+        padding: 5px
+    }
+
+    .typeCarte button:lang(ar) {
+        margin-left: 0;
+    }
+
+    .radioList {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+
+    .typeContainer.nav-tabs .nav-item.show .nav-link,
+    .typeContainer .nav-tabs .nav-link,
+    .paymentType {
+        margin: 10px 5px;
+        padding: 10px 15px !important;
+    }
+
+
+    .radioList {
+        margin-top: 20px;
+    }
+
+    .factureCheckbox {
+        height: 200px;
+    }
+
+    /* .detailFacture {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+
+    .rightText {
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .typeCarte button {
+        width: fit-content !important;
+    }
+
+    .paiementSection {
+        border-radius: 27px;
+    }
+
+    .detailFacture {
+        flex-direction: column;
+    }
+
+    .container1 {
+        padding: 0px;
+    }
+
+    .paiementSection {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width:414px) {
+
+
+    .paiementSection {
+        padding: 20px;
+        /* top: -170px; */
+    }
+
+    .radioList {
+        justify-content: center;
+    }
+
+    .typeContainer {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .typeContainer .nav-tabs {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .typeContainer .nav-tabs .nav-item.show .nav-link,
+    .typeContainer .nav-tabs .nav-link,
+    .paymentType {
+        width: 165px;
+        text-align: center;
+        display: block;
+        height: 40px;
+    }
+
+    .inputNumContainer {
+        align-items: center;
+    }
+
+    .pfTitle {
+        font-size: 18px;
+    }
+
+    .pfTopTitle img {
+        height: 60px;
+    }
+
+    .factureCheckbox {
+        margin-right: 5px;
+        height: 210px;
+        padding: 10px;
+    }
+
+    .total {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    .voirFacture {
+        width: auto;
+        height: auto;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 470px) {
+
+
+
+    .typeContainer .nav-tabs .nav-item.show .nav-link,
+    .typeContainer .nav-tabs .nav-link,
+    .paymentType {
+        width: 165px;
+        text-align: center;
+        display: block;
+        height: 40px;
+    }
+}

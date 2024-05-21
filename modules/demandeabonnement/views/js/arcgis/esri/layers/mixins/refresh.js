@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("exports ../../core/Collection ../../chunks/_rollupPluginBabelHelpers ../../core/has ../../core/Error ../../core/Logger ../../core/accessorSupport/watch ../../core/accessorSupport/trackingUtils".split(" "),function(g,n,q,r,t,u,v,p){function h(a){return null!=a&&"object"===typeof a&&"refreshInterval"in a&&"refresh"in a}function l(a,b){return Number.isFinite(a)&&Number.isFinite(b)?0>=b?a:l(b,a%b):0}function m(){const a=Date.now();for(const b of c)if(b.refreshInterval){const d=e.get(b)??0;a-d+
+5>=6E4*b.refreshInterval&&(e.set(b,a),b.refresh(a))}}const c=new n,e=new WeakMap;let k=0,f=0;p.autorun(()=>{const a=Date.now();let b=0;for(const d of c)b=l(Math.round(6E4*d.refreshInterval),b),d.refreshInterval?e.get(d)||e.set(d,a):e.delete(d);b!==f&&(f=b,clearInterval(k),k=0===f?0:setInterval(m,f))});g.registerLayer=function(a){h(a)&&c.push(a)};g.test={get hasRefreshTimer(){return 0<k},get tickInterval(){return f},forceRefresh(){m()},hasLayer(a){return h(a)&&c.includes(a)},clear(){for(const a of c)e.delete(a);
+c.removeAll()}};g.unregisterLayer=function(a){h(a)&&c.includes(a)&&c.remove(a)};Object.defineProperties(g,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/_rollupPluginBabelHelpers ../../../chunks/tslib.es6 ../../../Color ../../../core/Logger ../../../core/accessorSupport/ensureType ../../../core/arrayUtils ../../../core/Error ../../../core/has ../../../core/accessorSupport/decorators/subclass ../SmartMappingSliderViewModel".split(" "),function(l,m,b,c,t,u,v,w,n,p){c=function(f){function d(a){return f.call(this,a)||this}l._inheritsLoose(d,f);var g=d.prototype;g.getStopInfo=function(a){const {min:q,max:h,stops:e}=this;if(!e||
+!e.length)return[];const r=this._getColorForStops(a).toRgb();return e.map(k=>({color:new b([...r,k.opacity]),offset:(h-k.value)/(h-q)}))};g._getColorForStops=function(a){return a?a instanceof b?a:b.fromString(a):null};return d}(p);return c=m.__decorate([n.subclass("esri.widgets.smartMapping.OpacitySlider.OpacitySliderViewModel")],c)});

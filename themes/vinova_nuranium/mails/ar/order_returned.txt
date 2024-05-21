@@ -1,0 +1,13 @@
+ 
+
+
+
+Chèr(e) {firstname} {lastname},
+
+
+
+Nous regrettons de vous informer que votre commande ayant une référence  {order_name} a été retournée en raison d'un échec de livraison. 
+
+N'hésitez pas à nous contacter si vous avez des questions ou des préoccupations
+
+

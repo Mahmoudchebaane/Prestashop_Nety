@@ -1,0 +1,4 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../layers/graphics/elevationAlignmentUtils"],function(f,h){f.geometryToRenderInfo=function(d,b,k,l,m){const a=new Float64Array(3*d.length),g=new Float64Array(a.length);d.forEach((c,e)=>{a[3*e]=c[0];a[3*e+1]=c[1];a[3*e+2]=2<c.length?c[2]:0});b=h.applyPerVertexElevationAlignment(a,b,0,g,0,a,0,a.length/3,k,l,m);return{numVertices:d.length,position:a,mapPosition:g,projectionSuccess:null!=b,sampledElevation:b}};Object.defineProperties(f,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

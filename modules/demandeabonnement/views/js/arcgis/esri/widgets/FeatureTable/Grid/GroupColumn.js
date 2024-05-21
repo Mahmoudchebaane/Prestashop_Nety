@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/_rollupPluginBabelHelpers ../../../chunks/tslib.es6 ../../../core/accessorSupport/decorators/property ../../../core/arrayUtils ../../../core/accessorSupport/ensureType ../../../core/accessorSupport/decorators/subclass ./Column".split(" "),function(f,c,d,b,l,h,k){b=function(g){function e(a){a=g.call(this,a)||this;a.columns=null;a.sortable=!1;return a}f._inheritsLoose(e,g);f._createClass(e,[{key:"path",get:function(){return this.header},set:function(a){this.header=a}}]);return e}(k);
+c.__decorate([d.property()],b.prototype,"columns",void 0);c.__decorate([d.property()],b.prototype,"path",null);c.__decorate([d.property({readOnly:!0})],b.prototype,"sortable",void 0);return b=c.__decorate([h.subclass("esri.widgets.FeatureTable.Grid.GroupColumn")],b)});

@@ -1,0 +1,927 @@
+/**
+* 2007-2023 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2023 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*
+* Don't forget to prefix your containers with your own identifier
+* to avoid any conflicts with others containers.
+*/
+/* .lang-rtl #main-site {
+  overflow: initial;
+} */
+/* .footerDiwan{
+  background-color: #59049D;
+  padding: 20px 0;
+  
+}
+.footerDiwan span{
+  color: #FDEC25;
+  font-size: 17px;
+}
+.footerDiwan .footerCopy{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+}
+.footerDiwan .footerCopy span,
+.footerDiwan .footerCopy a{
+  color: #fff;
+  opacity: 69%;;
+  font-size: 16px;
+  padding: 0 10px;
+} */
+.cssHeader,
+.diwanHeader,
+.jawharaHeader {
+  height: 280px;
+  background-size: contain;
+  background-color: #59049D;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 132px;
+  align-items: center;
+}
+
+.cssHeader {
+  padding: 0;
+  background: url("../img/css/cssBg.png");
+  background-size: 100% 280px;
+  background-repeat: no-repeat;
+}
+
+.css-title {
+  color: #000;
+}
+
+.cssHeader img {
+  position: relative;
+}
+
+.cssHeader::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  height: 280px;
+}
+
+.diwanHeader {
+  padding: 10px 152px
+}
+
+
+
+.cssHeader .diwanRight {
+  height: 100%;
+}
+
+.diwanRight {
+  height: 250px;
+}
+
+.cssLogo {
+  height: 100%;
+}
+
+.diwanLogo {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.jawharaLogo {
+  height: 80px;
+}
+
+.jawharaRight {
+  height: 150px;
+}
+
+@media(max-width:1200px) {
+  .diwanHeader {
+    padding: 10px 75px
+  }
+
+  .jawharaHeader {
+    padding: 30px 75px;
+  }
+}
+
+@media(max-width:768px) {
+
+  .diwanHeader,
+  .jawharaHeader {
+    padding: 30px 75px;
+    justify-content: center;
+  }
+
+  .cssLogo {
+    width: 100%;
+  }
+
+  .diwanRight,
+  .jawharaRight {
+    display: none;
+  }
+
+  .cssHeader {
+    background-size: cover;
+  }
+}
+
+@media(max-width:300px) {
+  .jawharaLogo {
+    height: auto;
+    width: 200px;
+  }
+
+  .diwanLogo {
+    height: 80px;
+    margin-bottom: 0px;
+  }
+
+
+}
+
+
+#wrapper-site>.container {
+  padding-top: 3px;
+}
+
+#wrapper-site .container {
+  width: unset !important;
+  background: url("../img/bg-bottom.png") no-repeat 0 100%;
+}
+
+
+#main {
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: auto
+  }
+
+  .form-check {
+    margin-bottom: 5px !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: auto
+  }
+
+  .form-container {
+    padding: 10px !important;
+  }
+
+  .checkboxoffre {
+    padding: 10px !important;
+
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .abo-card-block {
+    padding: 15px;
+  }
+
+  .form-container {
+    padding: 5px !important;
+  }
+
+  .blocTitle .css-title {
+    font-size: 20px !important;
+  }
+
+  .blocTitle .title-icon {
+    height: 45px;
+  }
+
+  .stepwizard {
+    margin-bottom: 10px !important;
+  }
+
+  .form-check {
+    margin-bottom: 5px !important;
+  }
+
+  .col-xxs-12 {
+    -webkit-box-flex: 0 0 100%;
+    -moz-box-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .cssHeader{height: 210px;}
+  .cssSection{top: -50px !important;}
+}
+
+.postionxy {
+  visibility: hidden;
+}
+
+@media (max-width: 480px) {
+  .stepwizard p:not(.active-title) {
+    display: none;
+  }
+
+  .stepwizard p.active-title {
+    white-space: nowrap;
+  }
+
+  .esri-widget {
+    max-width: 100% !important;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .checkboxoffre>* {
+    flex: 1 1 50% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: auto
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: auto
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: auto;
+    padding: 0 70px;
+  }
+}
+
+
+.stepwizard {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.stepwizard p {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #A0A0A0;
+  margin-bottom: 15px;
+}
+
+.stepwizard p.active-title {
+  font-weight: 700;
+  color: #59049D;
+
+}
+
+.stepwizard-row {
+  display: table-row;
+}
+
+.stepwizard-step:not(:last-child):before {
+  top: 19px;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 1px;
+  z-index: -1;
+  background-color: #59049D;
+  /* // #ccc;  */
+}
+
+.stepwizard-step {
+  display: table-cell;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+
+.stepwizard-step .btn.disabled {
+  opacity: 1;
+}
+
+a.btn.disabled {
+  pointer-events: unset;
+  cursor: not-allowed !important;
+}
+
+a.btn.disabled:hover,
+a.btn.disabled:focus {
+  border-color: #bda7cc;
+  background-color: #bda7cc;
+  color: #fff;
+}
+
+.btn-circle {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-radius: 20px;
+}
+
+.btn-next {
+
+  font-size: 1.2rem;
+  font-family: 'Azo sans', sans-serif;
+  color: #fff;
+  border-color: #59049D;
+  background: #59049D;
+  text-transform: none;
+  background: #59049D 0% 0% no-repeat padding-box;
+  border: 1px solid #59049D;
+  border-radius: 10px;
+  padding: 9px 25px;
+}
+
+.btn-step {
+  color: #fff;
+  border-color: #59049D;
+  background-color: #8948b8;
+}
+
+.btn-step:hover,
+.btn-step:focus {
+  border-color: rgb(89, 4, 157);
+  color: #59049D;
+  background-color: #FDEC25;
+}
+
+.btn-step-css:hover,
+.btn-step-css:focus {
+  color: white;
+  background-color: #8A49B9
+}
+
+.btn-outline-step {
+  color: #59049D;
+  background-color: #fff;
+  border-color: #59049D;
+}
+
+.btn-outline-step:hover,
+.btn-outline-step:focus {
+  color: #59049D;
+  border-color: #59049D;
+  background-color: #f4eef8;
+}
+
+.blocTitle {
+  padding: 5px 45px;
+}
+
+.stepwizard-content {
+  margin: 5px auto;
+  padding: 5px 50px;
+}
+
+.setup-content {
+  display: flex;
+  flex-flow: column;
+}
+
+.pageheader {
+  height: 170px;
+  background: url(../img/bg-abo.png) no-repeat 100% 0%, url(../img/bg-abo-nety.png) no-repeat 4% 100%, #59049D;
+  background-size: contain;
+}
+
+
+@media (max-width:1200px) {
+  .blocTitle {
+    padding: 5px 15px;
+  }
+
+  .stepwizard-content {
+    margin: 5px auto;
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width:767px) {
+  .blocTitle {
+    padding: 5px 10px;
+  }
+
+  .stepwizard-content {
+    margin: 5px auto;
+    padding: 5px 30px;
+  }
+
+  .stepwizard-content {
+    margin: 5px auto;
+    padding: 5px 15px;
+  }
+
+  .rowfix {
+    min-width: 100% !important;
+    margin-bottom: 25px !important;
+  }
+}
+
+nav.offre>li {
+  float: left;
+}
+
+.custumflex {
+  display: flex;
+  column-gap: 10px;
+}
+
+.btn {
+  font-family: 'Azo sans', sans-serif;
+}
+
+
+li.nav-item {
+
+  background: transparent;
+  border-color: #59049D;
+  color: #59049D;
+}
+
+li.nav-item.active {
+
+  background: #59049D;
+  border-color: transparent;
+  color: #fff;
+}
+
+
+.nav-tabs .nav-link {
+  padding: 9px 25px;
+  font-size: 1.5rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-weight: 700;
+  text-transform: none;
+  background: inherit;
+  border-color: inherit;
+  color: inherit;
+}
+
+.nav-tabs .nav-link.active {
+  background: inherit;
+  border-color: inherit;
+  color: inherit;
+}
+
+.tab-content>.active {
+  display: flex !important;
+}
+
+
+.checkboxoffre {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 25px;
+  font-size: 1.5rem;
+  width: 100%;
+  background: #f8f4fb;
+  box-shadow: 0px 3px 5px #00000029;
+  border-radius: 12px;
+}
+
+.codeverifciation {
+  background: #f8f4fb;
+  box-shadow: 0px 3px 5px #00000029;
+  border-radius: 12px;
+}
+
+#step-4 span {
+  color: #59049D;
+}
+
+.locControl:lang(ar) {
+  text-align: right;
+}
+
+.custumlabel {
+  /* width: 5%; */
+  font-weight: bold;
+  border-bottom: 2px solid #59049D;
+  color: #000;
+  white-space: nowrap;
+}
+
+.custumlabel:lang(ar) {
+  margin-right: 0 !important;
+}
+
+.checkboxoffre>* {
+  flex: 1 1 auto;
+}
+
+.flexrow>* {
+  flex: 1 1 0px;
+}
+
+
+.form-check-inline+.form-check-inline {
+  margin-left: 0px;
+}
+
+.form-check {
+  margin-bottom: 0;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  /* left: -9px; */
+  visibility: hidden;
+
+}
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 17px;
+  display: inline-block;
+  color: #000;
+  white-space: nowrap;
+}
+
+[type="radio"]:checked+label:lang(ar),
+[type="radio"]:not(:checked)+label:lang(ar) {
+  direction: ltr !important;
+}
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #59049D;
+  border-radius: 100%;
+  background: #fff;
+}
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #59049D;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.rowfix {
+  min-width: 50%;
+}
+
+
+.abo-card-block {
+  top: -70px;
+  padding: 30px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.title-form-page {
+  color: #59049D;
+  line-height: 1.2;
+}
+
+.css-title {
+  color: #000;
+}
+
+.title-icon {
+  width: auto;
+  height: 50px;
+}
+
+.abo-form-card {
+  z-index: 1;
+  max-width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  /* border: 1px solid rgba(0, 0, 0, .125); */
+  box-shadow: 0px 3px 5px #00000029;
+  border-radius: 45px;
+}
+
+.form-container {
+  padding: 30px;
+}
+
+.form-container .form-group {
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-weight: normal;
+}
+
+.control-label {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  color: #000;
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+.nextBtn:lang(ar) {
+  float: left
+}
+
+.group-span-filestyle .btn {
+  height: 100%;
+  padding: 9px;
+  cursor: pointer;
+  color: #000 !important;
+  line-height: normal;
+  /* font-weight: normal; */
+  text-transform: none;
+  background: #f4eef8;
+  border-color: #ba95d6;
+  border-right: none;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.group-span-filestyle .btn:lang(ar) {
+  border-radius: 0px 10px 10px 0px;
+  border-right: 1px solid #ba95d6;
+}
+
+.bootstrap-filestyle input.form-control {
+  border-left: 0 !important;
+}
+
+.bootstrap-filestyle input.form-control:lang(ar) {
+  border-left: 1px solid #ba95d6 !important;
+}
+
+#ba95d6 .group-span-filestyle .btn:hover {
+  background: #f4eef8;
+  border-color: #59049D;
+}
+
+.custum-file-buton {
+  margin-bottom: 0px;
+}
+
+.codesmsinput {
+  min-width: 75px;
+  flex: 1 1 100%;
+  max-width: 150px;
+
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: transparent;
+}
+
+.select2-drop-active {
+  border: 1px solid #ba95d6;
+  border-top: none;
+}
+
+.select2-container {
+  height: 35px;
+  font-size: 1.3rem;
+  border-color: #ba95d6;
+  background: #fff;
+}
+
+.select2-container .select2-choice .select2-arrow {
+  border-left: none;
+  background: #f4eef8;
+  background-image: none;
+}
+
+.select2-container .select2-choice {
+  display: block;
+  height: initial;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ba95d6;
+  white-space: nowrap;
+  height: unset;
+  line-height: revert;
+  font-size: 1.4rem;
+  min-height: 3.5rem;
+  color: #000;
+  text-decoration: none;
+  background-clip: inherit;
+  background-color: #fff;
+  background-image: none;
+}
+
+.select2-results__option {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.4rem !important;
+  ;
+}
+
+
+.select2-results .select2-highlighted {
+  background-color: #8948b8;
+  color: #fff;
+}
+
+.select2-search input {
+  margin-top: 2px;
+  border: 1px solid #ba95d6;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.select2-container .select2-choices .select2-search-field input,
+.select2-container .select2-choice,
+.select2-container .select2-choices {
+  font-family: inherit !important;
+}
+
+#viewDiv {
+  position: relative;
+  height: 450px;
+  width: 100%;
+}
+
+
+
+.esri-ui-manual-container>.esri-component {
+  display: none !important;
+}
+
+.help-block {
+  color: red;
+  /* margin-bottom: 15px; */
+}
+
+#sms_error,
+#captcha_error {
+  color: red !important;
+}
+
+.has-error .form-control {
+  border-color: red;
+}
+
+.form-group.has-error {
+  color: red;
+  margin-bottom: 0px;
+}
+
+#step-4 u {
+  cursor: pointer;
+}
+
+#step-4 span.help-block {
+  float: left;
+  margin: 3px;
+  color: red;
+}
+
+.has-error .select2-container .select2-choice {
+  border: 1px solid red;
+}
+
+#Modalnotif .modal-content {
+  border: none;
+  padding: 15px;
+  opacity: 1;
+  background: #ffff;
+  border-radius: 10px;
+}
+
+#Modalnotif button.close,
+button.close:hover {
+  color: #ffff;
+  width: 40px;
+  height: 40px;
+}
+
+#Modalnotif .modal-title {
+  color: #59049D;
+}
+
+@media (max-width: 320px) {
+  .help-block {
+    width: 100%;
+  }
+}
+
+canvas {
+  max-width: 100%;
+  /* border: 2px dotted #59049d;
+  border-radius: 10px; */
+}
+
+#captcha-input {
+  max-width: 250px;
+}
+
+#refresh-captcha {
+  background: none;
+  float: right;
+  margin-left: -33px;
+  border: none;
+  color: #59049d;
+  font-size: larger;
+  cursor: pointer;
+}
+
+#refresh-captcha:lang(ar) {
+  margin-left: 0px;
+  margin-right: -33px;
+}
+
+#refresh-captcha:focus {
+  border: none;
+  outline: 0 !important;
+}
+
+#confirmbtn:lang(ar) {
+  float: left;
+}

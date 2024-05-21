@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../../chunks/_rollupPluginBabelHelpers ../core/shaderTechnique/ReloadableShaderModule ../core/shaderTechnique/ShaderTechnique ../lib/DefaultVertexAttributeLocations ../lib/Program ../../../../chunks/OITCompositing.glsl ../../../webgl/enums ../../../webgl/renderState".split(" "),function(h,f,k,l,b,m,n,p,c,e){b=function(d){function a(){return d.apply(this,arguments)||this}k._inheritsLoose(a,d);var g=a.prototype;g.initializeProgram=function(q){return new n.Program(q.rctx,
+a.shader.get().build(),m.Default3D)};g.initializePipeline=function(){return e.makePipelineState({blending:e.separateBlendingParams(c.BlendFactor.SRC_ALPHA,c.BlendFactor.ONE,c.BlendFactor.ONE_MINUS_SRC_ALPHA,c.BlendFactor.ONE_MINUS_SRC_ALPHA),colorWrite:e.defaultColorWriteParams})};return a}(b.ShaderTechnique);b.shader=new l.ReloadableShaderModule(p.OITCompositing,()=>new Promise((d,a)=>h(["./OITCompositing.glsl"],d,a)));f.OITCompositingTechnique=b;Object.defineProperties(f,{__esModule:{value:!0},
+[Symbol.toStringTag]:{value:"Module"}})});

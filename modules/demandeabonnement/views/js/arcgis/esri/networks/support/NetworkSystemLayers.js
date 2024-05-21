@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../chunks/_rollupPluginBabelHelpers ../../chunks/tslib.es6 ../../core/Accessor ../../core/accessorSupport/decorators/property ../../core/arrayUtils ../../core/accessorSupport/ensureType ../../core/accessorSupport/decorators/subclass".split(" "),function(g,c,a,d,k,l,h){a=function(e){function f(b){b=e.call(this,b)||this;b.rulesTableId=null;b.rulesTableUrl=null;b.subnetworksTableId=null;b.subnetworksTableUrl=null;b.dirtyAreasLayerId=null;b.dirtyAreasLayerUrl=null;return b}g._inheritsLoose(f,
+e);return f}(a);c.__decorate([d.property({constructOnly:!0})],a.prototype,"rulesTableId",void 0);c.__decorate([d.property({constructOnly:!0})],a.prototype,"rulesTableUrl",void 0);c.__decorate([d.property({constructOnly:!0})],a.prototype,"subnetworksTableId",void 0);c.__decorate([d.property({constructOnly:!0})],a.prototype,"subnetworksTableUrl",void 0);c.__decorate([d.property({constructOnly:!0})],a.prototype,"dirtyAreasLayerId",void 0);c.__decorate([d.property({constructOnly:!0})],a.prototype,"dirtyAreasLayerUrl",
+void 0);return a=c.__decorate([h.subclass("esri.networks.support.NetworkSystemLayers")],a)});

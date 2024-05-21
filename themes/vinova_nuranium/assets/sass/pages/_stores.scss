@@ -1,0 +1,346 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map-canvas {
+    height: 800px;
+}
+
+#current {
+    padding-top: 25px;
+}
+
+.Page_title span:lang(ar) {
+    font-size: 65px;
+}
+
+.storeItem {
+    width: auto; // 400px;
+    height: auto;
+    background-color: white; //$lowOpactity;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0 ;
+    padding: 20px;
+    // padding: 30px 20px;
+    box-shadow: 0px 3px 20px $shadow;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.storeDescription {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around !important;
+    align-items: flex-start;
+
+    h3 {
+        color: $violet;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 600;
+        // white-space: nowrap;
+    }
+
+    .storeLabel {
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .storeInfo {
+        color: grey;
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+
+.storeContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    // height: 800px;
+    overflow-y: scroll;
+    // width: 36%;
+    /* width */
+
+}
+
+.storeInfoMaps {
+    display: flex;
+    margin-bottom: -80px;
+    background-color: $lowOpactity;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #59049D;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: grey;
+    }
+}
+
+.storeMaps {
+    display: flex;
+    flex-direction: column;
+    // margin: 0px 30px;
+    width: -webkit-fill-available;
+
+    .gm-style {
+        .gm-style-iw-c {
+            padding-left: 0px !important;
+            padding-top: 0px !important
+        }
+
+        .gm-style-iw-d {
+            overflow: auto !important
+        }
+
+        .gm-style-iw-t button {
+            opacity: 1 !important;
+            border: none !important;
+            margin: 5px !important;
+
+            &:focus {
+                outline: none !important
+            }
+        }
+    }
+}
+
+.filterItem1,
+.filterItem {
+    border: 1px solid $violet;
+    height: 40px;
+    border-radius: 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    color: #6A6A6A;
+    margin: 0 10px;
+
+    .select2-choice {
+        font-family: "Azo Sans", sans-serif !important
+    }
+}
+
+.filterStores {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    // margin-bottom: 30px;
+}
+
+.filterBtn {
+    background-color: $violet;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    width: 45px;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        font-size: 22px
+    }
+}
+
+.filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: row;
+    padding: 10px 20px;
+    // align-items: flex-end;
+    justify-content: center;
+    background-color: $lowOpactity;
+    padding-top: 30px;
+
+    .select2-container .select2-choice {
+        height: 40px !important;
+        background: transparent !important;
+        display: flex !important;
+        align-items: center !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-size: 12px;
+
+        .select2-arrow {
+            background-color: transparent !important;
+            background-image: url(../../img/icon-dropdown.png) !important;
+            border-left: none !important;
+            top: -2px;
+
+            b {
+                background-position: 0 10px !important
+            }
+        }
+
+    }
+}
+
+.btnIcons {
+    display: flex;
+    justify-content: center; //space-between;
+
+    // width: 200px;
+    i {
+        font-size: 22px
+    }
+}
+
+.markerPopup {
+    padding: 15px;
+    border: none;
+    box-shadow: 0px 7px 8px grey;
+
+    .card-title {
+        color: $violet;
+        font-size: 17px;
+    }
+
+    .storeLabel {
+        font-weight: 600;
+        color: black;
+        padding-bottom: 6px;
+    }
+
+    .storeInfo {
+        font-weight: 400
+    }
+
+}
+
+#ToastStore {
+    visibility: hidden;
+    max-width: 250px;
+    margin-left: -125px;
+    background-color: rgb(229, 132, 132);
+    color: black;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+
+@media (max-width:992px) {
+    .storeMaps {
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width:767px) {
+    #map-canvas {
+        height: 500px
+    }
+
+    .storeInfoMaps {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 0px;
+        padding-bottom: 30px;
+    }
+
+    .storeContainer {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow-y: hidden;
+
+        #listestore {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .storeItem {
+                margin: 10px;
+                width: 300px;
+            }
+        }
+    }
+
+    .storeMaps {
+        padding: 0 10px;
+        margin: 0px;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+@media(min-width:768px) {
+    .storeContainer {
+        max-height: 865px;
+    }
+}
+
+@media(max-width:592px) {
+    .filterContainer {
+        // flex-direction: column;
+        // align-items: center; 
+    }
+
+    .storeContainer #listestore .storeItem {
+        margin: 10px;
+        width: 80vw;
+    }
+}
+
+@media (max-width: 534px) {
+    .filterItem {
+        width: 250px;
+
+        .select2-container {
+            width: 250px !important
+        }
+    }
+
+    .filterItem1 {
+        width: 200px;
+        margin-right: 5px;
+    }
+
+
+}
+
+@media(max-width:371px) {
+    .storeContainer #listestore .storeItem {
+        margin: 10px;
+        width: 90vw;
+    }
+
+}

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/custom.css",
+	"sources": [
+		"../sass/custom.scss"
+	],
+	"sourcesContent": [
+		"/*\r\n * Custom code goes here.\r\n * A template should always ship with an empty custom.css\r\n * Code here\r\n*/\r\n.vinovathemes {\r\n\tbackground-color: #000;\r\n}"
+	],
+	"mappings": "AAAA;;;;EAIE;;AACF,AAAA,aAAa,CAAC;EACb,gBAAgB,EAAE,IAAK;CACvB",
+	"names": []
+}

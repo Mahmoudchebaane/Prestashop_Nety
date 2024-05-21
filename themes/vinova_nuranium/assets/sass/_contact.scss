@@ -1,0 +1,205 @@
+.title_page_contact {
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 50px;
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  color: $color-heading-default;
+  font-family: $font-family-primary;
+}
+.title_contact_rich {
+  font-weight: bold;
+  color: $color-heading-default;
+}
+.contact-rich {
+  .phone_number {
+    font-family: $font-family-primary;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $color-heading-default;
+    line-height: 1;
+  }
+  .block-content {
+    font-size: 1.4rem;
+    a {
+      color: $text-color;
+      &:hover {
+        color: $theme-color-default;
+      }
+    }
+  }
+  .block {
+    height: auto;
+    overflow: hidden;
+    .icon_phone {
+      width: 32px;
+      min-width: 32px;
+      height: 39px;
+      background: url(../img/group-icon.png);
+      background-position: -1px -167px;
+      @include rtl-margin-right(25px);
+    }
+    .icon_address {
+      width: 32px;
+      min-width: 32px;
+      height: 34px;
+      background: url(../img/group-icon.png);
+      background-position: -36px -172px;
+      @include rtl-margin-right(25px);
+    }
+    .icon_email {
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      background: url(../img/group-icon.png);
+      background-position: -73px -174px;
+      @include rtl-margin-right(25px);
+    }
+    .icon {
+      background: $theme-color-default;
+      color: #fff;
+      @include rtl-float-left();
+      @include square(24px);
+      text-align: center;
+      line-height: 28px;
+      @include border-radius(2px);
+      @include rtl-margin-right(20px);
+      margin-top: 2px;
+      i {
+        font-size: rem(14px);
+      }
+    }
+    .data {
+      width: auto;
+      font-size: 1.2rem;
+      overflow: hidden;
+    }
+  }
+  &.no-fullwidth {
+    .block:not(:last-child) {
+      position: relative;
+      &:before {
+        content: "";
+        width: 1px;
+        height: 36px;
+        background: #eaeaea;
+        position: absolute;
+        top: 0%;
+        @include rtl-right(15px);
+      }
+    }
+  }
+}
+.contact-form {
+  color: #ccc;
+  margin-bottom: 2rem;
+  h3 {
+    text-transform: uppercase;
+    color: #eaeaea;
+  }
+  .form-fields {
+    .row {
+      margin-left: -5px;
+      margin-right: -5px;
+      margin-bottom: 0;
+    }
+    .col-md-6, .col-md-12 {
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 10px;
+    }
+    label {
+      margin-bottom: 0;
+    }
+    .form-control, select.form-control:not([size]):not([multiple]) {
+      border-color: #ececec;
+      min-height: 42px;
+      font-size: 1rem;
+      color: #909090;
+      text-transform: uppercase;
+      @include border-radius(3px);
+      &:disabled, &[readonly] {
+        background: none;
+      }
+      &:hover, &:focus {
+        background-color: #fff;
+        @include transition(all 0.35s ease 0.1s);
+      }
+      @include placeholder {
+        color: #909090;
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+    }
+    select.form-control:not([size]):not([multiple]) {
+      letter-spacing: 2px;
+      option {
+        color: #909090;
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+    }
+    textarea {
+      padding: 10px 20px;
+      min-height: 210px !important;
+    }
+    .input-group {
+      .form-control {
+        @include border-radius(3px 0 0 3px);
+      }
+    }
+    .group-span-filestyle {
+      .btn {
+        background: #dddddd;
+        border-radius: 3px !important;
+        border: none;
+        &:hover {
+          background: $theme-color-default;
+        }
+        .buttonText {
+          line-height: 31px;
+          color: #fff;
+          font-family: $font-family-default;
+          i {
+            font-size: 2rem;
+            @include rtl-margin-right(0);
+            @include rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+  .form-footer {
+    margin-top: 1rem;
+    @include border-radius(5px);
+    .btn {
+      padding: 14px 38px;
+      color: #fff;
+      position: relative;
+      border: transparent;
+      background: $theme-color-default;
+      &:hover {
+        background: darken($theme-color-default, 10%);
+      }
+      img {
+       @include rtl-margin-right(10px);
+      }
+      span {
+        font-family: $font-family-default;
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+.google-map{
+  position: relative;
+ iframe{
+   width: 100%;
+ }
+}
+#nov-map-contact {
+  min-height: 500px;
+  margin-bottom: 30px;
+}
+

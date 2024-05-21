@@ -1,0 +1,106 @@
+/**
+* 2007-2015 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2015 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*
+* Don't forget to prefix your containers with your own identifier
+* to avoid any conflicts with others containers.
+*/
+
+
+.ndk_att_list {
+    padding: 15px;
+    background: #F5F5F5;
+    margin-bottom: 15px;
+}
+
+.ndk_attribute_label {
+	/* width: 120px; */
+	text-align: right;
+	display: inline-block;
+}
+
+.ndk_attribute_select{
+	padding:3px
+}
+
+.ndk_quantity_wanted_p{
+	padding-top: 8px;
+}
+
+.ndk_quantity_wanted_p input{
+	display:inline-block;
+	width:40px;
+	border:1px solid #DEDEDE;
+	color: #777;
+}
+
+.ndksplistbutton-container {
+	display: block;
+	width: 100% !important;
+	float: left!important;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #DEDEDE;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #DEDEDE;
+}
+
+[id^="step_"] .icon,
+[id^="step_"] [class^="icon-"],
+#timeline [class^="icon-"] {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+}
+
+.icon-trash::before {
+	content: "\f1f8";
+}
+
+.icon-minus::before {
+	content: "";
+}
+
+.icon-plus::before {
+	content: "";
+}
+
+.icon-puzzle::before {
+	content: "\f12e";
+	font-size:18px;
+	margin-right:3px;
+	font: normal normal normal 18px/1 FontAwesome;
+}
+
+.tooltip.top{
+	width:290px
+}
+
+.pack-list{
+	margin-bottom:25px
+}

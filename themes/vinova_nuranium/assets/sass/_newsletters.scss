@@ -1,0 +1,245 @@
+.newsletterImg {
+    background-position: bottom left;
+    background-size: 200px;
+    background-color: $lowOpactity;
+    background-repeat: no-repeat;
+    background-image: url('/themes/vinova_nuranium/assets/img/Design6.png')
+}
+
+.block_newsletter {
+    // background-image: url('../img/Design6.png');
+    background-position: left bottom !important;
+    background-repeat: no-repeat;
+    background-size: 160px;
+
+    .atert {
+        border-radius: 12px;
+    }
+}
+
+.block_newsletter .input-group {
+    width: 600px !important;
+    //max-width: 600px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 25px !important;
+    border: none !important;
+    height: 50px !important;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.16) !important;
+
+}
+
+.block_newsletter .input-group input {
+    font-size: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.block_newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+    height: 150px; //110px;
+    /* margin-bottom: 50px; */
+}
+
+.block-description {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: #666;
+    /* width: 500px; */
+}
+
+.block_newsletter .input-group-btn .btn {
+    background-color: #F6537E !important;
+    padding: 0 25px;
+    color: white;
+    border-radius: 25px !important;
+    font-size: 15px;
+    height: 50px;
+    text-transform: capitalize;
+    font-family: $font-family-base;
+}
+
+.block-title {
+    color: #000000;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    // margin-bottom: 50px
+}
+
+.block-title p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-container .copyrigthFooter {
+    left: 0 !important;
+    width: 100% !important;
+}
+
+.inscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+    .inner-footer .container {
+        width: 90%
+    }
+}
+
+@media(max-width: 992px) and (min-width:768px) {
+    .block-title p {
+        font-size: 45px;
+    }
+
+    .block-description p {
+        font-size: 21px;
+    }
+
+    .Service_Description {
+        font-size: 15px;
+    }
+
+    .Service_Title {
+        font-size: 20px;
+    }
+
+    svg {
+        height: 50px;
+        width: 50px;
+    }
+
+    .block-title p {
+        font-size: 40px;
+    }
+
+    .block-description p {
+        font-size: 21px;
+    }
+}
+
+@media (max-width:768px) {
+    .newsletterImg {
+        background-size: 150px
+    }
+
+    .block_newsletter .input-group {
+        width: 450px !important;
+        font-size: 14px;
+        height: 45px !important;
+    }
+
+    .block_newsletter .input-group input {
+        font-size: 15px;
+        height: 45px
+    }
+
+    .block_newsletter .block-title {
+        font-size: 35px;
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .block-description {
+        font-size: 20px;
+        //width: 400px;
+    }
+
+    .block-description p {
+        font-size: 18px;
+    }
+
+    .block-title p {
+        font-size: 35px;
+    }
+
+    .bloc_service {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .block_newsletter .input-group .btn {
+        font-size: 13px;
+        text-transform: capitalize;
+        height: 45px;
+    }
+
+}
+
+@media (max-width:576px) {
+    .block-title p {
+        font-size: 25px;
+    }
+
+    .block-description p {
+        font-size: 16px;
+    }
+
+    .block_newsletter .input-group .btn {
+        font-size: 10px;
+        padding: 0 15px;
+        height: 40px;
+    }
+
+    .block_newsletter .input-group {
+        width: 350px !important;
+        height: 40px !important;
+    }
+
+    .block_newsletter .input-group input {
+        height: 40px
+    }
+
+    .block_newsletter .input-group .btn {
+        //     font-size: 10px;
+        //     padding: 0 12px;
+        font-size: 12px;
+        padding: 0px 25px;
+        height: 40px;
+    }
+
+    .block_newsletter .block-title {
+        font-size: 30px;
+        margin-bottom: 20px
+    }
+
+    .block_newsletter form .block-description {
+
+        // font-size: 15px;
+        //width: 400px;
+        p {
+            font-size: 13px;
+            padding-top: 10px;
+        }
+    }
+}
+
+@media (max-width:350px) {
+    .block_newsletter .input-group {
+        width: 250px !important;
+        height: 40px !important;
+    }
+
+    .block-title {
+        font-size: 25px;
+    }
+
+    .block-description {
+        font-size: 13px;
+        //width: 300px;
+
+    }
+}

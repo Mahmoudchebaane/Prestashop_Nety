@@ -1,0 +1,10 @@
+
+###> prestashop ###
+/var/
+/themes/classic/_dev/node_modules/
+/node_modules/
+/vendor/
+###< prestashop ###
+
+/themes/vinova_nuranium/assets/css/theme.css
+.env

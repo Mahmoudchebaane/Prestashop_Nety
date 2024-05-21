@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="C:\xampp\htdocs\prestashop_1784fn\administrator" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="4f4adcbf8c6f66dcfc8a3282ac2bf10a">
+        <source>404</source>
+        <target>404</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

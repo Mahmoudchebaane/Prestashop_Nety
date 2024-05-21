@@ -1,0 +1,132 @@
+.icon-Adminjscomposer {
+    /*background: url('../../../image/admin-logo.png') no-repeat scroll 0 0;
+	background-position: center center; 
+	height: inherit; 
+	background-size: contain;
+	height: 16px;
+	width: 18px;*/
+}
+
+.icon-Adminjscomposer:before {
+    content: "\f194";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+.collapse.in {
+    display: block;
+}
+
+.ultimate-warning-sec {
+    height: 720px;
+    background-color: #29245c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    background-image: url("../images/vc-bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.feature-single {
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 8px 30px 0 rgba(166, 166, 166, .3);
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 22% !important;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.ultimate-feature-sec {
+    height: 760px;
+    color: #339;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.features-bottom {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ultimate-back-overlay {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #324e86 0%, #333399 100%);
+    opacity: .94;
+    height: 720px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.heading-section,
+.inner-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.inner-section .vc-sec-activate-bt {
+    line-height: 1.2em;
+    background-color: #39f;
+    border-radius: 50px 50px 50px 50px;
+    padding: 20px 100px 20px 100px;
+    color: #fff;
+}
+
+.inner-section .vc-sec-activate-bt:hover {
+    background-color: #339;
+    color: #fff;
+}
+
+.intro-image-section {
+    margin-top: 24px;
+}
+
+.heading-vc {
+    font-size: 45px !important;
+    font-weight: 500 !important;
+}
+
+.heading-section p {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.activate-bt-font {
+    float: right;
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    color: #000 !important;
+    position: relative;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.warning-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+    left: 10px;
+}
+
+
+#vc_add-element-dialog-title{
+    background-color: unset !important;
+}
+
+#vc_add-element-dialog{
+    opacity: 1;
+}

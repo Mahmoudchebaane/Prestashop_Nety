@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("require exports ../../../chunks/_rollupPluginBabelHelpers ../../../chunks/Clouds.glsl ./CloudsData ../webgl-engine/core/shaderTechnique/ReloadableShaderModule ../webgl-engine/core/shaderTechnique/ShaderTechnique ../webgl-engine/lib/DefaultVertexAttributeLocations ../webgl-engine/lib/Program ../../webgl/enums ../../webgl/renderState".split(" "),function(l,g,m,n,p,q,b,r,t,c,e){b=function(d){function a(f,u){var h;return h=d.call(this,f,u,()=>h.destroy())||this}m._inheritsLoose(a,d);var k=a.prototype;
+k.initializeProgram=function(f){return new t.Program(f.rctx,a.shader.get().build(this.configuration),r.Default3D)};k.initializePipeline=function(){return e.makePipelineState({blending:e.simpleBlendingParams(c.BlendFactor.CONSTANT_COLOR,c.BlendFactor.ONE_MINUS_CONSTANT_COLOR,c.BlendOperation.ADD,this.configuration.writeTextureChannels===p.CloudsTextureChannels.RG?[1,1,0,0]:[0,0,1,1]),depthTest:{func:c.CompareFunction.LEQUAL},colorWrite:e.defaultColorWriteParams})};return a}(b.ShaderTechnique);b.shader=
+new q.ReloadableShaderModule(n.Clouds,()=>new Promise((d,a)=>l(["./Clouds.glsl"],d,a)));g.CloudsTechnique=b;Object.defineProperties(g,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

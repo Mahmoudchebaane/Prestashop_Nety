@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../chunks/_rollupPluginBabelHelpers ../../chunks/tslib.es6 ../../AggregateGraphic ../../geometry ../../core/maybe ../../core/accessorSupport/decorators/property ../../core/arrayUtils ../../core/accessorSupport/ensureType ../../core/accessorSupport/decorators/reader ../../core/accessorSupport/decorators/subclass ./FeatureSet ../../geometry/SpatialReference".split(" "),function(t,g,m,b,h,u,A,B,v,w,x,y){b=function(n){function k(){var c=n.apply(this,arguments)||this;c.features=[];return c}
+t._inheritsLoose(k,n);k.prototype.readFeatures=function(c,e){e=y.fromJSON(e.spatialReference);const p=[];for(let l=0;l<c.length;l++){var a=c[l];const f=m.fromJSON(a);var d=a.geometry&&a.geometry.spatialReference;h.isSome(f.geometry)&&!d&&(f.geometry.spatialReference=e);a=a.aggregateGeometries;d=f.aggregateGeometries;if(a&&h.isSome(d))for(const q in d){const r=d[q],z=a[q]?.spatialReference;h.isSome(r)&&!z&&(r.spatialReference=e)}p.push(f)}return p};return k}(x);g.__decorate([u.property({type:[m],json:{write:!0}})],
+b.prototype,"features",void 0);g.__decorate([v.reader("features")],b.prototype,"readFeatures",null);return b=g.__decorate([w.subclass("esri.rest.support.AggregateFeatureSet")],b)});

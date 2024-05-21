@@ -1,0 +1,24 @@
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+
+.owl-carousel {
+	.owl-item {
+		@include opacity(0.3);
+		@include transition(opacity 600ms ease);
+		&.active {
+			@include opacity(1);
+			@include transition(opacity 600ms ease);
+			transform-style: preserve-3d;
+		}
+		.owl-lazy {
+				opacity: 0;
+				transition: opacity 600ms ease;
+		}
+
+		img.owl-lazy {
+			transform-style: preserve-3d;
+		}
+	}
+}
+

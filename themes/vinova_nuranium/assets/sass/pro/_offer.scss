@@ -1,0 +1,705 @@
+@keyframes defile {
+    0% {
+        //   margin-left: 100%;
+        //   width: 300%;
+        transform: translate(10px) scale(1.1);
+    }
+    50% {
+        //   margin-left: 0%;
+        //   width: 100%;
+        transform: translate(30px) scale(0.9);
+    }
+    100% {
+        transform: translate(-60px) scale(1);
+    }
+}
+
+.rapidoProOffer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    flex-wrap: wrap;
+    &::before,
+    &::after {
+        display: none;
+    }
+    img {
+        height: 400px;
+    }
+    img:lang(ar){
+        transform: rotateY(180deg);
+    }
+    > div {
+        text-transform: uppercase;
+        font-weight: 600;
+
+        span {
+            color: white;
+            font-size: 35px;
+        }
+        p {
+            color: $netyVert;
+            font-size: 45px;
+        }
+    }
+}
+.fastImg img {
+    max-width: 60%;
+}
+.fast .rapidoProOffer {
+    flex-wrap: nowrap;
+    > div {
+        width: 50%;
+    }
+}
+.category-pro {
+    background-color: $violet;
+    margin-left: 0;
+    margin-right: 0;
+}
+.newsBackground {
+    background-color: $lowOpactity;
+    .block_newsletter form {
+        height: 100px;
+    }
+}
+.page-cms-67 {
+    .newsBackground {
+        background-color: white;
+    }
+    .category-pro:lang(ar) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+.b2bActive {
+    text-decoration: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+.b2cActive {
+    text-decoration: none;
+    outline: none;
+    border-bottom: 2px solid $Jaune;
+}
+.bloc1Ask {
+    padding-left: 0;
+    padding-right: 0;
+    > .vc_column-inner {
+        justify-content: start !important;
+    }
+    h2 {
+        color: #000000;
+        font-size: 28px;
+        line-height: 48px;
+    }
+}
+.contactPro {
+    justify-content: center;
+    display: flex;
+    padding: 30px 0px 0px;
+    margin-top: 25px;
+    > div {
+        background-color: white;
+        background-image: url(/img/b2b/bg_contact.png);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        box-shadow: 1px 4px 13px $shadow;
+        border-radius: 35px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        width: 50%;//60%;
+        > div {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding-right: 60px;
+        }
+    }
+    > div:lang(ar) {
+        background-position: left;
+    }
+    span {
+        color: $violet;
+        font-size: 27px;
+        font-weight: 600;
+    }
+    p {
+        color: black;
+        font-size: 15px;
+    }
+    a {
+        background-color: $violet;
+        color: white;
+        font-size: 17px;
+        border-radius: 32px;
+        padding: 9px 27px;
+        display: flex;
+        align-items: center;
+    }
+    img {
+        padding: 0 25px 0 0;
+        height: 200px;
+    }
+    img:lang(ar) {
+        padding: 0 0 0 25px;
+    }
+}
+.devisOffer {
+    background-color: $violet;
+    color: white;
+    text-transform: none;
+    padding: 5px 45px;
+    border-radius: 40px;
+    height: 45px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+.rapidoOffer {
+    height: 175px;
+    width: 220px;
+    box-shadow: 0px 1px 12px $purpleShadow;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 10px 25px;
+    .offerName {
+        color: $netyRose;
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .offerDebit {
+        color: black;
+        font-size: 32px;
+        font-weight: 600;
+    }
+}
+.rapidoDesc {
+    background-color: $lowOpactity;
+    display: flex;
+}
+.offerDescription {
+    align-items: center;
+    justify-content: space-between;
+    &.vc_row {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    &.container {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+    .image1Pro .vc_column-inner {
+        justify-content: end !important;
+    }
+    .fastDesc {
+        padding-left: 0;
+        padding-right: 0;
+        h2 {
+            color: #000000;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 45px;
+        }
+        span {
+            color: #000000;
+            font-size: 20px;
+            line-height: 45px;
+        }
+    }
+}
+.functionList {
+    background-color: $lowOpactity;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    > div {
+        padding: 20px 0;
+    }
+    .functionOffer {
+        color: black;
+        background-color: white;
+        border-radius: 21px;
+        padding: 10px;
+        width: 250px;
+        height: 200px;
+        box-shadow: 0px 3px 6px $shadow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0;
+        &:focus,
+        &:active,
+        &:hover {
+            // transform: scale(1.2);
+            animation: defile 2s infinite alternate;
+        }
+        > div {
+            height: 100%;
+        }
+        p span {
+            font-size: 18px;
+            text-align: center;
+        }
+        .wpb_wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            height: 60px;
+        }
+    }
+    .functionsBloc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &.vc_row {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &.container {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.bloc2Ask > .vc_column-inner {
+    justify-content: end !important;
+}
+
+.wrapperPro {
+    // background-color: red;
+    .askQuote {
+        margin-bottom: 0;
+        margin-top: 60px;
+        &.vc_row {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &.container {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .vc_row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.proCard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card {
+        border-radius: 30px;
+        padding: 0;
+        width: fit-content;
+        box-shadow: 0px 6px 11px $shadow;
+        margin: 0;
+        border: none;
+        .card-header {
+            padding: 0;
+            border-radius: 35px;
+            height: 250px;
+            img {
+                width: 100%;
+            }
+        }
+        .card-body {
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+                font-weight: 600;
+                font-size: 22px;
+                color: black;
+            }
+            a {
+                background-color: $violet;
+                padding: 7px 20px;
+                color: white;
+                font-size: 13px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 130px;
+            }
+        }
+    }
+}
+
+.firstTitlePro {
+    // margin-top: 70px;
+    h4 {
+        text-align: center;
+        color: black;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 45px;
+    }
+    .descPro {
+        text-align: center;
+        color: black;
+        font-size: 18px;
+        line-height: 35px;
+    }
+}
+.newsBackground {
+    .contactH1 {
+        font-size: 30px;
+    }
+}
+.alertPro {
+    position: absolute;
+    margin-top: 410px;
+    width: 100% !important;
+}
+
+.netyProOffer {
+    justify-content: center;
+    .vc_col-sm-6 {
+        width: auto;
+    }
+}
+@media (max-width: 1200px) {
+    .rapidoOffer {
+        height: 150px;
+        width: 200px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nov_button {
+        &.nety-primary,
+        &.nety-secondary {
+            a {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .functionList .functionOffer {
+        img {
+            height: 50px;
+        }
+        p span {
+            font-size: 15px;
+        }
+    }
+    .bloc1Ask h2 {
+        font-size: 25px;
+    }
+    .devisOffer {
+        font-size: 15px;
+        padding: 5px 27px;
+    }
+    .askQuote {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .rapidoOffer {
+        // height: 120px;
+        // width: 150px;
+        width: max-content;
+        padding: 20px 10px;
+        height: max-content;
+        margin: 0;
+        .offerName {
+            font-size: 21px;
+        }
+        .offerDebit {
+            font-size: 24px;
+        }
+    }
+    .functionList .functionOffer {
+        width: 200px;
+        height: 150px;
+        img {
+            height: 65px;
+        }
+    }
+    .contactPro > div {
+        width: 80%;
+        padding-right: 0;
+    }
+    .cms-id-65,
+    .cms-id-67,.category-rapido, .category-fast-link {
+        .footerLogo img {
+            height: 70px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .alertPro {
+        margin-top: 625px;
+    }
+    .newsBackground {
+        .contactH1 {
+            font-size: 25px;
+        }
+        .block-description p {
+            font-size: 15px;
+        }
+    }
+
+    .quoteContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .proCard {
+        width: 100%;
+    }
+    .rapidoProOffer {
+        height: auto;
+        justify-content: center;
+        img {
+            height: auto;
+            width: 100%;
+        }
+        > div {
+            text-align: center;
+            span {
+                font-size: 27px !important;
+            }
+        }
+    }
+    .firstTitlePro {
+        h4 {
+            font-size: 21px !important;
+        }
+        h4:lang(ar) {
+            font-size: 30px !important;
+        }
+        .descPro {
+            font-size: 16px;
+        }
+    }
+    .contactPro {
+        padding: 30px 15px 0px;
+        > div {
+            background-image: none;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: fit-content;
+            // padding: 10px;
+            padding: 30px 10px;
+            p {
+                text-align: center;
+                padding: 10px 0;
+            }
+            a {
+                font-size: 14px;
+            }
+            img {
+                height: 150px;
+            }
+            > div {
+                align-items: center;
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+    }
+    .bloc1Ask {
+        h2 {
+            text-align: center;
+        }
+        .devisOffer {
+            padding: 5px 16px;
+            font-size: 15px;
+        }
+    }
+    .bloc2Ask {
+        align-items: center;
+        padding-top: 30px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+        .rapidoOffer {
+            height: 130px;
+            width: 150px;
+            padding: 20px 10px;
+        }
+        > .vc_column-inner {
+            width: auto;
+        }
+        .wpb_wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .offer1 {
+            margin-bottom: 0;
+        }
+    }
+
+    .askQuote {
+        display: flex;
+        justify-content: center;
+    }
+    .functionList .functionOffer {
+        width: 200px;
+
+        img {
+            height: 70px;
+        }
+        span {
+            text-align: center;
+            font-size: 13px !important;
+        }
+    }
+    .offerDescription {
+        span {
+            font-size: 15px !important;
+        }
+        h2 {
+            font-size: 24px !important;
+        }
+    }
+    .fastImg {
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+    }
+    .offerDescription .fastDesc {
+        span,
+        h2 {
+            text-align: center;
+        }
+    }
+    .rapidoProOffer.rap {
+        flex-direction: column;
+    }
+    .offerDescription .fastDesc {
+        h2 {
+            line-height: 35px;
+        }
+        span {
+            line-height: 35px;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapperPro .alert ul{
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .fast .rapidoProOffer {
+        flex-wrap: wrap;
+        padding-top: 20px;
+        > div {
+            width: 100%;
+        }
+    }
+
+    .proCard .card {
+        .card-header {
+            height: 200px;
+        }
+        .card-body {
+            span {
+                font-size: 18px;
+            }
+            a {
+                width: 110px;
+                padding: 7px 15px;
+            }
+        }
+    }
+
+    .cms-id-67,
+    .cms-id-65 {
+        .contactPro {
+            padding: 0;
+            margin-top: 0;
+        }
+    }
+
+    .firstTitlePro {
+        .descPro {
+            line-height: 28px;
+        }
+        h4 {
+            font-size: 28px;
+        }
+    }
+
+    .bloc2Ask {
+        .vc_row-fluid,
+        .offer1 {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .functionList .functionsBloc {
+        // flex-direction: column;
+        // justify-content: center;
+        .functionOffer {
+            width: 175px;
+            img {
+                height: 55px;
+            }
+        }
+    }
+    .cms-id-67,
+    .cms-id-65, .category-rapido, .category-fast-link {
+        .logoNetyDiwan {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 386px) {
+    .bloc2Ask {
+        .vc_row-fluid,
+        .offer1 {
+            flex-wrap: wrap;
+        }
+    }
+    .functionList .functionsBloc {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

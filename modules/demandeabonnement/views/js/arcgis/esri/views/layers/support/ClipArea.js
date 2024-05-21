@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/_rollupPluginBabelHelpers ../../../chunks/tslib.es6 ../../../core/JSONSupport ../../../core/accessorSupport/decorators/property ../../../core/arrayUtils ../../../core/accessorSupport/ensureType ../../../core/accessorSupport/decorators/subclass".split(" "),function(c,d,a,f,h,k,g){a=function(e){function b(){return e.apply(this,arguments)||this}c._inheritsLoose(b,e);c._createClass(b,[{key:"version",get:function(){this.commitVersionProperties();return(this._get("version")||0)+
+1}}]);return b}(a.JSONSupport);d.__decorate([f.property({readOnly:!0})],a.prototype,"version",null);return a=d.__decorate([g.subclass("esri.views.layers.support.ClipArea")],a)});

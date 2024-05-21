@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ndksteppingpack</name>
+    <displayName><![CDATA[Ndk Stepping Pack]]></displayName>
+    <version><![CDATA[1.5.8]]></version>
+    <description><![CDATA[Permet a vos clients de configurer leurs packs &eacute;tape par &eacute;tape]]></description>
+    <author><![CDATA[NdkDesign]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[En supprimant ce module vous perdrez vos enregistrement. Confirmez-vous?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

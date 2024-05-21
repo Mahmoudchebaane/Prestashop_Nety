@@ -1,0 +1,1 @@
+<a href="{$my_module_link}" id="paiementfacture">{l s='Paiement facture' mod='paiementfacture'}</a>

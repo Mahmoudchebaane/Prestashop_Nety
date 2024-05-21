@@ -1,0 +1,42 @@
+<?php
+$hooks = array(
+	'displayTopOne',
+	'displayTopTwo',
+	'displayTopThree',
+	'displayTopFour',
+	'displayHomeNovOne',
+	'displayHomeNovTwo',
+	'displayHomeNovThree',
+	'displayHomeNovFour',
+	'displayLeftColumnNov',
+	'displayRightColumnNov',
+	'displayLeftProductNov',
+	'displayRightProductNov',
+	'displaySidebarBlogNov',
+	'displayReassurance',
+);
+
+$hookSupport = array(
+	'hookdisplayRightColumn',
+	'hookRightColumn',
+	'hookdisplayLeftColumn',
+	'hookLeftColumn',
+	'hookdisplayLeftColumnProduct',
+	'hookdisplayRightColumnProduct',
+	'hookdisplayTopColumn',
+	'hookdisplayVerticalmenu',
+	'hookdisplayTop',
+	'hookdisplayHome',
+	'hookFooter',
+	'hookdisplayNovContact',
+	'hookdisplayCopyright',
+	'hookdisplaySlideShow',
+	'hookdisplayHomeSliderOne',
+	'hookdisplayHomeSliderTwo',
+	'hookdisplayHomeSliderThree',
+	'hookdisplayHomeSliderFour',
+	'hookdisplayFooterBefore',
+	'hookdisplayHomeNov',
+	'hookdisplayFooter',
+);
+?>

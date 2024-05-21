@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../geometry/support/buffer/types"],function(m,n){function p(c,b,a){const d=c.typedBuffer;c=c.typedBufferStride;const g=b.typedBuffer,e=b.typedBufferStride;b=a?a.count:b.count;let f=(a&&a.dstIndex?a.dstIndex:0)*c;a=(a&&a.srcIndex?a.srcIndex:0)*e;for(let l=0;l<b;++l)d[f]=g[a],d[f+1]=g[a+1],f+=c,a+=e}function q(c,b,a){const d=c.typedBuffer,g=c.typedBufferStride,e=b.typedBuffer,f=b.typedBufferStride,l=a?a.count:b.count;let h=(a&&a.dstIndex?a.dstIndex:0)*g,k=(a&&a.srcIndex?a.srcIndex:
+0)*f;if(n.isInteger(b.elementType))if(a=n.maximumValue(b.elementType),n.isSigned(b.elementType))for(b=0;b<l;++b)d[h]=Math.max(e[k]/a,-1),d[h+1]=Math.max(e[k+1]/a,-1),h+=g,k+=f;else for(b=0;b<l;++b)d[h]=e[k]/a,d[h+1]=e[k+1]/a,h+=g,k+=f;else p(c,b,a);return c}function r(c,b,a,d){const g=c.typedBuffer,e=c.typedBufferStride;c=d?.count??c.count;d=(d?.dstIndex??0)*e;for(let f=0;f<c;++f)g[d]=b,g[d+1]=a,d+=e}const t=Object.freeze(Object.defineProperty({__proto__:null,copy:p,normalizeIntegerBuffer:q,fill:r},
+Symbol.toStringTag,{value:"Module"}));m.copy=p;m.fill=r;m.normalizeIntegerBuffer=q;m.vec2=t});

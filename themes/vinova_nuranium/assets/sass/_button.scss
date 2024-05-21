@@ -1,0 +1,82 @@
+// BOTTON
+.btn {
+	font-size: 1.1rem;
+	font-family: $font-family-default;
+	font-weight: bold;
+	text-transform: uppercase;
+	@include box-shadow(none);
+	cursor: pointer;
+	i {
+		@include rtl-margin-right(7px);
+		font-size: 1.3rem;
+		vertical-align: middle;
+		&.material-icons {
+			font-size: 1.5rem;
+		}
+	}
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:hover, &:focus {
+		background-color: darken($theme-color-default, 10%); 
+		color: #fff;
+		border-color: transparent;
+		@include box-shadow(none);
+	}
+	&.btn-primary {
+		padding: 9px 25px;
+		@include border-radius(3px);
+		background: #c4c4c4;
+		border-color: transparent;
+		color: #fff;
+		&:hover, &:focus {
+			color: #fff;
+			background: darken($theme-color-default, 10%);
+			@include opacity(1);
+		}
+	}
+	&.btn-default {
+		color: #fff;
+		&:hover, &:focus {
+			background: $theme-color-primary;
+			border-color: $theme-color-primary;
+		}
+	}
+	&.btn-secondary {
+		@include border-radius(20px);
+		background: $theme-color-primary;
+		border-color: $theme-color-primary;
+		color: #fff;
+		line-height: 26px;
+		&:hover, &:focus {
+			background: $theme-color-default;
+		}
+	}
+}
+.rev-btn {
+	.icon_btn {
+		width: 12px;
+		height: 14px;
+		background: url(../img/icon/icon-cart.png);
+		background-position: -109px 0;
+		vertical-align: sub;
+		@include rtl-margin-right(15px);
+		&.black {
+			width: 10px;
+			height: 12px;
+			background-position: -126px 0;
+		}
+	}
+	&:hover {
+		.icon_btn.pink {
+			background-position: -173px 0;
+		}
+		.icon_btn.black {
+			background-position: -158px 0;
+		}
+	}
+	.zmdi-chevron-right {
+		@include rtl-margin-left(5px);
+	}
+}

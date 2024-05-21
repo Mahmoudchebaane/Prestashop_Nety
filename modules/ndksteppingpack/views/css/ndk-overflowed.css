@@ -1,0 +1,138 @@
+body .overflowed {
+  position: relative;
+  display: block !important;
+  margin: 0;
+  scrollbar-width: none;
+}
+
+body .overflowed::-webkit-scrollbar {
+  display: none;
+}
+.overflow-container-main {
+  position: relative;
+  padding-bottom: 2em;
+  max-width: 100%;
+}
+
+body .overflowed .overflow-container {
+  min-width: 100%;
+  align-content: space-around;
+  justify-content: space-around;
+  display: flex;
+}
+
+.overflowed.ndk-overflow-x {
+  overflow-y: hidden;
+}
+
+body .overflowed .overflow-container .overflow-item {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  /* width: auto !important; */
+  padding: 0;
+  min-width: auto;
+  position: relative;
+  margin: inherit auto;
+}
+.overflow-item .thumbnail-container,
+.overflow-item > *,
+.overflow-item .product-thumbnail {
+  max-width: 100%;
+  min-width: auto;
+}
+.overflow_chevron_x::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 0.5em;
+  font-family: "Material Icons";
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 100%;
+  width: 1em;
+  height: 1em !important;
+  z-index: 1000;
+  line-height: 1em;
+  font-size: 4em;
+  content: "swipe";
+  display: block;
+  width: 100%;
+  display: none !important;
+}
+
+.overflow_chevron_x:hover::after {
+  display: none;
+}
+
+.ndk-overflow-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.ndk-overflow-pager {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.ndkcp-slide-block .overflow-container-main {
+  padding-bottom: 0em;
+}
+.ndkcp-slide-block .overflow-container-main.has-arrows {
+  padding-left: var(--icon-slider-width);
+  padding-right: var(--icon-slider-width);
+}
+.ndkcp-slide-block .ndk-overflow-pager {
+  bottom: 1em;
+}
+
+.ndk-overflow-control span {
+  color: inherit;
+  padding: 0;
+  font-weight: bold;
+  font-size: 2em;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ndk-custom-group-block .bx-wrapper .bx-pager.bx-default-pager a,
+.ndk-custom-group-block .bx-wrapper .bx-pager.bx-default-pager a,
+.ndk-custom-group-block .brands-sort .select-list,
+.ndk-custom-group-block .products-sort-order .select-list,
+.ndk-custom-group-block .suppliers-sort .select-list,
+.ndk-scroll-pager {
+  text-indent: -9999px;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.3rem;
+  background: var(--white);
+  outline: 0;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--dominente1);
+}
+
+span.ndk-scroll-pager:first-child,
+span.ndk-scroll-pager:last-child {
+  transform: scale(0.8);
+}
+
+.ndk-custom-group-block .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.ndk-custom-group-block .bx-wrapper .bx-pager.bx-default-pager a.active,
+.ndk-custom-group-block .brands-sort .select-list:hover,
+.ndk-custom-group-block .products-sort-order .select-list:hover,
+.ndk-custom-group-block .suppliers-sort .select-list:hover,
+.ndk-scroll-pager:hover,
+.ndk-scroll-pager.active {
+  background: var(--dominente1);
+  box-shadow: none;
+}

@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["../../geometry","../Polygon","../Polyline","../Point","../Multipoint"],function(r,l,n,p,q){function m(a){let f=0,b;const e=a.length;let d=a[0],c;for(b=0;b<e-1;b++)c=a[b+1],f+=(c[0]-d[0])*(c[1]+d[1]),d=c;return 0<=f}function h(a,f,b,e){const d=[];for(const c of a){a=c.slice(0);d.push(a);const g=b*(c[0]-e.x)+f*(c[1]-e.y)+e.y;a[0]=f*(c[0]-e.x)-b*(c[1]-e.y)+e.x;a[1]=g}return d}return function(a,f,b){const e=a.spatialReference;var d=f*Math.PI/180;f=Math.cos(d);d=Math.sin(d);"xmin"in a&&(b=b??
+a.center,a=new l({spatialReference:e,rings:[[[a.xmin,a.ymin],[a.xmin,a.ymax],[a.xmax,a.ymax],[a.xmax,a.ymin],[a.xmin,a.ymin]]]}));if("paths"in a){b=b??a.extent.center;var c=[];for(var g of a.paths)c.push(h(g,f,d,b));return new n({spatialReference:e,paths:c})}if("rings"in a){b=b??a.extent.center;g=[];for(c of a.rings){a=m(c);const k=h(c,f,d,b);m(k)!==a&&k.reverse();g.push(k)}return new l({spatialReference:e,rings:g})}return"x"in a?(b=b??a,b=new p({x:f*(a.x-b.x)-d*(a.y-b.y)+b.x,y:d*(a.x-b.x)+f*(a.y-
+b.y)+b.y,spatialReference:e}),null!=a.z&&(b.z=a.z),null!=a.m&&(b.m=a.m),b):"points"in a?(b=b??a.extent.center,new q({points:h(a.points,f,d,b),spatialReference:e})):null}});

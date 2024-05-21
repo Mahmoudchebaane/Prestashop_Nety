@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("exports ../../chunks/_rollupPluginBabelHelpers ../../core/Error ./classBreaks ./dotDensity ./heatmap ./predominance ./relationship ./simple ./uniqueValues".split(" "),function(f,g,h,k,l,m,n,p,q,r){function e(){e=g._asyncToGenerator(function*(c){var {layer:d}=c;c=c.renderer||d.renderer;if(!c)throw new h("getTemplates:invalid-parameters","'renderer' or 'layer.renderer' must be provided");const {renderer:a,layer:b}={layer:d,renderer:c};return"simple"===a.type?q.getTemplates({renderer:a,layer:b}):
+"class-breaks"===a.type?k.getTemplates({renderer:a,layer:b}):"dot-density"===a.type?l.getTemplates({renderer:a,layer:b}):"heatmap"===a.type?m.getTemplates({renderer:a,layer:b}):"unique-value"===a.type?(d=a.authoringInfo&&a.authoringInfo.type,"predominance"===d?n.getTemplates({renderer:a,layer:b}):"relationship"===d?p.getTemplates({renderer:a,layer:b}):r.getTemplates({renderer:a,layer:b})):null});return e.apply(this,arguments)}f.getTemplates=function(c){return e.apply(this,arguments)};Object.defineProperties(f,
+{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

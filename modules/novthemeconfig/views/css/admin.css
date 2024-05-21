@@ -1,0 +1,12 @@
+.nov-background > * {
+    border: 1px solid #ddd;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 30px;
+}
+.nov-background  .active ,
+.nov-background div:hover {
+	cursor: pointer;
+	border-color: red !important;
+}

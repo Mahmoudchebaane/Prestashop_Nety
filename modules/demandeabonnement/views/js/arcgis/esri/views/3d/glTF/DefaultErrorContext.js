@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/Error","../../../core/Logger"],function(d,e,g){let h=function(){function f(){}var b=f.prototype;b.error=function(a){throw new e("gltf-loader-error",a);};b.errorUnsupported=function(a){throw new e("gltf-loader-unsupported-feature",a);};b.errorUnsupportedIf=function(a,c){a&&this.errorUnsupported(c)};b.assert=function(a,c){a||this.error(c)};b.warn=function(a){g.getLogger("esri.views.3d.glTF").warn(a)};b.warnUnsupported=function(a){this.warn("[Unsupported Feature] "+a)};
+b.warnUnsupportedIf=function(a,c){a&&this.warnUnsupported(c)};return f}();d.DefaultErrorContext=h;Object.defineProperties(d,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

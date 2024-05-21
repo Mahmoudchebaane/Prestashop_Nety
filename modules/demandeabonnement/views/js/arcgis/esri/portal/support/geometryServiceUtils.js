@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("exports ../../chunks/_rollupPluginBabelHelpers ../../config ../../core/Error ../Portal ../../rest/geometryService/project ../../rest/support/ProjectParameters".split(" "),function(c,k,l,d,p,q,r){function m(){return e.apply(this,arguments)}function e(){e=k._asyncToGenerator(function*(a=null,b){if(l.geometryServiceUrl)return l.geometryServiceUrl;if(!a)throw new d("internal:geometry-service-url-not-configured");a="portal"in a?a.portal||p.getDefault():a;yield a.load({signal:b});b=a.helperServices?.geometry?.url;
+if(!b)throw new d("internal:geometry-service-url-not-configured");return b});return e.apply(this,arguments)}function f(){f=k._asyncToGenerator(function*(a,b,g=null,n){g=yield m(g,n);const h=new r;h.geometries=[a];h.outSpatialReference=b;if((a=yield q.project(g,h,{signal:n}))&&Array.isArray(a)&&1===a.length)return a[0];throw new d("internal:geometry-service-projection-failed");});return f.apply(this,arguments)}c.getGeometryServiceURL=m;c.projectGeometry=function(a,b){return f.apply(this,arguments)};
+Object.defineProperties(c,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

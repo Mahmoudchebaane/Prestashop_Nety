@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(e){function g(a){a.propertyName===this.openTransitionProp&&a.target===this.transitionEl&&(this.open?this.onBeforeOpen():this.onBeforeClose())}function h(a){a.propertyName===this.openTransitionProp&&a.target===this.transitionEl&&(this.open?this.onOpen():this.onClose())}function f(a){if(c.has(a)){var [b,d,k]=c.get(a);b.removeEventListener("transitionstart",d);b.removeEventListener("transitionend",k);c.delete(a)}}const c=new WeakMap;e.connectOpenCloseComponent=function(a){f(a);
+if(a.transitionEl){const b=g.bind(a),d=h.bind(a);c.set(a,[a.transitionEl,b,d]);a.transitionEl.addEventListener("transitionstart",b);a.transitionEl.addEventListener("transitionend",d)}};e.disconnectOpenCloseComponent=f});

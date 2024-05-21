@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../chunks/_rollupPluginBabelHelpers ../../chunks/tslib.es6 ../../core/JSONSupport ../../core/accessorSupport/decorators/property ../../core/arrayUtils ../../core/accessorSupport/ensureType ../../core/accessorSupport/decorators/subclass ./materialUtils".split(" "),function(h,c,a,d,m,n,k,l){var e;a=e=function(g){function f(b){b=g.call(this,b)||this;b.screenLength=0;b.minWorldLength=0;b.maxWorldLength=null;return b}h._inheritsLoose(f,g);f.prototype.clone=function(){return new e({screenLength:this.screenLength,
+minWorldLength:this.minWorldLength,maxWorldLength:this.maxWorldLength})};return f}(a.JSONSupport);c.__decorate([d.property(l.screenSizeProperty)],a.prototype,"screenLength",void 0);c.__decorate([d.property({type:Number,nonNullable:!0,json:{write:!0,default:0}})],a.prototype,"minWorldLength",void 0);c.__decorate([d.property({type:Number,json:{write:!0}})],a.prototype,"maxWorldLength",void 0);return a=e=c.__decorate([k.subclass("esri.symbols.support.Symbol3DVerticalOffset")],a)});

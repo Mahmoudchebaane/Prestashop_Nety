@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(d){let g=function(){function e(a){this._callbacks=a;this._currentCount=0;this._callbacks.condition||(this._callbacks.condition=()=>!0)}var b=e.prototype;b.handle=function(a){const f=a.data,c=f.pointers.size;switch(f.action){case "start":this._currentCount=c;this._emitStart(a);break;case "added":this._emitEnd(this._previousEvent);this._currentCount=c;this._emitStart(a);break;case "update":this._emitUpdate(a);break;case "removed":this._startEvent&&this._emitEnd(this._previousEvent);
+this._currentCount=c;this._emitStart(a);break;case "end":this._emitEnd(a),this._currentCount=0}this._previousEvent=a};b._emitStart=function(a){this._startEvent=a;this._callbacks.condition?.(this._currentCount,a)&&this._callbacks.start(this._currentCount,a,this._startEvent)};b._emitUpdate=function(a){this._callbacks.condition?.(this._currentCount,a)&&this._callbacks.update(this._currentCount,a,this._startEvent)};b._emitEnd=function(a){this._callbacks.condition?.(this._currentCount,a)&&this._callbacks.end(this._currentCount,
+a,this._startEvent);this._startEvent=null};return e}();d.DragEventSeparator=g;Object.defineProperties(d,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

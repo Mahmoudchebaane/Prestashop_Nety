@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/_rollupPluginBabelHelpers"],function(g,m){let l=function(){function e(a,b,c=0,d,h){this.TypedArrayConstructor=a;this.elementCount=1;a=this.TypedArrayConstructor;void 0===d&&(d=a.BYTES_PER_ELEMENT);const k=0===b.byteLength?0:c;this.typedBuffer=null==h?new a(b,k):new a(b,k,(h-c)/a.BYTES_PER_ELEMENT);this.stride=d;this.typedBufferStride=d/a.BYTES_PER_ELEMENT;this.count=Math.ceil(this.typedBuffer.length/this.typedBufferStride)}var f=e.prototype;f.sliceBuffer=function(a,
+b,c=this.count-b){b=this.typedBuffer.byteOffset+b*this.stride;return new a(this.buffer,b,this.stride,b+c*this.stride)};f.get=function(a){return this.typedBuffer[a*this.typedBufferStride]};f.set=function(a,b){this.typedBuffer[a*this.typedBufferStride]=b};m._createClass(e,[{key:"buffer",get:function(){return this.typedBuffer.buffer}}]);return e}();l.ElementCount=1;g.BufferViewScalarImpl=l;Object.defineProperties(g,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

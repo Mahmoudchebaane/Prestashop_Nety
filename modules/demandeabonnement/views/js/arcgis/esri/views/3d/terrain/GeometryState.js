@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){let a=function(){this.cornerTiles=[null,null,null,null];this.cornerTileSamplerVersions=[-1,-1,-1,-1]},c=function(){this.cornerNeighborData=[new a,new a,new a,new a];this.edgeResolutions=[-1,-1,-1,-1];this.edgePeerNeighbors=[null,null,null,null];this.edgePeerNeighborSamplerVersions=[-1,-1,-1,-1];this.cornerPeerNeighbors=[null,null,null,null]};b.CornerNeighborData=a;b.GeometryState=function(){this.numVerticesPerSide=0;this.clippingArea=this.samplerData=null;this.shading=
+this.wireframe=!1;this.samplerDataVersion=0;this.neighborData=new c};b.NeighborhoodData=c;Object.defineProperties(b,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

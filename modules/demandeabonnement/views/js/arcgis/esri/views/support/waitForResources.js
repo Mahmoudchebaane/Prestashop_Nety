@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["../../core/maybe","../../core/promiseUtils","../../core/reactiveUtils","../../core/scheduling","../../core/accessorSupport/watch"],function(h,k,l,e,f){function m(a){function d(){!a.destroyed&&n()?(c=null,setTimeout(d,16)):(c||(c=performance.now()),200<=performance.now()-c?g():setTimeout(d,16))}const g=k.createResolver();let c=performance.now();const n=()=>{f.dispatch();e.debug.dispatch();return!a.ready||a.updating||!a.stationary||a.rendering||!0===a.layerViewManager?.updating||!0===a.labelManager?.updating||
+!0===a.graphicsView?.updating||!0===a.magnifier?.visible&&h.isSome(a.magnifier?.position)&&(!a._magnifierView?.mask||!a._magnifierView?.overlay)||a.allLayerViews.some(b=>!0===b.updating)||a.allLayerViews.find(b=>{const p=!b.isFulfilled();b=b.updating&&!b.suspended;return p||b})?!0:!1};setTimeout(d,16);return g.promise}return function(a){switch(a.type){case "2d":return m(a);case "3d":if(a)return f.dispatch(),e.debug.dispatch(),l.whenOnce(()=>!a.updating)}return Promise.resolve()}});

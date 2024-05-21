@@ -1,0 +1,7 @@
+order_number;factures;ammount;payment_type;created_date;modified_date;payment_state;message;client;num_fixe;reference_crm;sendto_crm
+6;"[""FV000001"",""FV000002""]";101.000000;E-dinar;"2023-04-13 12:41:44";"2023-04-13 12:41:44";0;;"Foulen ben Foulen";11111111;AB00001;0
+5;"[""FV000001""]";50.500000;"Carte bancaire";"2023-04-13 12:39:16";"2023-04-13 12:39:16";0;;"Foulen ben Foulen";11111111;AB00001;0
+4;"[""FV000001""]";50.500000;"Carte bancaire";"2023-04-13 12:36:11";"2023-04-13 12:36:11";0;;"Foulen ben Foulen";11111111;AB00001;0
+3;"[""FV000001""]";50.500000;"Carte bancaire";"2023-04-13 12:27:52";"2023-04-13 12:27:52";0;;"Foulen ben Foulen";11111111;0;0
+2;"[""FV000001""]";50.500000;"Carte bancaire";"2023-04-13 12:26:47";"2023-04-13 12:26:47";0;;"Foulen ben Foulen";11111111;0;1
+1;"[""FV000001""]";50.500000;"Carte bancaire";"2023-04-13 12:19:57";"2023-04-13 12:19:57";1;;"Foulen ben Foulen";11111111;0;1

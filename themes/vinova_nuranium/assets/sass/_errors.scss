@@ -1,0 +1,131 @@
+#pagenotfound {
+  height: 100vh;
+  .modal-backdrop.fade.in {
+    display: none;
+  }
+  @media(min-width: 576px) {
+    overflow: hidden;
+  }
+  .container {
+    padding-top: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .page-not-found {
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    h4 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      font-family: $font-family-primary;
+      line-height: 1.5;
+    }
+    .btn {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 6px 19px;
+      @include border-radius(30px);
+      background-color: #45ab67;
+      border: none;
+      &:hover {
+        background-color: darken(#45ab67, 10%);
+      }
+      i {
+        font-size: 30px;
+        vertical-align: middle;
+        @include rtl-margin-right(10px);
+      }
+    }
+    p {
+      margin-bottom: 3.5rem;
+    }
+    &.style_dark {
+      background-color: #00426f;
+      color: $white;
+      h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: $font-family-primary;
+        margin-top: -6rem;
+        margin-bottom: 3.5rem;
+      }
+    }
+    &.style_light {
+      h1 {
+        font-size: 10rem;
+        font-weight: bold;
+        font-family: $font-family-primary;
+        color: #fe8126;
+      }
+      h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        font-family: $font-family-primary;
+        color: $color-heading-default;
+        margin-bottom: 50px;
+      }
+    }
+    @media(max-width: 1600px) {
+      img {
+        max-height: 500px;
+      }
+      &.style_light {
+        h1 {
+          font-size: 6rem;
+        }
+        h2 {
+          margin-bottom: 30px;
+          font-size: 2rem;
+        }
+      }
+    }
+    @media(max-width: 1366px) {
+      
+      &.style_dark {
+        img {
+          max-height: 315px;
+        }
+      }
+      &.style_light {
+        img {
+          max-height: 400px;
+        }
+      }
+    }
+    @media(max-height: 500px) {
+      img {
+        max-height: 160px;
+      }
+      &.style_light {
+        h1 {
+          font-size: 5rem;
+        }
+        h2 {
+          margin-bottom: 10px;
+        }
+      }
+      &.style_dark h2 {
+        font-size: 2rem;
+        margin-top: -2rem;
+        margin-bottom: 1.5rem;
+      } 
+    }
+  }
+
+  
+  @media(max-width: 767px) {
+    .content-404{
+      margin-top: 40px;
+    }
+    .page-not-found {
+      font-size: 1.4rem;
+      .image {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+@mixin placeholder-config{
+    &::-webkit-input-placeholder {
+     color: #414141;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 500
+    }
+    &::-moz-placeholder {
+        color: #414141;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 500
+    }
+    &:-ms-input-placeholder {
+    /** notice that ie has only a single colon) */
+        color: #414141;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 500
+    }
+
+    &::-webkit-input-placeholder {
+        color: #414141;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 500
+    }
+    &::placeholder {
+      color: #414141;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 500
+    }
+}
+.contactInput {
+    border: 1px solid $violet !important;
+    border-radius: 16px !important;
+    height: 45px !important;
+    color: black !important;
+    text-transform: none !important;
+    font-size: 15px !important;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    //::placeholder
+    // &::-webkit-input-placeholder,
+    // &:-moz-placeholder,
+    // &::-moz-placeholder,
+    // &:-ms-input-placeholder,
+    // &::-ms-input-placeholder  
+    // {
+    //     color: #414141;
+    //     text-transform: capitalize;
+    //     font-size: 15px;
+    //     font-weight: 500
+    // }
+    @include placeholder-config();
+    option{
+        border-radius: 16px !important;
+        font-size: 15px !important;
+        color: black !important;
+        background-color: white;
+        &:hover,
+        &:active,
+        &:focus{
+            background-color: $violet;
+            color: white !important;
+        }
+    }
+}
+#id_contact{
+    color: #414141;
+}
+.btnContact{
+    background-color: $netyRose;
+    border-radius: 31px;
+    border: none;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding: 5px 30px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: $font-family-base;
+    &:hover,
+    &:active,
+    &:focus{
+       background-color: darken($netyRose, $amount: 20%);
+       border:none !important;
+       outline: none !important; 
+    }
+}
+.contact-form .alert{
+    border-radius: 20px;
+    .alert-success, 
+    .alert-danger{
+        &::marker{ display: none;    }
+    }
+}
+.contactBtn{
+    display: flex;
+    justify-content: end;
+    margin-top: 30px !important;
+    align-items: center;
+}
+.contactMaps{
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+    font-family: $font-family-base;
+    strong{
+        font-size: 18px;
+        text-transform: uppercase;
+        color: black;
+        font-weight: 600;
+        font-family: $font-family-base;
+    }
+}
+.infoContainer{
+    display: flex;
+    justify-content: center;
+}
+.contactInfo {
+    width: auto;
+    left: -14px;
+    height: 490px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 12px $shadow;
+    // padding-left: 0px;
+    // padding-right: 0px;
+    padding: 0px;
+    .vc_column-inner{height: inherit;}
+    .block-socials{text-align: center}
+    .nov-socials li a{
+        color: $Jaune;
+        background: black;
+        .fa .fa-facebook{
+            padding: 0 0 0 5px;
+            color: $Jaune;
+        }
+        .fa .fa-twitter{            color: $Jaune;        }
+    }
+    .social_facebook .fa {
+            padding: 0px 3px;;
+            color: $Jaune;
+        }
+}
+.mapInfo{
+    box-shadow: 0px 3px 12px $shadow;
+    padding: 0;
+    height: 490px;
+}
+.g-recaptcha{
+    border-radius: 10px;
+    iframe{
+        border-radius: 10px;
+        border: 0.5px solid #AAAAAA;
+    }
+}
+.TitleBlock{
+    background-color: $violet;
+    height: 350px;
+    border-radius: 0 0 0 179px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1{    
+        text-align: center;
+        color: $Jaune;
+        font-size: 50px;
+        font-family: 'Azo Sans', sans-serif;
+}
+}
+.contactForm2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //padding-bottom: 80px;
+    margin-top: 40px;
+}
+.serviceInfo{
+    border-radius: 20px;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //justify-content: center;
+    align-items: center;
+    height: 200px;
+    img{padding-top: 0px}
+    span{
+        font-size:20px;
+        font-weight:400;
+    }
+    p{
+        font-size:23px;
+        font-weight:500;
+    }
+}
+.serviceInfo:nth-child(odd) {
+   background-color: $violet;
+   p,span{color: white;}
+   p,span{color: white;}
+}
+.serviceInfo:nth-child(even) {
+    background-color: $Jaune;
+    p,span{color: black;}
+    p,span{color: black;}
+}
+.listLine{
+    display: flex ;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom: 50px
+}
+
+// .contactFooter{
+//     margin-top: 0;
+//     padding-top: 0;
+// }
+@media (max-width:992px) {  
+    .infoContainer{
+        flex-direction: column;
+        .mapInfo{
+            box-shadow: none;
+            padding: 0;
+            height: 490px;
+            width: 100% !important;
+        }
+        .contactInfo {
+            top: 0;
+            left: 0;
+            height: auto;
+            display: block;
+            width: 100%;
+            img{height: 80px}
+            .block-socials{padding-bottom: 10px}
+            .vc_row{margin-bottom: 0 !important}
+            .vc_column-inner    {
+                padding: 10px 10px 1px !important;
+                width:100%
+            }
+            .nousContactez{margin-top: 20px }
+        }
+        
+    }
+}
+ 
+
+ 
+@media (max-width:768px) {
+    .contactInfo{
+        img{height: 80px}
+        .contactMaps strong{margin-top: 10px}
+    }
+    .contactBtn{margin-top: 0 !important}
+}
+@media (max-width:592px) {
+    .contactInfo {
+        img{height: 80px}
+        .contactMaps strong{margin-top: 10px}
+    }
+    .contact-form .form-footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .btnContact{    margin-top: 20px;}
+    }
+}
+
+
+ 

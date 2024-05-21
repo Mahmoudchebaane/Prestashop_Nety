@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../chunks/_rollupPluginBabelHelpers ../../chunks/tslib.es6 ../../core/Clonable ../../core/JSONSupport ../../core/maybe ../../core/accessorSupport/decorators/property ../../core/arrayUtils ../../core/accessorSupport/ensureType ../../core/accessorSupport/decorators/subclass".split(" "),function(g,c,a,h,k,d,m,n,l){a=function(e){function f(b){b=e.call(this,b)||this;b.onFields=null;b.operator=null;b.searchTerm=null;b.searchType=null;return b}g._inheritsLoose(f,e);return f}(a.ClonableMixin(h.JSONSupport));
+c.__decorate([d.property({type:[String],json:{write:{enabled:!0,overridePolicy(){return{enabled:k.isSome(this.onFields)&&0<this.onFields.length}}}}})],a.prototype,"onFields",void 0);c.__decorate([d.property({type:String,json:{write:!0}})],a.prototype,"operator",void 0);c.__decorate([d.property({type:String,json:{write:!0}})],a.prototype,"searchTerm",void 0);c.__decorate([d.property({type:String,json:{write:!0}})],a.prototype,"searchType",void 0);return a=c.__decorate([l.subclass("esri.rest.support.FullTextSearch")],
+a)});

@@ -1,0 +1,4 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../core/promiseUtils"],function(f,g){f.executeForEachAsync=function(b,l,c){const m=c?.batchSize??100,d=g.createResolver();let a=0;const k=()=>{const n=Date.now();let e=!1,h=0;for(;!e&&500>h;){try{for(c&&g.throwIfAborted(c);a<Math.min(a+m,b.length);a++)l(b[a])}catch(p){d.reject(p)}h=Date.now()-n;e=a>=b.length}e?d.resolve():setTimeout(k,0)};k();return d.promise};Object.defineProperties(f,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

@@ -1,0 +1,265 @@
+@import "variables";
+
+$rtl-left : left;
+$rtl-right : right;
+//------- Variables
+$image-path:                   "images/";
+$font-family-path:             "../font/";
+$image-theme-base-path:        "../img/";
+$image-theme-path:             "../img/icon/";
+$image-base-path:              "../../../img/";
+$image-skin-path:              "../../img/icon/";
+$image-module-path:            "../../../img/icon/";
+$module-path:                  "../../../modules/";
+$screen-xs-min: 575px;
+$screen-xs-max : 767px;
+$screen-sm-max : 991px;
+$screen-md-max: 1199px;
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-lg-max: 1439px;
+$screen-xlg: 1440px;
+//---------Color
+$black: 				#000000;
+$gray-darker: 			#232323;
+$gray-dark:   			#222222 !default;
+$brown:					#b39770;
+$browndark: 			#e4dcd2;
+$lightbrown:			#f6eee3;
+$blue:                  #049cdb;
+$bluedark:              #0064cd;
+$yellow:                #ffc40d;
+$orange:                #f89406;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+$white :			 	#ffffff;
+$nocolor:				transparent !default;
+$button-hover: 			#349034;
+
+
+$theme-color-default:   #f7af24!default;
+$theme-color-primary:   #f7af24!default;
+$color-heading-default: #222222!default;
+$font-size-heading    : 2.6rem;
+
+$header-color-1: #f7af24 !default;
+$header-color-2: #f7af24 !default;
+$header-color-3: #f7af24 !default;
+
+
+// Color Heading
+$color-heading-primary:  #444444;
+$text-color: 			#666666;
+
+//------- FONTS
+$font-family-default:   'Azo Sans', sans-serif;
+$font-family-primary:   'Lato', sans-serif;
+$font-icon: 			"FontAwesome";
+$font-icons: 			'Material-Design-Iconic-Font';
+
+//-------- BORDERS
+$base-border-color:		            #dfdfdf !default;
+$main_border:						#e7e7e7;
+$dark-border-color:					#333;
+$light-border-color:				#fff;
+$homepage-footer-border:            #e8e9ed;
+
+//--------- BACKGROUNDS
+$body-bg:							#fff;
+$base-box-bg:                       #fbfbfb;
+$table-background:                  $base-box-bg;
+$dark-background:                   #333;
+$light-background:                  #fff;
+$homepage-footer-bg:                #f2f2f2;
+
+//--------- COLORS
+$base-body-color:                   $text-color;
+$base-text-color:                   $text-color;
+$base-title-color:					#202020;
+$light-text-color:                  #fff;
+$link-color:						#585858;
+$link-hover-color:                  $link-hover-color;
+$description-color:					$text-color;
+	
+//--------- Breadcrumb ---------
+$breadcrumb-text-color:       		$text-color;
+$breadcrumb-font-size:        		$font-size-base - 1;
+$breadcrumb-link-color:       		$theme-color-default;
+$breadcrumb-bg:               		transparent;
+$breadcrumb-link-hover-color:  		$breadcrumb-text-color;
+
+//--------- Base Heading
+$base-heading-color:				#202020;
+$base-heading-fontsize:				$font-size-base * 1.2;
+$base-heading-bg:			    	transparent;
+$base-headding-padding:         	0 0 15px;
+$base-headding-font:         		$font-family-default;
+$base-header-border:            	$base-border-color;
+
+//--------- Indents
+$base-box-padding:                  14px 18px 13px;
+$base-box-indent:                  	0 0 30px 0;
+
+//---------- Product Elements
+$product-name-color:                #202020;
+$product-name-hover-color:          $theme-color-default;
+$price-color:						#cb3737;
+$product-price-color:				$theme-color-default;
+$product-new-price-color:		    $theme-color-default;
+$product-old-price-color:			$base-text-color;
+$product-reduced-price:				#f00;
+$product-info-margin: 				15px;
+
+//---------- Buttons
+$button-text-color:					$light-text-color;
+
+		//------ Buttons +/- ---
+		$button-pm-color:			#2671c9;
+		$button-pm-hover-color:		$base-text-color;
+
+		//------ Button Small --
+		$button-small-bg:			#6f6f6f;
+		$button-small-hover-bg:		#575757;
+
+		//-------Button exclusive-medium
+		$button-em-color:			$base-text-color;
+
+//---------- Product Listing
+$base-listing-border-color:					$base-border-color;
+$base-listing-grid-padding:					$base-box-padding;
+
+		//-------------- Grid/List vars
+		$GL-text-color:								$base-text-color;
+		$GL-title-color:							$base-text-color;
+		$GL-icon-color:								$base-text-color;
+		$GL-icon-color-hover:						$base-text-color;
+
+		//-------------- Pagination vars
+		$pagination-prevnext-color:					#777676;
+		$pagination-bgcolor:	               		$base-box-bg;
+		$pagination-hover-bg:						#f6f6f6;
+
+//---------- Product Info
+$top-line-color:									#C4C4C4;
+$product-image-border:								$nocolor;
+$scroll-button-color:								#c0c0c0;
+$list-info-bg:										#f6f6f6;
+$scroll-button-hover-color:							$base-text-color;
+$tr-even-bg:										#fdfdfd;
+
+
+//------------- BLOCK --------------
+	$block-module-margin:             0 0 15px;
+	$block-module-heading-border:     none;
+	$block-module-heading-bg:         $theme-color-default;
+	$block-module-heading-padding:    22px 0;
+	$block-module-heading-span-padding:    8px 38px;
+	$block-module-heading-margin:     0;
+	$block-module-heading-font:       $font-family-default;
+	$block-module-heading-color:      #272727;
+	$block-module-heading-fontsize:   36px;
+	$block-module-border-color:       $base-border-color;
+	$block-module-content-bg:         #fff;
+	$block-module-content-padding:    15px;
+
+//------------- BOX ---------------------
+	$box-bg:                    #fff !default;
+	$box-inner-border:          #ddd !default;
+	$box-border-radius:         3px !default;
+	$box-footer-bg:             #f5f5f5 !default;
+
+	$box-default-text:          $gray-dark !default;
+	$box-default-border:        #ddd !default;
+	$box-default-heading-bg:    #f5f5f5 !default;
+ /*
+  * LAYOUTS VAIRABLES
+  */
+  //banner
+	$banner-bg: $black;
+    $baner-color: $white;
+    $banner-font-size: $font-size-base;
+//  Topbar
+	$topbar-bg				: #f9f9f9;
+	$topbar-color			: #666666;
+	$topbar-border-color	: transparent;
+	$topbar-font-size  		: 13px;
+	$topbar-font-family     : $font-family-default;
+	$topbar-link-color      : #666666;
+	$topbar-link-hover-color: $link-hover-color;
+
+//  Header
+    $header-bg:                #fff;
+	$header-color:             #666;
+    $header-font-size:         1.3rem;
+    $header-link-color:        #666;
+    $header-link-hover-color:  $link-hover-color;
+
+//  Megamenu
+	$mainmenu-bg:                   transparent;
+	$mainmenu-link-color:           #222;
+	$mainmenu-link-hover-color:     $theme-color-default;
+	$mainmenu-font-family:			$font-family-default;
+	$mainmenu-font-size:			1.2rem;
+
+	$mainsubmenu-bg: 				$white;
+	$mainsubmenu-color:             #666;
+	$mainsubmenu-link-color:        #666;
+	$mainsubmenu-link-hover-color:  #fff;
+	$mainsubmenu-font-family:		$font-family-default;
+	$mainsubmenu-font-size:			1.3rem;
+	$mainsubmenu-title-color:       $theme-color-default;
+	$mainsubmenu-title-font-size:   15px;
+
+//  Vertical Menu
+	$vertical-menu-bg:                   #fff;
+	$vertical-menu-link-color:           $text-color;
+	$vertical-menu-link-hover-color:     $theme-color-primary;
+	$vertical-menu-font-weight:          400;
+	$vertical-menu-font-family:			 $font-family-default;
+	$vertical-menu-font-size:			 1.8rem;
+
+	$vertical-submenu-bg: 				 #fff;
+	$vertical-submenu-color:             #6a6a6a;
+	$vertical-submenu-link-color:        #6a6a6a;
+	$vertical-submenu-link-hover-color:  $link-hover-color;
+	$vertical-submenu-font-family:		 $font-family-default;
+	$vertical-submenu-font-size:		 1.3rem;
+	$vertical-submenu-title-color:       #202020;
+	$vertical-submenu-title-font-size:   1.4rem;
+
+
+//Slideshow
+	$slideshow-bg:             $nocolor;
+	$slideshow-color:          $white;
+	$slideshow-link-color:     $link-color;
+
+//Slidebar
+	$slidebar-bg:                    none;
+	$slidebar-color:                 inherit;
+	$slidebar-link-color:            $link-color;
+	$slidebar-link-hover-color:      $link-hover-color;
+	$siderbar-headding-color:        $base-heading-color;
+
+	
+
+//Footer
+	$footer-bg:                  #f7f6f2;
+	$footer-text-color:          rgba(225,225,225,0.6);
+	$footer-font-size:			 1.3rem;
+	$footer-link-color:          rgba(225,225,225,0.6);
+	$footer-link-hover-color:    $theme-color-primary;
+	$footer-padding:             0 0;
+	$footer-margin:              0 0;
+
+	$footer-heading-font-size:   1.6rem;
+	$footer-heading-color:       #444444;
+
+//Copyright
+$copyright-bg              : #fff;
+$copyright-text-color      : rgba(#fff,0.6);
+$copyright-link-color      : $theme-color-primary;
+$copyright-link-color-hover: $link-hover-color;
+$copyright-padding         : 36px 0;
+$copyright-margin          : 0;

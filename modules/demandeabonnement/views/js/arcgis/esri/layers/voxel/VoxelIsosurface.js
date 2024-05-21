@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../chunks/_rollupPluginBabelHelpers ../../chunks/tslib.es6 ../../Color ../../core/Clonable ../../core/JSONSupport ../../core/accessorSupport/decorators/property ../../core/arrayUtils ../../core/accessorSupport/ensureType ../../core/accessorSupport/decorators/subclass".split(" "),function(h,b,e,a,k,d,n,l,m){a=function(f){function g(){var c=f.apply(this,arguments)||this;c.color=e.fromArray([0,0,0,0]);c.value=0;c.enabled=!0;c.label="";c.colorLocked=!0;return c}h._inheritsLoose(g,f);return g}(a.ClonableMixin(k.JSONSupport));
+b.__decorate([d.property({type:e,json:{type:[l.Integer],write:{enabled:!0,isRequired:!0}}})],a.prototype,"color",void 0);b.__decorate([d.property({type:Number,json:{write:{enabled:!0,isRequired:!0}}})],a.prototype,"value",void 0);b.__decorate([d.property({type:Boolean,json:{default:!0,write:!0}})],a.prototype,"enabled",void 0);b.__decorate([d.property({type:String,json:{write:!0}})],a.prototype,"label",void 0);b.__decorate([d.property({type:Boolean,json:{default:!1}})],a.prototype,"colorLocked",void 0);
+return a=b.__decorate([m.subclass("esri.layers.voxel.VoxelIsosurface")],a)});

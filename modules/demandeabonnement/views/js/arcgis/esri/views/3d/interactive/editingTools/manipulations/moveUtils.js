@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../../core/maybe","../../../../interactive/dragEventPipeline"],function(d,l,n){d.axisConstrainedDragSign=function(a){if(l.isNone(a)||l.isNone(a.axis))return 1;const {mapStart:b,mapEnd:e,axis:f}=a;a=[e.x-b.x,e.y-b.y];return 0<a[0]*f[0]+a[1]*f[1]?1:-1};d.createGraphicMoveDragPipeline=function(a,b,e,f){const m=a.graphic,k=(g,h)=>b({action:g,graphic:m,dxScreen:h.screenDeltaX,dyScreen:h.screenDeltaY});return e((g,h,p)=>{g=h.next(c=>{"start"===c.action&&k("start",c);return c}).next(n.dragGraphic(m,
+f)).next(c=>{switch(c.action){case "start":case "update":(c.translationX||c.translationY||c.translationZ)&&k("update",c);break;case "end":k("end",c)}return c});p.next(n.resetGraphic(m)).next(()=>{k("end",{screenDeltaX:0,screenDeltaY:0})});return g})};d.shapeOrientation=function(a){if(l.isNone(a)||"polyline"!==a.type&&"polygon"!==a.type)return 0;var b=("polyline"===a.type?a.paths:a.rings)[0];if(!b||2>b.length)return 0;a=b[0];b=b[1];return Math.atan2(b[1]-a[1],b[0]-a[0])};Object.defineProperties(d,
+{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

@@ -1,0 +1,30 @@
+.ult-carousel-wrapper .slick-slide {
+    height: auto !important;
+}
+.flip-box-wrap .flip-box {
+    height: auto !important;
+}
+.upb_video-src {
+    height: auto !important;
+}
+.upb_video-wrapper {
+    position: absolute;
+}
+.square_box-icon .aio-icon-square_box {
+    height: auto !important;
+}
+.flip-box-wrap .ifb-flip-box {
+    height: auto !important;
+}
+.flip-box-wrap .ifb-front, .flip-box-wrap .ifb-back {
+    height: auto !important;
+}
+.flip-box-wrap .ifb-front, .flip-box-wrap .ifb-back {
+    padding: 10px !important;
+}
+.uvc-ctaction-data {
+    line-height: initial;
+}
+.upb_video-wrapper {
+    top: 0;
+}

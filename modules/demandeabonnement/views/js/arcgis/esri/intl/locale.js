@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){function e(){return n??globalThis.navigator?.language??"en"}function f(){void 0===c&&(c=e());return c}function k(a=f()){return/^([a-zA-Z]{2,3})(?:[_\-]\w+)*$/.exec(a)?.[1].toLowerCase()}function l(){const a=m??e();c!==a&&(c=a,[...g].forEach(h=>{h.call(null,a)}),[...d].forEach(h=>{h.call(null,a)}))}let m=void 0,c=void 0;const n=globalThis.esriConfig?.locale??globalThis.dojoConfig?.locale,p={he:!0,ar:!0},d=[],g=[];globalThis.addEventListener?.("languagechange",l);b.beforeLocaleChange=
+function(a){g.push(a);return{remove(){d.splice(g.indexOf(a),1)}}};b.getDefaultLocale=e;b.getLanguage=k;b.getLocale=f;b.onLocaleChange=function(a){d.push(a);return{remove(){d.splice(d.indexOf(a),1)}}};b.prefersRTL=function(a=f()){a=k(a);return void 0!==a&&(p[a]||!1)};b.setLocale=function(a){m=a?a:void 0;l()};Object.defineProperties(b,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

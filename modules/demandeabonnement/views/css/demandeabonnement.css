@@ -1,0 +1,41 @@
+#module-demandeabonnement-display .card{
+    background-color: transparent;
+}
+
+#module-demandeabonnement-display  .h3, #module-demandeabonnement-display  h3{
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+#module-demandeabonnement-display .h1, #module-demandeabonnement-display h1 {
+   margin-bottom: 25px;
+}
+
+.h3:before, h3:before {
+    width: 22px;
+    height: 22px;
+    top: 2px;
+}
+
+#module-demandeabonnement-display .form-control{
+    font-size: 13px;
+}
+
+#module-demandeabonnement-display .input-group-text{
+    position: relative;
+    z-index: 9;
+    box-shadow: 0 0 5px #00000045;
+    padding: 0.299rem 0.75rem;
+    border: none;
+
+}
+
+#module-demandeabonnement-display .calendar_demande{
+ 
+    text-indent: -215px;
+}
+
+
+
+
+

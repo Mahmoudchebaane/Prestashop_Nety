@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/_rollupPluginBabelHelpers ../../../chunks/tslib.es6 ../../../core/accessorSupport/decorators/property ../../../core/arrayUtils ../../../core/accessorSupport/ensureType ../../../core/accessorSupport/decorators/subclass ./ClipArea".split(" "),function(k,c,d,b,n,l,m){var e;b=e=function(g){function f(a){a=g.call(this,a)||this;a.type="rect";a.left=null;a.right=null;a.top=null;a.bottom=null;return a}k._inheritsLoose(f,g);var h=f.prototype;h.clone=function(){return new e({left:this.left,
+right:this.right,top:this.top,bottom:this.bottom})};h.commitVersionProperties=function(){this.commitProperty("left");this.commitProperty("right");this.commitProperty("top");this.commitProperty("bottom")};return f}(m);c.__decorate([d.property({type:[Number,String],json:{write:!0}})],b.prototype,"left",void 0);c.__decorate([d.property({type:[Number,String],json:{write:!0}})],b.prototype,"right",void 0);c.__decorate([d.property({type:[Number,String],json:{write:!0}})],b.prototype,"top",void 0);c.__decorate([d.property({type:[Number,
+String],json:{write:!0}})],b.prototype,"bottom",void 0);return b=e=c.__decorate([l.subclass("esri.views.layers.support.ClipRect")],b)});

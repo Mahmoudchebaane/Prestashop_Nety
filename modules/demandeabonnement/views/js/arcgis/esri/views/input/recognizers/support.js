@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/screenUtils"],function(p,w){p.euclideanDistance=function(b,a){const e=a.x-b.x;b=a.y-b.y;return Math.sqrt(e*e+b*b)};p.fitCircleLSQ=function(b,a){a?(a.radius=0,a.center.x=0,a.center.y=0):a={radius:0,center:w.createScreenPoint()};if(0===b.length)return a;if(1===b.length)return a.center.x=b[0].x,a.center.y=b[0].y,a;if(2===b.length){const [c,d]=b,[l,m]=[d.x-c.x,d.y-c.y];a.radius=Math.sqrt(l*l+m*m)/2;a.center.x=(c.x+d.x)/2;a.center.y=(c.y+d.y)/2;return a}let e=0,g=0;for(a=
+0;a<b.length;a++)e+=b[a].x,g+=b[a].y;e/=b.length;g/=b.length;var q=b.map(c=>c.x-e),t=b.map(c=>c.y-g);let v=a=0;var u=0,r=0,f=0,n=0,h=0;for(var k=0;k<q.length;k++){const c=q[k],d=t[k],l=c*c,m=d*d;a+=l;v+=m;u+=c*d;r+=l*c;f+=m*d;n+=c*m;h+=d*l}q=a;t=u;k=v;r=.5*(r+n);f=.5*(f+h);h=q*k-u*t;n=(r*k-f*t)/h;f=(q*f-u*r)/h;h=w.createScreenPoint(n+e,f+g);return{radius:Math.sqrt(n*n+f*f+(a+v)/b.length),center:h}};p.getPointerId=function(b){({native:b}=b);const {pointerId:a,button:e,pointerType:g}=b;return"mouse"===
+g?`${a}:${e}`:`${g}`};p.manhattanDistance=function(b,a){return Math.abs(a.x-b.x)+Math.abs(a.y-b.y)};Object.defineProperties(p,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

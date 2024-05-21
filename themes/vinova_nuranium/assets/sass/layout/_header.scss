@@ -1,0 +1,187 @@
+.nov-megamenu .menu-title {
+    text-transform: capitalize !important;
+    color: white !important;
+    font-weight: 500 !important;
+    font-size: 15px !important; //1.4rem;
+    margin-bottom: 0px !important;
+}
+
+.blockcart .header-cart .cart-products-count {
+    top: -17px !important;
+}
+.verticalLogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerBottomAr #_desktop_top_menu {
+    display: flex;
+    justify-content: flex-end;
+
+    .lang-rtl .nov-megamenu .menu > li.has-sub > .dropdown-menu ul:lang(ar) {
+        flex-direction: column;
+    }
+}
+
+#header .header-style-5 .header-top {
+    padding: 15px 0 !important;
+}
+
+#header {
+    z-index: 99999;
+}
+
+.logo {
+    height: 80px;
+}
+.ifLogged {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-self: start;
+    padding: 20px;
+    width: 100%;
+
+    a {
+        // border-bottom: 1px solid #dbdbdb;
+        // font-size: 14px;
+        padding: 10px 0;
+        width: 100%;
+        font-family: 0, sans-serif;
+        font-size: 2rem;
+        position: relative;
+        color: #000;
+        font-weight: 500;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        i,
+        svg {
+            color: $violet;
+            height: 30px;
+            width: 27px;
+            font-size: 30px;
+            margin: 0 10px;
+        }
+    }
+}
+.titleB2C {
+    margin: 0 12px;
+    font-family: $font-family-primary;
+    font-weight: bold;
+    text-transform: none;
+    color: $theme-color-primary;
+    margin-left: 0;
+    color: $Jaune !important;
+    &:focus, &:active,&:hover{
+        text-decoration: none;
+        border-bottom: 2px solid $theme-color-primary
+    }
+}
+
+.titleB2B {
+    margin: 0 12px;
+    font-family: $font-family-primary;
+    font-weight: bold;
+    text-transform: none;
+    color: $white !important;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    &:focus, &:active,&:hover{
+        text-decoration: none;
+        outline: none;
+        border-bottom: 2px solid $white;
+    }
+}
+.headerUser{
+    background-color: #7e37b1;
+    height: 50px;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    padding: 10px;
+    .fa-shopping-cart{padding: 0 !important;}
+}
+.mobile_logo .logo {
+    height: 53px; //60px
+}
+.verticalLogo,
+.verticalMenuTop {
+    display: flex;
+    justify-content: space-between;
+    .dropdown-menu {
+        position: absolute;
+        top: 44%;
+        left: -100px;
+    }
+    .dropdown-menu:lang(ar) {
+        left: 0;
+        right: -100px;
+        width: 140px;
+    }
+
+    .myAccountDropdown .dropdown-toggle {
+        color: $violet;
+        display: flex;
+        font-size: 15px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 45px;
+        .fa-user {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+    .header-bottom .logo {
+        height: 80px;
+    }
+
+    #header-sticky .logo {
+        height: 65px;
+    }
+
+    #header .nov-megamenu .menu > li {
+        padding: 0 3px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: none;
+            color: $Jaune;
+            
+        }
+    }
+    // .header-style-5 .nov-megamenu .menu > li > a{font-size: 20px !important}
+}
+
+// @media(max-width: 767px) {
+//     #wrapper-site{
+//         margin-top: 87px;
+//     }
+// }
+
+@media (max-width: 767px) {
+    #header {
+        margin-bottom: 102px; //80px;
+    }
+    // .header-style-5 .sticky-menu{     padding-bottom: 87px;}
+    .nov-megamenu .menu > li.has-sub > .dropdown-menu ul li {
+        display: block;
+        position: relative;
+        // padding: 0 30px !important;
+        // font-size: 10px !important;
+    }
+
+    .nov-megamenu .menu > li .dropdown-menu a {
+        display: block;
+        // font-size: 13px !important;
+        font-weight: 500;
+        // font-family: 0, sans-serif;
+        // color: #666;
+    }
+}

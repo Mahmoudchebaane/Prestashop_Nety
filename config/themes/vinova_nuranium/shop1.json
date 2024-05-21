@@ -1,0 +1,258 @@
+{
+    "name": "vinova_nuranium",
+    "display_name": "PrestaShop Nuranium",
+    "version": "1.8.0",
+    "author": {
+        "name": "VinovaThemes Team",
+        "email": "vinovathemes@gmail.com",
+        "url": "http:\/\/vinovathemes.com"
+    },
+    "meta": {
+        "compatibility": {
+            "from": "1.7.5.0",
+            "to": null
+        },
+        "available_layouts": {
+            "layout-one-column": {
+                "name": "One Columns",
+                "description": "One Columns, No side columns and no full-width, ideal for distraction-free pages such as product pages."
+            },
+            "layout-both-columns": {
+                "name": "Three Columns",
+                "description": "One large central column and 2 side columns."
+            },
+            "layout-left-column": {
+                "name": "Two Columns, small left column",
+                "description": "Two columns with a small left column"
+            },
+            "layout-right-column": {
+                "name": "Two Columns, small right column",
+                "description": "Two columns with a small right column"
+            },
+            "layout-full-width": {
+                "name": "Full Width",
+                "description": "No side columns, fullwidth layout"
+            }
+        }
+    },
+    "assets": null,
+    "global_settings": {
+        "configuration": {
+            "PS_IMAGE_QUALITY": "png"
+        },
+        "modules": {
+            "to_enable": [
+                "ps_searchbar",
+                "ps_shoppingcart",
+                "ps_customersignin",
+                "ps_currencyselector",
+                "ps_languageselector",
+                "novthemeconfig",
+                "jscomposer",
+                "novmanagevcaddons",
+                "novadvancedsearch",
+                "novblocktags",
+                "novblockwishlist",
+                "novloginsocial",
+                "novlookbook",
+                "novmegamenu",
+                "novproductcomments",
+                "novtestimonials",
+                "novverticalmenu",
+                "smartblog",
+                "revsliderprestashop"
+            ],
+            "to_disable": [
+                "blockwishlist",
+                "productcomments"
+            ]
+        },
+        "hooks": {
+            "custom_hooks": [
+                {
+                    "name": "displayNovContact",
+                    "title": "displayNovContact",
+                    "description": "Add a widget Contact Form"
+                }
+            ],
+            "modules_to_hook": {
+                "displayNav": [
+                    "ps_customeraccountlinks",
+                    "ps_languageselector",
+                    "ps_currencyselector"
+                ],
+                "displayNav1": [
+                    "ps_languageselector",
+                    "ps_currencyselector"
+                ],
+                "displayNav2": [
+                    "ps_shoppingcart"
+                ],
+                "displayMyAccountBlock": [
+                    "ps_customersignin",
+                    "novblockwishlist",
+                    "ps_languageselector",
+                    "ps_currencyselector"
+                ],
+                "displayLeftColumnProduct": [
+                    "ps_categorytree",
+                    "novblocktags"
+                ],
+                "displayRightColumnProduct": [
+                    "ps_categorytree",
+                    "novblocktags"
+                ],
+                "displayLeftColumn": [
+                    "ps_categorytree",
+                    "ps_facetedsearch",
+                    "novblocktags"
+                ],
+                "displayRightColumn": [
+                    "ps_categorytree",
+                    "ps_facetedsearch",
+                    "novblocktags"
+                ],
+                "displaySmartBlogLeft": [
+                    "smartblogsearch",
+                    "ps_categorytree",
+                    "smartblogrecentposts",
+                    "smartblogtag"
+                ],
+                "displaySmartBlogRight": [
+                    "smartblogsearch",
+                    "ps_categorytree",
+                    "smartblogrecentposts",
+                    "smartblogtag"
+                ],
+                "displayNovContact": [
+                    "contactform"
+                ],
+                "displayHome": [
+                    "novthemeconfig"
+                ],
+                "displaySearch": [
+                    "ps_searchbar"
+                ],
+                "displayProductButtons": [
+                    "ps_sharebuttons"
+                ],
+                "displayReassurance": [
+                    "blockreassurance"
+                ],
+                "displayOrderConfirmation2": [
+                    "ps_featuredproducts"
+                ],
+                "displayCrossSellingShoppingCart": [
+                    "ps_featuredproducts"
+                ],
+                "displayProductListReviews": [
+                    "novproductcomments"
+                ]
+            }
+        },
+        "image_types": {
+            "cart_default": {
+                "width": 125,
+                "height": 125,
+                "scope": [
+                    "products"
+                ]
+            },
+            "small_default": {
+                "width": 150,
+                "height": 150,
+                "scope": [
+                    "products",
+                    "categories",
+                    "manufacturers",
+                    "suppliers"
+                ]
+            },
+            "medium_default": {
+                "width": 270,
+                "height": 270,
+                "scope": [
+                    "products",
+                    "manufacturers",
+                    "suppliers"
+                ]
+            },
+            "home_default": {
+                "width": 380,
+                "height": 380,
+                "scope": [
+                    "products"
+                ]
+            },
+            "large_default": {
+                "width": 490,
+                "height": 490,
+                "scope": [
+                    "products",
+                    "manufacturers",
+                    "suppliers"
+                ]
+            },
+            "extra_large_default": {
+                "width": 570,
+                "height": 570,
+                "scope": [
+                    "products"
+                ]
+            },
+            "category_default": {
+                "width": 141,
+                "height": 180,
+                "scope": [
+                    "categories"
+                ]
+            },
+            "stores_default": {
+                "width": 170,
+                "height": 115,
+                "scope": [
+                    "stores"
+                ]
+            },
+            "manu_default": {
+                "width": 170,
+                "height": 120,
+                "scope": [
+                    "manufacturers"
+                ]
+            }
+        }
+    },
+    "theme_settings": {
+        "default_layout": "layout-one-column",
+        "layouts": {
+            "index": "layout-full-width",
+            "product": "layout-left-column",
+            "category": "layout-left-column",
+            "best-sales": "layout-left-column",
+            "new-products": "layout-left-column",
+            "prices-drop": "layout-left-column",
+            "contact": "layout-one-column"
+        }
+    },
+    "dependencies": {
+        "modules": [
+            "novthemeconfig",
+            "jscomposer",
+            "novmanagevcaddons",
+            "novadvancedsearch",
+            "novblocktags",
+            "novblockwishlist",
+            "novloginsocial",
+            "novlookbook",
+            "novmegamenu",
+            "novproductcomments",
+            "novtestimonials",
+            "novverticalmenu",
+            "smartblog",
+            "revsliderprestashop"
+        ]
+    },
+    "directory": "D:\\xampp\\htdocs\\nety_project\/themes\/vinova_nuranium\/",
+    "preview": "themes\/vinova_nuranium\/preview.png"
+}

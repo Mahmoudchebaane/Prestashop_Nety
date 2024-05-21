@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../../chunks/_rollupPluginBabelHelpers ../../../chunks/tslib.es6 ../../../core/lang ../../../core/accessorSupport/decorators/property ../../../core/accessorSupport/ensureType ../../../core/accessorSupport/decorators/subclass ../../../core/accessorSupport/decorators/writer ./BaseFunctionArguments".split(" "),function(l,b,m,e,a,n,p,q){var f;a=f=function(h){function g(){var c=h.apply(this,arguments)||this;c.rasters=[];c.processAsMultiband=!1;return c}l._inheritsLoose(g,h);var k=g.prototype;
+k.writeRasters=function(c,r){r.rasters=c.map(d=>"number"===typeof d||"string"===typeof d?d:d.toJSON())};k.clone=function(){return new f({method:this.operation,processAsMultiband:this.processAsMultiband,rasters:m.clone(this.rasters)})};return g}(q);b.__decorate([e.property({json:{write:!0}})],a.prototype,"operation",void 0);b.__decorate([e.property({json:{write:!0}})],a.prototype,"rasters",void 0);b.__decorate([p.writer("rasters")],a.prototype,"writeRasters",null);b.__decorate([e.property({json:{write:!0}})],
+a.prototype,"processAsMultiband",void 0);return a=f=b.__decorate([n.subclass("esri.layers.support.rasterFunctions.LocalFunctionArguments")],a)});

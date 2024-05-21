@@ -1,0 +1,4 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/_rollupPluginBabelHelpers","./basicInterfaces","./Geometry"],function(c,f,g,d){d=function(b){function e(a,h,k,l,m,n,p){a=b.call(this,a,h,g.PrimitiveType.Triangle,p)||this;a.path=k;a.geometrySR=l;a.upVectorAlignment=m;a.stencilWidth=n;return a}f._inheritsLoose(e,b);return e}(d.Geometry);c.PathGeometry=d;c.isPathGeometry=function(b){return"upVectorAlignment"in b};Object.defineProperties(c,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

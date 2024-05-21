@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>requestforquote</name>
+    <displayName><![CDATA[Request For Quote]]></displayName>
+    <version><![CDATA[2.0.0]]></version>
+    <description><![CDATA[Customers can request a quote using this module.]]></description>
+    <author><![CDATA[FMM Modules]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

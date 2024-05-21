@@ -1,0 +1,114 @@
+// BREADCRUMB
+.breadcrumb {
+  background: white; //#f2f3f7;
+  color: #9B9B9B;
+  font-family: $font-family-default;
+  font-size: 1.2rem;
+  @include border-radius(0);
+  margin-bottom: 0;
+  padding: 0;
+
+  ol {
+    @include rtl-padding-left(0);
+    margin-bottom: 0;
+    padding: 16px 0;
+
+    li {
+      padding: 0 15px;
+      position: relative;
+      display: inline-block;
+      color: $breadcrumb-link-color;
+      min-height: 10px;
+
+      >span {
+        color: $text-color;
+      }
+
+      a {
+        font-size: 14px;
+        color: $text-color;
+        font-family: $font-family-default;
+        font-weight: 500;
+
+        &:hover {
+          color: $theme-color-default;
+        }
+      }
+
+      &:not(:first-child) {
+        cursor: none;
+        pointer-events: none;
+
+        &:before {
+          // content: "";
+          // position: absolute;
+          // @include rtl-left(-2px);
+          // top: calc(50% - 2px);
+          // font-size: 1.6rem;
+          // width: 4px;
+          // height: 4px;
+          // background: $text-color;
+          // @include rotate(45deg);
+          // line-height: 1.6rem;
+          content: ">";
+          position: absolute;
+          left: -2px;
+          top: calc(50% - 9px);
+          font-size: 1.6rem;
+          width: 4px;
+          height: 4px;
+          font-size: 13px;
+          color: #9B9B9B;
+        }
+      }
+
+      &:first-child {
+        @include rtl-padding-lr(0, 15px);
+
+        a {
+          color: $violet;
+          font-weight: 500;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &:first-child:lang(ar) {
+        &::before {
+          content: ">";
+          display: block;
+          position: absolute;
+          left: -2px;
+          top: calc(50% - 9px);
+          font-size: 1.6rem;
+          width: 4px;
+          height: 4px;
+          font-size: 13px;
+          color: #9B9B9B;
+        }
+      }
+
+      &:last-child {
+        @include rtl-padding-lr(15px, 0);
+      }
+
+      &:last-child:lang(ar) {
+        &::before {
+          content: " ";
+        }
+      }
+    }
+  }
+}
+
+
+.breadcrumb-title-page {
+  font-size: 2.4rem;
+  font-family: $font-family-primary;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  line-height: 1;
+}

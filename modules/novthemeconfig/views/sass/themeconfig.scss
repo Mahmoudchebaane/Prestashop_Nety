@@ -1,0 +1,349 @@
+$theme-color: #388dc8 !default;
+
+@mixin border-arrow-top ($width, $height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 $width/2 $height $width/2;
+  border-color: transparent transparent $color transparent;
+}
+@mixin border-arrow-bottom ($width, $height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $height $width/2 0 $width/2;
+  border-color: $color transparent transparent transparent;
+}
+@mixin border-arrow-right ($width, $height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $height/2 0 $height/2 $width;
+  border-color: transparent transparent transparent $color;
+}
+@mixin border-arrow-left ($width, $height, $color){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $height/2 $width $height/2 0;
+  border-color: transparent $color transparent transparent;
+}
+
+.w50 {width: 50px;}
+.w100 {width: 100px;}
+.w150 {width: 150px;}
+.w200 {width: 200px;}
+
+.mr10 {margin-right: 10px;}
+.mr15 {margin-right: 15px;}
+.mr20 {margin-right: 20px;}
+.mr25 {margin-right: 25px;}
+.mr30 {margin-right: 30px;}
+.mb10 {margin-bottom: 10px;}
+.mb15 {margin-bottom: 15px;}
+.mb20 {margin-bottom: 20px;}
+.mb25 {margin-bottom: 25px;}
+.mb30 {margin-bottom: 30px;}
+.m-auto {margin: 0 auto;}
+.inline {display: inline-block;}
+
+.nov-config-tabs, .nov-config-contents {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+.row-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-shadow: 0 0 20px rgba(#000, 0.1);
+    &:before, &:after {
+        width: 0;
+        content: "";
+        display: table;
+    }
+    @media (min-width: 992px) {
+        .nov-config-tabs {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 13%;
+            -ms-flex: 0 0 13%;
+            flex: 0 0 13%;
+            max-width: 13%;
+        }
+        .nov-config-contents {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 87%;
+            -ms-flex: 0 0 87%;
+            flex: 0 0 87%;
+            max-width: 87%;
+        }
+    }
+}
+
+.themeconfig-heading {
+    padding-top: 30px;
+    padding-bottom: 43px;;
+    .module-name {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $theme-color;
+    }
+}
+
+/* Extension Bootstrap */
+.bootstrap textarea{height: auto;overflow: inherit !important;}
+.bootstrap .prestashop-switch {
+    background-color: #fff;
+    border: 3px solid $theme-color;
+    box-shadow: none;
+    border-radius: 2px;
+    height: 39px;
+    a {
+        background-color: $theme-color;
+        border: 1px solid $theme-color;
+        border-radius: 0;
+    }
+    label {
+        line-height: 35px;
+        font-weight: bold;
+        font-size: 11px;
+        color: $theme-color;
+    }
+    input:checked + label {
+        color: #fff;
+    }
+}
+#content.bootstrap .help-block {
+    margin-bottom: 0;
+}
+.bootstrap .input-group-addon:last-child {
+    padding: 6px 12px;
+}
+#content.bootstrap select {
+    -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+   background: url(../img/select-bg.png) no-repeat scroll 275px center;
+}
+div.bootstrap .dummyfile {
+    width: 368px;
+    input[type='text'] {
+        height: 39px;
+        border-radius: 2px 0 0 2px !important;
+    }
+    .input-group-addon {
+        display: none;
+    }
+    .input-group-btn:last-child > .btn {
+        height: 39px;
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: #fff;
+        padding: 6px 19px;
+        border-radius: 2px;
+        margin-left: 0;
+        i {
+            color: #fff;
+            margin-right: 10px;
+        }
+    }
+}
+
+div.bootstrap .input-mini {width: 60px;}
+div.bootstrap .input-small {width: 90px;}
+div.bootstrap .input-medium {width: 150px;}
+div.bootstrap .input-large {width: 300px;height: 39px; border-color: #ebebeb;background-color: #fff;}
+div.bootstrap .input-xlarge {width: 300px;}
+div.bootstrap .input-xxlarge {width: 300px;}
+div.bootstrap .fixed-width-xl {width: 300px !important;height: 39px; border-color: #ebebeb;background-color: #fff;}
+.bootstrap .form-control, .bootstrap input[type="text"], .bootstrap input[type="search"],
+.bootstrap input[type="password"], .bootstrap textarea, .bootstrap select{color: #777; font-family: 'Arial'; height: 39px;}
+.icon-AdminSP{height:18px; vertical-align:middle !important;  background:url(../../../logo.png) no-repeat ;display:inline-block; background-size:100% auto;}
+
+.textarea-autosize {
+    min-height: 200px !important;
+    resize: vertical !important;
+}
+
+/* Layout */
+.heading-section{color: #fff; overflow: hidden;}
+.heading-section .module-title{float: left;width: 250px; background: #383F4C;padding: 12px 20px; font-size: 14px;height: 48px;box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.1) inset;}
+.heading-section .buttons_section{background: #F1F1F1;padding: 10px 15px;overflow: hidden;height: 48px;box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.1) inset;}
+.footer-section{ color: #999; overflow: hidden; background: #2E3138;border-top: 1px solid #565D6B;padding:  10px 20px;}
+.footer-section span{float: right;margin-top: 5px;}
+#configuration_form  .form-horizontal .form-group {margin:0;}
+
+.nov-config-tabs {
+    border-left: 5px solid $theme-color;
+    background: #297bb4;
+}
+
+#nov-config-tabs {
+    padding-left: 0;
+    margin-bottom: 0;
+    .tab {
+        background: #297bb4;
+        color: #fff;
+        font-size: 13px;
+        display: block;
+        font-weight: bold;
+        padding: 16px 5px 16px 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        border-radius: 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid #388dc8;
+        }
+        &.active, &:hover {
+            background-color: #fff;
+            color: $theme-color;
+        }
+    }
+}
+.nov-config-contents {
+    background-color: #fff;
+    padding: 35px 129px 35px 48px;
+}
+
+#nov-config-tabscontent {
+    padding: 0;
+}
+.bootstrap .img-view{
+    float: right; margin-right: 50px;margin-top: -40px;width: 200px;
+
+}
+
+.bootstrap .form-horizontal .control-label {
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666666;
+    padding-top: 10px;
+}
+.image-content {
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-top: 28px;
+}
+.logo-image-content {
+    background-color: #f2f2f2;
+    padding: 30px;
+    margin-top: 20px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        @include border-arrow-top(32px, 10px, #f2f2f2);
+        top: -10px;
+        left: 30px;
+    }
+    .logo_wrap {
+        span {
+            font-size: 11px;
+            margin-bottom: 15px;
+            display: block;
+            color: #909090;
+        }
+        height: auto; display: inline-block; margin-right: 25px; overflow: hidden; position: relative;vertical-align: top;
+    }
+}
+#configuration_form .form-group {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+#configuration_form option {padding: 2px 10px;}
+
+/*Options Fonts*/
+.fontshow{position: absolute;left: 320px;top: 3px;display: inline-block;padding: 3px 10px; font-size: 14px;}
+
+/*Options Layout*/
+.parttern_wrap{width: 50px;height: 50px;display: inline-block; margin-right: 3px;overflow: hidden;position: relative;}
+.parttern_wrap > span{position: absolute;background: rgba(255,255,255,0.8); z-index: 2; padding: 2px 5px;}
+
+.bootstrap .btn.save-button {background: #8BC954;color: white;border-color: #72AA3D; box-shadow: none;}
+
+/* Button Custom */
+#content.bootstrap .novthemeconfig .panel{
+    border-radius: 0;border: none; box-shadow: none;margin: 0;display:none;padding: 0;
+    position: static;
+}
+#content.bootstrap .novthemeconfig .panel:first-child{display:block;}
+#content.bootstrap .novthemeconfig .panel.active{display:block;}
+#content.bootstrap .novthemeconfig .panel .panel-heading{margin: -10px 0 15px; padding: 0;}
+
+#content.bootstrap .novthemeconfig .panel .form-wrapper > .form-group {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#nov_customcss,
+#nov_customjS,
+#nov_product_customtab {
+    min-height: 400px !important;
+    overflow: auto !important;
+}
+
+#configuration_form .panel-footer {
+    padding: 0 0 40px;
+    margin: 0;
+    background-color: transparent;
+    border-top: none;
+    position: absolute;
+    border-bottom: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    bottom: -124px;
+    text-align: right;
+    .btn {
+        padding: 14px 37px;
+        background: #fff;
+        border-color: $theme-color;
+        color: $theme-color;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        i {
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 12px;
+            width: auto;
+            height: auto;
+            vertical-align: middle;
+            color: $theme-color;
+        }
+        &:hover {
+            background-color: $theme-color;
+            color: #fff;
+            i {
+                color: #fff;
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
+
+.remove-image-content {
+    small {
+        color: #909090;
+        font-size: 12px;
+    }
+    a {
+        color: $theme-color;
+        font-weight: bold;
+        i {
+            color: #bfbfbf;
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(b){b.DomainValidationError=void 0;(function(a){a.VALUE_OUT_OF_RANGE="domain-validation-error::value-out-of-range";a.INVALID_CODED_VALUE="domain-validation-error::invalid-coded-value"})(b.DomainValidationError||(b.DomainValidationError={}));b.getDomainRange=function(a){if(a&&"range"===a.type)return{min:"range"in a?a.range[0]:a.minValue,max:"range"in a?a.range[1]:a.maxValue}};b.validateDomainValue=function(a,d){switch(a.type){case "range":const e="range"in a?a.range[0]:a.minValue;
+a="range"in a?a.range[1]:a.maxValue;if(null!=e&&+d<e||null!=a&&+d>a)return b.DomainValidationError.VALUE_OUT_OF_RANGE;break;case "coded-value":if(null==a.codedValues||a.codedValues.every(c=>null==c||c.code!==d))return b.DomainValidationError.INVALID_CODED_VALUE;break;case "codedValue":if(null==a.codedValues||a.codedValues.every(c=>null==c||c.code!==d))return b.DomainValidationError.INVALID_CODED_VALUE}return null};Object.defineProperties(b,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

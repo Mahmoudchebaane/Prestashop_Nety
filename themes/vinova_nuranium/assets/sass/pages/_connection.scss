@@ -1,0 +1,693 @@
+.page-authentication .form-group .btn:lang(ar) {
+    left: 0;
+    right: auto;
+}
+
+.cnxPage {
+    background-color: $violet;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+    display: flex;
+    .authOptions:lang(ar) {
+        border-radius: 0px 45px 45px 0px;
+    }
+    .authOptions {
+        border-radius: 45px 0px 0px 45px;
+        background-color: white;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 40px;
+        #notification {
+            color: red;
+            font-size: 15px;
+            padding: 0px 20px;
+            padding-top: 30px;
+        }
+        h2 {
+            border-bottom: none !important;
+            color: black;
+            text-transform: none;
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #6c6c6c;
+            font-size: 18px;
+            padding-top: 15px;
+        }
+        .nextBtn {
+            border-radius: 28px;
+            text-transform: capitalize;
+            height: 40px;
+            width: auto;
+            background-color: $violet;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            padding: 0 35px;
+            margin: 25px 20px;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $Jaune;
+                color: $violet;
+                border-color: $Jaune;
+            }
+        }
+
+        .option-group {
+            width: 100%;
+            // max-width: 400px;
+            height: 170px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.25em;
+            font-size: 4rem;
+            margin: 0.2em auto;
+            transform: translateZ(0);
+            margin-top: 50px;
+        }
+        .option-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+            // margin: 0 -10%;
+        }
+        .option {
+            box-shadow: 0px 3px 12px $shadow;
+            border-radius: 18px;
+            overflow: hidden;
+            flex: 1;
+            display: block;
+            padding: 0.5em;
+            background: #fff;
+            position: relative;
+            margin: 20px;
+            // margin-right: 0.2em;
+            border-radius: 0.25em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: row;
+            cursor: pointer;
+            // opacity: 0.5;
+            transition-duration: 0.8s, 0.6s;
+            transition-property: transform, opacity;
+            transition-timing-function: cubic-bezier(0.98, 0, 0.22, 0.98), linear;
+            will-change: transform, opacity;
+        }
+        // .option:last-child {
+        //     margin-right: 0;
+        // }
+        .option__indicator {
+            display: block;
+            transform-origin: left bottom;
+            transition: inherit;
+            will-change: transform;
+            position: absolute;
+            // top: 0.5em;
+            top: 0.65em;
+            // right: 0.5em;
+            left: 0.5em;
+        }
+        .option__indicator:before,
+        .option__indicator:after {
+            content: "";
+            display: block;
+            border: solid 2px $violet;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .option__indicator:after {
+            background: $violet;
+            transform: scale(0);
+            transition: inherit;
+            will-change: transform;
+        }
+        .option-input {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            visibility: hidden;
+        }
+        .option__label {
+            // display: block;
+            font-size: 17px;
+            color: black;
+            font-weight: 600;
+            transform-origin: left bottom;
+            // transform: translateX(20%) scale(0.7);
+            transition: inherit;
+            will-change: transform;
+            padding-left: 20px;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            font-size: 17px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: stretch;
+
+            p {
+                font-size: 14px;
+                color: #6c6c6c;
+                font-weight: 500;
+            }
+        }
+        .option__label sub {
+            margin-left: 0.25em;
+            font-size: 0.4em;
+            display: inline-block;
+            vertical-align: 0.3em;
+        }
+        // .option__label:after {
+        //     content: "";
+        //     display: block;
+        //     border: solid 2px $violet;
+        //     width: 100%;
+        //     transform-origin: 0 0;
+        //     transform: scaleX(0.2);
+        //     transition: inherit;
+        //     will-change: transform;
+        // }
+        .option:last-child .option__label {
+            // transform: translateX(0%) scale(0.7);
+        }
+        .option:last-child .option__indicator {
+            // transform: translateX(-20%);
+        }
+        .option-input:checked ~ .option {
+            // transform: translateX(-20%) translateX(0.2em);
+        }
+        .option-input:checked ~ .option .option__indicator {
+            transform: translateX(0%);
+        }
+        .option-input:checked ~ .option .option__label {
+            // transform: translateX(40%) scale(0.7);
+        }
+        .option-input:first-child:checked ~ .option {
+            // transform: translateX(20%) translateX(-0.2em);
+        }
+        .option-input:first-child:checked ~ .option .option__indicator {
+            // transform: translateX(-40%);
+        }
+        .option-input:first-child:checked ~ .option .option__label {
+            // transform: translateX(0%) scale(0.7);
+        }
+        .option-input:nth-child(1):checked ~ .option:nth-of-type(1),
+        .option-input:nth-child(2):checked ~ .option:nth-of-type(2) {
+            opacity: 1;
+        }
+        .option-input:nth-child(1):checked ~ .option:nth-of-type(1) .option__indicator,
+        .option-input:nth-child(2):checked ~ .option:nth-of-type(2) .option__indicator {
+            transform: translateX(0);
+        }
+        .option-input:nth-child(1):checked ~ .option:nth-of-type(1) .option__indicator::after,
+        .option-input:nth-child(2):checked ~ .option:nth-of-type(2) .option__indicator::after {
+            transform: scale(1);
+        }
+        .option-input:nth-child(1):checked ~ .option:nth-of-type(1) .option__label,
+        .option-input:nth-child(2):checked ~ .option:nth-of-type(2) .option__label,
+        .option-input:nth-child(1):checked ~ .option:nth-of-type(1) .option__label::after,
+        .option-input:nth-child(2):checked ~ .option:nth-of-type(2) .option__label::after {
+            transform: scale(1);
+        }
+    }
+    .leftSide {
+        color: white;
+        width: 50%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        // align-items: start;
+        justify-content: space-between;
+        .firstBloc {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 10px;
+
+            h1 {
+                font-size: 50px;
+            }
+            h2 {
+                font-size: 35px;
+            }
+            p {
+                padding: 30px 0;
+                font-size: 20px;
+            }
+        }
+
+        .imgLeft {
+            height: 40%;
+            /* display: flex; */
+            padding-left: 60px;
+        }
+
+        a {
+            border: 1px solid #ffffff;
+            background-color: $violet;
+            color: #ffffff;
+            border-radius: 35px;
+            font-weight: 500;
+            // padding: 10px 20px;
+            height: 40px;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $violet;
+                background-color: $Jaune;
+                border: 1px solid $Jaune;
+            }
+        }
+    }
+
+    .block-form-login {
+        background-color: white;
+        width: 50%;
+        height: 100%;
+        max-width: 100%;
+        border-radius: 45px 0px 0px 45px;
+        // display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        .LoginFooterLinks {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .formulaire {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+        }
+
+        .inputName {
+            color: black;
+            text-transform: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 10px 0;
+        }
+        .inputName:lang(ar) {
+            font-weight: 500;
+        }
+
+        .login-form {
+            width: 70%;
+            // height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            .help-block ul li {
+                white-space: nowrap;
+            }
+        }
+        .form-footer {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            .forgot-password {
+                color: $violet;
+                font-weight: 600;
+            }
+        }
+
+        .titleDesc {
+            color: #6c6c6c;
+            font-size: 20px;
+        }
+
+        .loginBtn {
+            // border-radius: 28px;
+            // text-transform: capitalize;
+            // height: 40px;
+            // width: auto;
+            // background-color: $violet;
+            // color: #ffffff;
+            // font-size: 14px;
+            // font-weight: 600;
+            // padding: 0px 30px;
+            // outline: none;
+            // border: none;
+
+            // &:hover,
+            // &:active,
+            // &:focus {
+            //     background-color: $Jaune;
+            //     color: $violet;
+            //     border-color: $Jaune;
+            // }
+            @include connectionBtn();
+        }
+
+        .page_title_account {
+            border-bottom: none !important;
+            color: black;
+            text-transform: none;
+            font-size: 35px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .page_title_account:lang(ar) {
+            text-align: right;
+        }
+
+        .novform-password,
+        .novform-email {
+            input {
+                padding-left: 10px;
+                height: 45px;
+                border: 1px solid $violet;
+                border-radius: 10px;
+                color: black;
+            }
+            input:lang(ar) {
+                padding-right: 20px;
+                padding-left: 0px;
+            }
+
+            &::after {
+                background: none;
+            }
+
+            &::before {
+                visibility: hidden;
+            }
+        }
+    }
+    .block-form-login:lang(ar) {
+        border-radius: 0px 45px 45px 0px;
+    }
+}
+.forgotten-password {
+    .item {
+        display: flex;
+        justify-content: center;
+    }
+    p {
+        color: black;
+        font-size: 20px;
+        width: 70%;
+    }
+}
+#authentication {
+    background-color: $violet !important;
+}
+#authentication .text-danger {
+    color: red !important;
+    li {
+        &::marker {
+            color: transparent;
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .cnxPage .leftSide .firstBloc {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 1200px) {
+    .cnxPage .leftSide {
+        width: 50%;
+    }
+    .authOptions,
+    .cnxPage .block-form-login {
+        width: 60%;
+    }
+    .cnxPage {
+        .leftSide {
+            .firstBloc {
+                padding: 0 50px;
+            }
+            .imgLeft {
+                width: 100%;
+                padding-left: 0px;
+            }
+        }
+    }
+    .authOptions {
+        padding: 0 20px;
+        // .option-group {
+        //     height: 200px;
+        // }
+        .option {
+            margin: 15px;
+        }
+    }
+    .footerBtn {
+        flex-direction: column;
+        .backLink {
+            padding-top: 0px;
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .cnxPage {
+        .authOptions {
+            .option-group {
+                height: auto;
+            }
+            .option-container {
+                flex-direction: column;
+            }
+            .footerBtn {
+                flex-direction: column;
+                .backLink {
+                    padding-top: 0px;
+                }
+            }
+        }
+        .leftSide .imgLeft img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .cnxPage .block-form-login .login-form {
+        width: 100%;
+        .LoginFooterLinks {
+            flex-direction: column;
+            align-items: flex-start;
+            .forgot-password {
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .cnxPage {
+        flex-direction: column;
+        .leftSide {
+            width: 100%;
+            height: auto;
+            align-items: center;
+            justify-content: flex-start;
+            .firstBloc {
+                // align-items: center;
+                padding-top: 20px;
+                h1 {
+                    font-size: 40px;
+                }
+                h2 {
+                    // text-align: right;
+                    font-size: 20px;
+                }
+                a {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+                p {
+                    padding: 20px 0;
+                    font-size: 15px;
+                }
+            }
+            .imgLeft {
+                height: 300px;
+                width: 100%;
+                display: none;
+                padding-bottom: 15px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .authOptions {
+            width: 100%;
+            border-radius: 45px 45px 0px 0px;
+            padding: 0 20px;
+            padding-top: 30px;
+
+            p {
+                font-size: 15px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            .option-group {
+                height: auto;
+                margin-top: 0px;
+            }
+            .option-container {
+                flex-direction: column;
+            }
+            .option {
+                margin: 10px;
+            }
+        }
+        .authOptions:lang(ar) {
+            border-radius: 45px 45px 0px 0px;
+        }
+        .block-form-login:lang(ar) {
+            border-radius: 45px 45px 0px 0px;
+        }
+        .block-form-login {
+            width: 100%;
+            border-radius: 45px 45px 0px 0px;
+            padding: 40px 20px;
+            align-items: center;
+            .login-form {
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                .LoginFooterLinks {
+                    // flex-direction: column;
+                    align-items: center;
+                    .forgot-password {
+                        margin-bottom: 0px !important;
+                    }
+                }
+            }
+            .form-footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .cnxPage {
+        flex-direction: column;
+        .leftSide {
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            .firstBloc {
+                // align-items: center;
+                padding-top: 20px;
+                h1 {
+                    font-size: 40px;
+                }
+                h2 {
+                    // text-align: right;
+                    font-size: 20px;
+                }
+            }
+            .imgLeft {
+                height: 300px;
+                width: 100%;
+                padding-bottom: 15px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        #authOptions {
+            width: 100%;
+            border-radius: 45px 45px 0px 0px;
+            padding: 40px 20px;
+            align-items: center;            
+            .option-group {
+                height: auto;
+                margin-top: 50px;
+            }
+            .option-container {
+                flex-direction: column;
+            }
+            .footerBtn {
+                flex-direction: column;
+                align-items: start;
+                .nextBtn {
+                    margin: 25px 10px;
+                }
+                .backLink {
+                    margin: 0 10px;
+                }
+            }
+        }
+        .authOptions:lang(ar) {
+            border-radius: 45px 45px 0px 0px;
+        }
+        .block-form-login:lang(ar) {
+            border-radius: 45px 45px 0px 0px;
+        }
+        .block-form-login {
+            width: 100%;
+            border-radius: 45px 45px 0px 0px;
+            padding: 40px 20px;
+            align-items: center;
+            .login-form {
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                .LoginFooterLinks {
+                    // flex-direction: column;
+                    align-items: center;
+                    .forgot-password {
+                        margin-bottom: 0px !important;
+                    }
+                }
+            }
+            .form-footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    .forgotten-password {
+        p {
+            font-size: 13px;
+        }
+    }
+    #password {
+        .inputLabel {
+            font-size: 14px;
+        }
+        .breadcrumb ol li a {
+            font-size: 11px;
+        }
+    }
+}
+
+@media (min-height: 600px) {
+    .cnxPage .leftSide .firstBloc {
+        height: auto;
+    }
+}

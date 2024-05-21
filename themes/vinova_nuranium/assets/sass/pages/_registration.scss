@@ -1,0 +1,183 @@
+// #recuperation,
+#customer-form .form-control-comment {
+    display: none !important;
+}
+#recuperation,
+#SubscriptionEmail,
+#SMS,
+#SubscriptionForm {
+    display: none;
+}
+#authOptions{
+    .backLink{width: auto;}
+    .footerBtn{
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+#SubscriptionEmail,
+#SubscriptionForm {
+    input {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 40px;
+        border: 1px solid #59049d;
+        border-radius: 10px;
+        color: black;
+    }
+    .novform-firstname,
+    .novform-lastname {
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    .text-danger {
+        color: red !important;
+    }
+}
+
+#SMS {
+    h2 {
+        border-bottom: none !important;
+        color: black;
+        text-transform: none;
+        font-size: 35px;
+        margin-bottom: 5px;
+    }
+
+    #sms_error {
+        color: $red;
+    }
+    #renvoyersms {
+        cursor: pointer;
+    }
+}
+.inputField {
+    padding-left: 10px;
+    height: 45px;
+    font-weight: 500;
+    border: 1px solid #59049d;
+    border-radius: 10px;
+    color: black;
+}
+.inputField:lang(ar) {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+.inputLabel {
+    color: black;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 1.7rem;
+    padding: 10px 0;
+}
+.recuperation {
+    border-radius: 45px 0px 0px 45px;
+    background-color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 40px;
+    h2 {
+        border-bottom: none !important;
+        color: black;
+        text-transform: none;
+        font-size: 35px;
+        margin-bottom: 5px;
+    }
+    p {
+        color: #6c6c6c;
+        font-size: 18px;
+        padding-top: 15px;
+    }
+}
+.SubscriptionBtn {
+    @include connectionBtn();
+}
+.backLink {
+    color: #444;
+    font-weight: 700;
+    font-size: 13px;
+    // padding-top: 40px;
+    // text-align: right;
+    width: 100%;
+    &:active,
+    &:hover,
+    &:focus {
+        color: $violet;
+    }
+    //border: ;
+}
+
+.novform-psgdpr {
+    text-align: right;
+}
+.novform-psgdpr:lang(ar) {
+    text-align: left;
+}
+.footerBtn {
+    display: flex;
+    align-items: end;
+    // justify-content: space-between;
+    justify-content: end;
+    width: 100%;
+}
+.prevBtn {
+    @include connectionBtn();
+    color: $violet;
+    border: 1px solid $violet;
+    background-color: transparent;
+}
+
+@media (max-height: 770px) {
+    #SubscriptionEmail,
+    #authOptions,
+    #recuperation,
+    #SMS,
+    #loginForm,
+    #SubscriptionForm {
+        height: 100vh;
+    }
+    .cnxPage{height: auto;}
+    .leftSide{.imgLeft{height: 300px !important;}}
+    .block-form-login {margin: 0;}
+}
+@media (max-width: 992px) {
+    .recuperation {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    #SubscriptionEmail,
+    #SubscriptionForm {
+        height: auto;
+    }
+}
+@media (max-width: 576px) {
+    .recuperation {
+        width: 100%;
+        padding: 40px 20px;
+        border-radius: 45px 45px 0px 0px;
+    }
+    .prevBtn {
+        padding: 0px 15px;
+        height: 32px;
+        font-size: 12px;
+    }
+    .recuperation h2,
+    #SMS h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 650px) {
+    .cnxPage .block-form-login .form-footer {
+        margin-top: 10px !important;
+    }
+}

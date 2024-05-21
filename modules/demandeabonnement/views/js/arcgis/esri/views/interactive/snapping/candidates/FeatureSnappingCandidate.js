@@ -1,0 +1,4 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../chunks/_rollupPluginBabelHelpers","../SnappingDomain","./SnappingCandidate"],function(c,f,g,b){b=function(d){function e({coordinateHelper:a,targetPoint:h,objectId:k,constraint:l,elevationInfo:m}){a=d.call(this,a,h,l,m,g.SnappingDomain.FEATURE)||this;a.objectId=k;return a}f._inheritsLoose(e,d);return e}(b.SnappingCandidate);c.FeatureSnappingCandidate=b;Object.defineProperties(c,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

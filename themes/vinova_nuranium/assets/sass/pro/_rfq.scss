@@ -1,0 +1,108 @@
+#module-requestforquote-rfq {
+    .breadcrumb {
+        display: none;
+    }
+}
+
+#pq_form_major {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#quoteModal {
+    .modal-content {
+        border-radius: 30px;
+    }
+    .modal-dialog {
+        height: auto;
+        width: 50%;
+        max-width: inherit;
+        label{
+            color:black;
+            font-size: 14px;
+        }
+        input::-webkit-file-upload-button {
+            background-color: $lowOpactity;
+            height: 100%;
+            padding: 5px 10px;
+            border: none;
+            margin: 0;
+        }
+        input[type="file"] {
+            padding: 0;
+        }
+        .submit{padding-top: 0;}
+        #fmm_submit_btn{
+            background-color: $violet;
+            color: white;
+            border-radius: 10px;
+            text-transform: none;
+            outline: none;
+            border: none;
+            padding: 10px 32px;
+            font-size: 14px;
+            font-weight: 600;
+        
+            &:focus,&:active,&:hover{background-color: darken($violet, $amount: 10%)}
+        }
+    }
+    .modal-header {
+        border-bottom: 1px solid #eceeef;
+        background-color: $lowOpactity;
+        height: 70px;
+        border-radius: 30px 30px 0 0 ;
+        button {
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            font-size: 24px;
+            padding: 15px 30px 0;
+            color: #918E8E;
+            &:focus {
+                outline: none;
+            }
+        }
+        .modal-title {
+            color: $violet;
+            text-align: center;
+            font-size: 18px;
+            width: 100%;
+        }
+    }
+    .modal-body{
+        padding-top: 45px;
+       
+        input.form-control{height: 40px;}
+        textarea.form-control{height: 150px;}
+    }
+}
+
+#emailError, #nameError, #companyError,#telError{
+    color: red;
+}
+
+
+@media (max-width:992px) {
+    #quoteModal .modal-dialog{width: 65%;}
+}
+@media (max-width:768px) {
+    #quoteModal {
+     
+        .modal-dialog{
+        width: 75%;
+        padding-top: 80px;
+    }}
+   
+}
+
+@media (max-width:576px) {
+    #quoteModal {
+        .modal-header .modal-title{
+            font-size: 13px;
+            padding: 11px 35px;
+        }
+        .modal-dialog{
+        width: auto;
+    }}
+}
+

@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../../Color"],function(b,a){var c=new a([255,127,0]);let d=function(){this.color=c;this.opacity=.5;this.radius=5},e=function(){this.color=new a([127,127,127]);this.opacity=.5;this.radius=5},f=function(){this.lineSizeFraction=.8},g=function(){this.color=c;this.opacity=.5;this.linePaddingPx=4;this.focusedLinePaddingPx=6;this.lengthFraction=.5;this.minLengthMeters=.1},h=function(){this.calloutOffsetPx=18;this.calloutOpacity=.5;this.calloutWidth=2;this.discScale=.3;this.focusMultiplier=
+2},k=function(){this.lineSizeFraction=.25},l=function(){this.marginPx=20;this.minScreenLengthFontSizeFactor=5},m=function(){this.color=new a([255,127,0,.5])};const n=new function(){this.pointManipulators=new d;this.offsetManipulator=new g;this.orientationManipulator=new h;this.markers=new f;this.labels=new l;this.offsetLine=new k;this.constraint=new m;this.constraintThresholdPx=10;this.initialOffsetPx=50;this.orientationSnapThresholdDegrees=5;this.disabledPointIndicator=new e;this.smallScreenLengthLineSizeFactor=
+2;this.pointerMoveTimeoutMs=2500};b.settings=n;Object.defineProperties(b,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

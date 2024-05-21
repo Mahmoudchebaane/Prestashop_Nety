@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../chunks/_rollupPluginBabelHelpers","../../request","../utils","./support/QueryNamedTraceConfigurationsResult"],function(g,h,k,e,l){function f(){f=h._asyncToGenerator(function*(c,a,b){c=e.parseUrl(c);const d=a.toJSON();a.globalIds&&0<a.globalIds.length&&(d.globalIds=JSON.stringify(a.globalIds));a.creators&&0<a.creators.length&&(d.creators=JSON.stringify(a.creators));a.tags&&0<a.tags.length&&(d.tags=JSON.stringify(a.tags));a.names&&0<a.names.length&&(d.names=JSON.stringify(a.names));
+a=e.encode({...c.query,...d,f:"json"});b=e.asValidOptions(a,{...b,method:"post"});({data:b}=yield k(`${c.path}/traceConfigurations/query`,b));return b?l.fromJSON(b):null});return f.apply(this,arguments)}g.queryNamedTraceConfigurations=function(c,a,b){return f.apply(this,arguments)};Object.defineProperties(g,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

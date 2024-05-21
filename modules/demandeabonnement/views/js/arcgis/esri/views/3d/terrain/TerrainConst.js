@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/mathUtils","../../../geometry/support/aaBoundingRect","./TilingScheme"],function(a,b,c,g){b=b.clampFloat32(b.NUMBER_MAX_FLOAT32/10);const e=c.create();g.TilingScheme.WebMercatorAuxiliarySphere.getExtent(0,0,0,e);c=c.create([-180,-90,180,90]);let f=4;a.ELEVATION_NODATA_VALUE=b;a.GEOGRAPHIC_WORLD_EXTENT=c;a.MAX_MEMORY_LOD_BIAS=2.5;a.MAX_PATCH_TESSELATION=512;a.MAX_ROOT_TILES=64;a.PROGRESSIVE_LOADING_MODULO=4;a.TILE_LOADING_DEBUGLOG=!1;a.TOO_MANY_ROOT_TILES_AFTER_CHANGE_ERROR=
+"Cannot extend surface to encompass all layers because it would result in too many root tiles.";a.TOO_MANY_ROOT_TILES_FOR_LAYER_ERROR="Surface extent is too large for tile resolution at level 0.";a.WEBMERCATOR_WORLD_EXTENT=e;a.getElevationDesiredResolutionLevel=d=>4>d?3:f;a.test={setElevationDesiredMaxUpscalingDistance(d){f=d}};Object.defineProperties(a,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

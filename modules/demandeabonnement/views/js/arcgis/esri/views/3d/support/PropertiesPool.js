@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../../core/ReentrantObjectPool","../../../core/accessorSupport/watch"],function(g,k,d){let l=function(){function h(b,a){this._owner=a;this._properties={};this._afterDispatchHandle=null;for(const c in b)a=new k.ReentrantObjectPool(b[c],void 0,void 0,2,2),this._properties[c]={pool:a,acquired:[]};this._afterDispatchHandle=d.afterDispatch(()=>this._release())}var e=h.prototype;e.destroy=function(){this._afterDispatchHandle&&(this._afterDispatchHandle.remove(),this._afterDispatchHandle=
+null);for(const b in this._properties){const a=this._properties[b];for(const c of a.acquired)d.isValueInUse(c)||a.pool.release(c);a.pool.destroy();a.pool=null;a.acquired=null}this._owner=this._properties=null};e.get=function(b){const a=this._owner._get(b);b=this._properties[b];let c=b.pool.acquire();for(b.acquired.push(c);c===a;)b.acquired.push(c),c=b.pool.acquire();return c};e._release=function(){for(const b in this._properties){const a=this._properties[b];let c=0;for(const f of a.acquired)d.isValueInUse(f)?
+a.acquired[c++]=f:a.pool.release(f);a.acquired.length=c}};return h}();g.PropertiesPool=l;Object.defineProperties(g,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

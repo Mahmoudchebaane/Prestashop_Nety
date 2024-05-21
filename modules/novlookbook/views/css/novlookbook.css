@@ -1,0 +1,92 @@
+/******************************************************
+ * @package Version Theme Framework for Vinovatheme
+ * @version 1.0
+ * @author http://www.vinovathemes.com
+ * @copyright Copyright (coffee) Augus 2013 vinovathemes.com <@emai:vinovathemes@gmail.com>.All rights reserved.
+ * @license   GNU General Public License version 2
+*******************************************************/
+.nov-lookbook .item {
+    margin-bottom: 20px;
+}
+.nov-content-lookbook{
+    display : inline-block;
+    position : relative;
+}
+.nov-content-lookbook img {
+    width: 100%;
+}
+.info-lookbook {
+    margin-top: 15px;
+    text-align: center;
+}
+.info-lookbook .title-lookbook {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+.info-lookbook .description-lookbook {
+    font-size: 12px;
+    font-weight: normal;
+}
+.item-lookbook{
+    position : absolute;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.content-lookbook {
+    width: 270px;
+    background: #fff;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 14px;
+}
+.content-lookbook.with-link {
+    width: auto;
+    padding: 3px 15px;
+}
+.content-lookbook .item-thumb {
+    margin-right: 60px;
+    margin-left:  60px;
+}
+.content-lookbook .item-title {
+    font-size: 14px;
+    color:  #4a4a4a;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+.content-lookbook .item-title .product-comments{
+    padding-bottom: 4px;
+}
+.content-lookbook .item-price{
+    font-size: 1.6rem;
+    font-weight: 900;
+    color:  #4e4d4d;
+}
+.item-lookbook:hover .content-lookbook{
+    display: block;
+}
+
+.number-lookbook {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.5);
+    display: block;
+	cursor: pointer;
+    font-size: 0;
+    position: relative;
+
+}
+.number-lookbook::after{
+    content:  "\f111";
+    font-size: 1.4rem;
+    font-family: "FontAwesome";
+    color: #2b2b2b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

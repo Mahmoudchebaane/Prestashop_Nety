@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(c){let f=function(){function d(a){this._gain=a;this.filteredDelta=this.lastValue=void 0}var b=d.prototype;b.update=function(a){if(this.hasLastValue()){const e=this.computeDelta(a);this._updateDelta(e)}this.lastValue=a};b.reset=function(){this.filteredDelta=this.lastValue=void 0};b.hasLastValue=function(){return void 0!==this.lastValue};b.hasFilteredDelta=function(){return void 0!==this.filteredDelta};b.computeDelta=function(a){return void 0===this.lastValue?NaN:a-this.lastValue};
+b._updateDelta=function(a){this.filteredDelta=void 0!==this.filteredDelta?(1-this._gain)*this.filteredDelta+this._gain*a:a};return d}();c.FilteredFiniteDifference=f;Object.defineProperties(c,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

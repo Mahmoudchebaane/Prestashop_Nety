@@ -1,0 +1,568 @@
+.my-account,
+.userContracts,
+.userInvoice {
+  thead {
+    background-color: rgba(89, 4, 157, 0.17);
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: white;
+  }
+
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: white;
+  }
+
+  .table-bordered thead td,
+  .table-bordered thead th,
+  .table-bordered td,
+  .table-bordered th {
+    border: 1px solid $lowOpactity;
+    text-align: center;
+    color: black;
+  }
+}
+
+$black: #222222;
+$dark-gray: #3e3e3e;
+$light-gray: #efefef;
+$breakpoint-large: 768px;
+$breakpoint-medium: 576px;
+
+// Responsive HTML table mixin.
+@mixin responsive-table() {
+  thead {
+    color: white;
+    display: none;
+  }
+
+  .colLabel {
+    font-weight: 600;
+  }
+
+  tbody {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    gap: 20px;
+
+    tr {
+      flex: 1;
+    }
+
+    td {
+      // background-color: white;
+      display: block;
+      padding: 0.75rem 1rem;
+      width: 100%;
+
+      a,
+      button {
+        color: white;
+        background-color: $violet;
+        border-radius: 26px;
+        padding: 5px 20px;
+        outline: none;
+        border: none;
+        width: auto;
+        cursor: pointer;
+      }
+
+      &::before {
+        //content: attr(data-label);
+        display: inline-block;
+        font-weight: bold;
+        margin: 0 1rem 0 0;
+        min-width: 80px;
+      }
+
+      &::before:lang(ar) {
+        text-align: right;
+      }
+
+      &:first-child {
+        // background-color: $black;
+        color: black;
+        background-color: $borderViolet;
+        text-align: center;
+      }
+    }
+  }
+
+  tr {
+    flex-flow: column wrap;
+    flex: 0 0 100%;
+    padding: 1.25rem 1rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $breakpoint-medium) {
+    tr {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .colLabel {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-large) {
+    display: inline-table;
+    background-color: #efefef;
+
+    .colLabel {
+      display: none;
+    }
+
+    thead {
+      display: table-header-group;
+
+      th {
+        // background-color: $black;
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+
+    tbody {
+      display: table-row-group;
+
+      td {
+        background-color: transparent;
+        display: table-cell;
+        padding: 1rem;
+        text-align: center;
+        width: auto;
+
+        &::before {
+          display: none;
+        }
+
+        &:first-child {
+          background-color: transparent;
+          color: black;
+          text-align: left;
+        }
+
+        &:first-child:lang(ar) {
+          text-align: right;
+        }
+      }
+
+      tr {
+        display: table-row;
+        margin: 0;
+
+        &:nth-child(odd) {
+          background-color: white;
+        }
+
+        &:nth-child(even) {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.table-responsive {
+  @include responsive-table;
+}
+
+// Pop-up services
+#optionsModal {
+  .modal-dialog {
+    width: 40%;
+    max-width: 90%;
+    .modal-content {
+      border-radius: 7px;
+      .modal-header {
+        border-bottom: 1px solid #eceeef;
+        background-color: $lowOpactity;
+       
+        button {
+          top: 0;
+          right: 0;
+          background-color: transparent;
+          font-size: 25px;
+          padding: 10px 30px 0;
+          color: $violet;
+          &:focus{outline: none;}
+        }
+        .modal-title {
+          color: $violet;
+          text-align: center;
+          font-size: 15px;
+          width: 100%;
+        }
+      }
+      .table{
+        margin: 20px 0;
+      }
+    }
+  }
+  #antivirusKey{
+    color: black;
+  }
+  #retreiveBtn{
+    background-color: $netyRose;
+    padding: 8px 20px;
+  }
+}
+.my-account,
+.userInvoice,
+.userContracts {
+  .pagination {
+    display: flex;
+    justify-content: end;
+  }
+  .dataTables_filter {
+    display: flex;
+    justify-content: flex-end;
+
+    label {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: left;
+  }
+
+  .dataTables_wrapper .dataTables_length:lang(ar) {
+    float: right;
+  }
+
+  .dataTables_wrapper .dataTables_filter:lang(ar) {
+    float: left;
+
+    input {
+      margin-left: 0;
+    }
+  }
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: white;
+    border: white;
+    padding: 0px 5px;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: white;
+    }
+  }
+
+  .dataTables_info {
+    // display: none;
+  }
+
+  .form-select {
+    width: 45px;
+    text-align: right;
+    border-color: #ba95d6;
+    border-radius: 5px;
+    padding: 0 5px;
+    background-position: 0 -42px;
+  }
+
+  .page-item:first-child .page-link,
+  .page-item .page-link {
+    background-color: white;
+    color: $violet;
+    border-color: #eeeeee; //#ba95d6;
+  }
+
+  .page-item.active .page-link {
+    background-color: #ba95d6;
+  }
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+  .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+  .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    .page-link {
+      background-color: #eeeeee;
+    }
+  }
+}
+.contractBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .pdfContract{
+    border-radius: 50% !important;
+    height: 30px ;
+    width: 30px;
+    padding: 0;
+  }
+  button{
+    background-color: $netyRose !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  #facturesCRM,
+  #contratCRM {
+    #wrapper-site > .container {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  table.dataTable tbody th,
+  table.dataTable tbody td {
+    padding: 5px;
+  }
+
+  .table-responsive tbody td a,
+  .table-responsive tbody td button {
+    padding: 5px 10px;
+  }
+
+  #facturesCRM,
+  #contratCRM {
+    .block_content-right {
+      margin-left: 0;
+    }
+  }
+
+  #contratsCRM footer,
+  #facturesCRM footer {
+    @media (min-width: 992px) {
+      padding-top: 6rem;
+    }
+  }
+
+  .my-account,
+  .userContracts,
+  .userInvoice {
+    .table-bordered td,
+    .table-bordered th {
+      padding: 5px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #facturesCRM {
+    #wrapper-site > .container {
+      width: 100%;
+    }
+  }
+}
+
+#blockcart-modal .modal-body .backToShopping:hover,
+#blockcart-modal .modal-body .backToShopping:focus,
+#blockcart-modal .modal-body .backToShopping:active {
+  background-color: unset;
+  border: 1px solid #56039b;
+  color: #59049d;
+}
+
+#blockcart-modal .modal-header .close i {
+  color: rgb(36, 35, 35);
+  font-size: 18px;
+}
+
+// #blockcart-modal .modal-dialog {
+//   max-width: 450px;
+// }
+
+.payammount {
+  color: #f6537e;
+  font-size: medium;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-pay {
+  color: white;
+  background-color: #59049d;
+  border-radius: 26px;
+  padding: 7px 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: none;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+.classavoir:lang(ar) {
+  pointer-events: none;
+  opacity: 0.5;
+  margin: 0;
+  width: 20px;
+  accent-color: #59049d;
+}
+
+.classavoir {
+  pointer-events: none;
+  opacity: 0.5;
+  margin-right: 5%;
+  width: 20px;
+  accent-color: #59049d;
+}
+
+.classfact:lang(ar) {
+  margin-left: 0;
+  width: 20px;
+  accent-color: #59049d;
+}
+
+.classfact {
+  margin: 0;
+  width: 20px;
+  accent-color: #59049d;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+td:first-child:lang(ar) {
+  text-align: right;
+}
+#totalpay {
+  direction: ltr !important ;
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+  #paysection {
+    flex-wrap: wrap !important;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .link-name {
+    display: none !important;
+  }
+
+  td:has(.classfact) {
+    background-color: #e6f8f4 !important;
+    color: #640fa2 !important;
+  }
+
+  td:has(.classavoir) {
+    background-color: #fffbcb !important;
+    color: #640fa2 !important;
+  }
+
+  td:first-child {
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: black;
+    white-space: normal !important;
+    background-color: transparent;
+  }
+
+  td:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .block_content-right .topProfile {
+    text-align: right;
+    padding: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+    background: #ede4f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .my-account,
+  .userContracts,
+  .userInvoice {
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter {
+      float: left;
+    }
+
+    .dataTables_wrapper .dataTables_length:lang(ar),
+    .dataTables_paginate:lang(ar),
+    .dataTables_wrapper .dataTables_filter:lang(ar) {
+      float: right;
+    }
+
+    .table-responsive tbody td {
+      width: auto;
+    }
+
+    .table-responsive tbody tr {
+      padding: 0;
+    }
+    .table-bordered thead th,
+    .table-bordered td:not(last-child),
+    .table-bordered th {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    td:not(last-child):lang(ar) {
+      flex-direction: row-reverse !important;
+    }
+    .table-bordered thead th,
+    .table-bordered td:not(last-child),
+    .table-bordered th {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .table-bordered td:last-child {
+      justify-content: center;
+    }
+  }
+  #optionsModal .modal-dialog{
+    width: 60%;
+    
+    #tableOptions td{
+      justify-content: center;
+      height: auto;
+      padding: 10px 0;
+      // &:last-child{
+        
+      // }
+    }
+  }
+  .contractBtn{
+    width: 100%;      
+  }
+  #antivirusKey{font-weight: 500;}
+}
+
+@media (max-width: 575px) {
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #optionsModal .modal-dialog{
+    width: 80%;
+  }
+}
+
+@media (max-width: 483px) and (min-width: 0px) {
+  #paysection {
+    flex-wrap: wrap !important;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center !important;
+  }
+}

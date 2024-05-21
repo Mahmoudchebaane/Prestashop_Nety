@@ -1,0 +1,373 @@
+.oneArea {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 30px 20px;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.oneArea .oneBox .nov_button.type-1 a:lang(ar) {
+  font-size: 20px !important;
+  padding: 0 30px;
+}
+
+.oneArea .oneBox .nov_button.type-1 a:lang(en) {
+  font-size: 20px !important;
+  padding: 2px 25px;
+}
+
+
+
+.oneArea .oneBox {
+  text-align: left;
+  width: 350px;
+  transition: 0.3s;
+  margin: 0 20px 30px 20px;
+  border-radius: 35px;
+  background: #fff;
+  box-sizing: border-box;
+  color: #000;
+
+  .nov_button.type-1 a {
+    font-size: 12px !important;
+    font-family: inherit;
+    background: white;
+    color: $violet;
+    border: 1px solid $violet;
+    text-transform: capitalize;
+    box-shadow: none;
+    padding: 0 15px;
+    position: absolute;
+    line-height: 35px;
+    bottom: 5px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+
+    &:hover {
+      background: $violet;
+      color: $Jaune;
+    }
+  }
+
+  .btn {
+    display: block;
+    font-size: 11px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 10px 5px;
+  }
+
+}
+
+.bloc_top_pack * {
+  font-family: 'Azo Sans', sans-serif !important;
+  color: white;
+}
+
+.packName {
+  color: $Jaune;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.bloc_top_pack {
+  text-align: center;
+  padding: 50px 15px;
+  width: 100%;
+  background-color: $Jaune;
+  background-image: url(/modules/jscomposer/uploads/eNETY.png);
+  background-size: 250px auto;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 179px 0px;
+
+  .contactH1 b {
+    color: black;
+  }
+}
+
+.bloc_top_pack:lang(ar) {
+  background-size: 250px auto;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 0px 179px;
+  background-image: url(/modules/jscomposer/uploads/eNETYar.png);
+}
+
+.associated_product {
+  color: black;
+}
+
+.beforetiquette {
+  color: black;
+  font-weight: 600 !important;
+}
+
+.etiquette {
+  background-color: #1fbd9c !important;
+  padding: 0 4px;
+  margin: 0 3px;
+  line-height: 28px;
+  color: white;
+  border-radius: 6px;
+}
+
+.noetiquette {
+  color: black !important;
+  font-weight: 400 !important
+}
+
+.associated_product:lang(ar),
+.noetiquette:lang(ar) {
+  text-align: right
+}
+
+.product-description {
+  .nov_image_text .text_top {
+    font-weight: 400;
+    color: #222;
+    margin-top: 4px;
+    text-align: left;
+  }
+
+  .nov_image_text img {
+    margin-right: 1px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .text_top p .text_top {
+    font-weight: 400;
+    color: #222;
+    margin-top: 4px;
+    text-align: left;
+  }
+}
+
+.card_pack-body {
+  text-align: left;
+  font-size: 1.8rem !important;
+  background-color: white;
+  line-height: 33px;
+  padding: 20px 20px 30px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.list_top_pack {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 30px auto;
+}
+
+.card_pack-header {
+  background: $violet 0% 0% no-repeat padding-box;
+  text-align: left;
+  padding: 20px 40px;
+  color: #fff;
+  border-radius: 35px 35px 0px 0px;
+}
+
+.card_pack:hover {
+  transform: scale(1.05);
+}
+
+.pack_header {
+  text-align: left;
+
+  p,
+  a {
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 26px;
+    color: $Jaune;
+  }
+}
+
+.partir_pack {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.card_pack-header {
+  small {
+    font-size: 16px;
+  }
+
+  .ttc {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff
+  }
+}
+
+.pagePacks {
+  background-color: $lowOpactity;
+  border-radius: 0 0 179px 0;
+
+  .js-listContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .breadcrumb {
+    background-color: transparent !important;
+  }
+
+  .pack_header span {
+    margin-bottom: -6px;
+  }
+}
+
+.bloc_top_pack .product-price-and-shipping:lang(ar) {
+  text-align: right
+}
+
+.pagePacks:lang(ar) {
+  .product-price-and-shipping {
+    text-align: right
+  }
+
+  .pack_header span {
+    white-space: normal;
+  }
+}
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.packProducts .card_pack-header .price1,
+.card_pack-header .price {
+  color: $Jaune;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
+
+.wrapperPack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .bloc_top_pack {
+    border-radius: 0px 0px 80px 0px;
+    background-position: 110% bottom;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .pagePacks {
+    border-radius: 0 0 80px 0;
+
+    .card_pack-body {
+      height: auto
+    }
+  }
+
+  .bloc_top_pack:lang(ar),
+  .bloc_top_pack {
+    background-image: none;
+    border-radius: 0px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .packProducts .card_pack-header .price1,
+  .card_pack-header .price {
+    font-size: 22px
+  }
+
+  .pagePacks .pack_header span {
+    margin-bottom: 0
+  }
+
+  .list_top_pack {
+    padding-bottom: 30px;
+  }
+
+  .pagePacks {
+    border-radius: 0 0 0 0
+  }
+
+  .pagePacks .card_pack-header {
+    height: auto;
+    padding: 20px
+  }
+
+  .card_pack-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+
+  .nov_button.type-1 a {
+    padding: 0px 15px !important
+  }
+
+  .pack_header span {
+    font-size: 22px
+  }
+
+  .pack_header a {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .partir_pack {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+
+  .packProducts .card_pack-header .price1,
+  .card_pack-header .price {
+    font-size: 19px
+  }
+}
+
+
+@media (max-width: 430px) {
+  .oneBox {
+    margin: 20px 0px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 368px) {
+
+  .partir_pack {
+    margin-bottom: 5px !important;
+    font-size: 16px
+  }
+
+  .packProducts .card_pack-header .price1 {
+    font-size: 25px !important;
+  }
+
+}

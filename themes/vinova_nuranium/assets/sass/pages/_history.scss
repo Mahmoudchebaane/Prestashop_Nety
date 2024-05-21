@@ -1,0 +1,198 @@
+#history {
+    .table {
+        tbody tr:nth-of-type(odd) {
+            background-color: white;
+        }
+
+        tbody tr:nth-of-type(even) {
+            background-color: $lowOpactity;
+        }
+        .thead-default th,
+        .thead-default td,
+        tbody td,
+        tbody th {
+            text-align: start;
+            color: black;
+            font-weight: 500;
+            .material-icons,
+            .fa {
+                font-size: 20px;
+                color: $violet;
+                padding: 0 3px;
+            }
+        }
+        .thead-default th {
+            background-color: rgba(89, 4, 157, 0.17);
+            font-weight: 600;
+        }
+    }
+    .order {
+        border: 1px solid $lowOpactity;
+        // padding: 15px 0;
+        border-radius: 7px;
+        > div {
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            .referenceOrder {
+                border-bottom: 1px solid $lowOpactity;
+                background-color: $lowOpactity;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                color: black;
+            }
+            .date,
+            .status,
+            .total,
+            .details {
+                border-bottom: 1px solid $lowOpactity;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 13px;
+                color: black;
+                > div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .fa {
+                    font-size: 20px;
+                    color: $violet;
+                }
+            }
+        }
+    }
+    .label-pill {
+        padding: 2px 10px;
+        border-radius: 5px;
+    }
+}
+.alert {
+    ul {
+        list-style: none;
+    }
+    &.alert-warning {
+        margin-top: 10px;
+        padding: 10px 20px;
+
+        &::before {
+            position: absolute;
+        }
+    }
+}
+
+body#order-detail {
+    color: black;
+    .breadcrumb {
+        display: none;
+    }
+    .label-pill {
+        padding: 2px 10px;
+        border-radius: 5px;
+    }
+    h3 {
+        color: $violet;
+        padding-bottom: 20px;
+    }
+    #order-infos {
+        //border: 1px solid violet;
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        // width: fit-content;
+        // box-shadow: 0px 3px 15px $shadow;
+        background-color: $lowOpactity;
+        padding-left: 0;
+        // margin: 0 0 30px;
+        .refOrder {
+            font-size: 14px;
+            white-space: nowrap;
+            padding: 0 25px;
+        }
+
+        ul {
+            margin-bottom: 0;
+        }
+    }
+    #order-infos:lang(ar) {
+        padding: 20px;
+        ul {
+            padding: 0 10px;
+        }
+        .refOrder {
+            padding: 0;
+        }
+    }
+    .table-bordered td,
+    .table-bordered th {
+        border: 1px solid $lowOpactity;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: transparent;
+    }
+    .table {
+        border-radius: 7px;
+        background-color: transparent;
+        border: 1px solid $lowOpactity;
+        .thead-default {
+            th {
+                background-color: $lowOpactity;
+                color: #000000;
+                font-weight: 600;
+            }
+        }
+        tbody td {
+            background-color: transparent;
+        }
+    }
+    th {
+        text-align: start;
+    }
+    #order-history {
+        // box-shadow: 0px 3px 15px $shadow;
+        padding: 10px;
+        border-radius: 7px;
+        // margin: 0 0 30px;
+        width: 470px;
+        .table {
+            margin-bottom: 0;
+        }
+    }
+    .order-message-form {
+        button {
+            padding: 0px 44px;
+            text-transform: none;
+            background-color: #59049d;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+    }
+    .backHistory {
+        color: black;
+        .fa-chevron-left:lang(ar) {
+            transform: rotate(180deg);
+        }
+    }
+}
+@media (max-width: 576px) {
+    body#order-detail #order-infos {
+        strong {
+            white-space: normal;
+        }
+    }
+}
+@media (min-height: 810px) and (min-width: 992px) {
+    #history footer {
+        padding-top: 20rem;
+    }
+    #history footer:lang(ar) {
+        padding-top: 15rem;
+    }
+}

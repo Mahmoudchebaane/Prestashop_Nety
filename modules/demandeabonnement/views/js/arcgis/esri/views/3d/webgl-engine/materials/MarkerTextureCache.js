@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports","../../support/engineContent/marker","../core/material/RenderTexture"],function(c,f,g){let k=function(){function d(a,b){this._textures=a;this._textureRepository=b;this._texturesByPrimitive=new Map}var e=d.prototype;e.acquire=function(a){if(!this._texturesByPrimitive.has(a)){const b=f.prepareMarkerResources(this._textures,a),h=new g.RenderTexture(this._textureRepository,b.texture.id);this._texturesByPrimitive.set(a,{result:b,reference:h});return b.texture}return this._texturesByPrimitive.get(a).result.texture};
+e.destroy=function(){this._texturesByPrimitive.forEach(({result:a,reference:b})=>{b.dispose();a.release()});this._texturesByPrimitive.clear()};return d}();c.MarkerTextureCache=k;Object.defineProperties(c,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

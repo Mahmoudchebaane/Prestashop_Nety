@@ -1,0 +1,478 @@
+.TopPageAbout {
+    border-radius: 0 0 0 179px;
+    padding: 0 !important;
+    background-color: $violet;
+
+    .vc_custom_1679471704153 {
+        background-color: $bgBloc !important;
+    }
+}
+
+.TopPageAbout1 {
+    border-radius: 0 0 0 0;
+}
+
+.TopPageAbout:lang(ar) {
+    border-radius: 0 0 179px 0;
+}
+
+.BgTop {
+    display: flex;
+    margin-bottom: -30px;
+    border-radius: 0 0 0 179px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+        // height: 400px;
+        // max-height: 100%;
+        // width: auto;
+        // float: right;
+        height: auto;
+        width: 540px;
+    }
+}
+
+// .BgTop>*{
+//     flex: 1 1 50%;
+// }
+
+.Page_title {
+    margin: auto;
+    padding: 0 15px;
+}
+
+.contactH1 {
+    font-family: 'Azo Sans', sans-serif;
+    font-weight: 300;
+    font-size: 45px;
+    color: black;
+    margin-bottom: 30px; //50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contactH1 b,
+.contactH1 strong {
+    font-weight: 700;
+}
+
+.AproposBloc {
+    color: white;
+    font-size: 16px !important;
+    background-color: $violet;
+    border-radius: 22px;
+    padding: 30px;
+    max-width: 600px;
+    height: 200px;
+    font-family: 'Azo sans', sans-serif !important;
+    font-weight: 400 !important;
+    display: flex;
+    align-items: center;
+}
+
+.AproposBloc1 {
+    color: black !important;
+    background-color: rgba(103, 19, 163, 0.14);
+    font-size: 16px !important;
+    border-radius: 22px;
+    padding: 30px;
+    max-width: 600px;
+    height: 200px;
+    font-family: 'Azo sans', sans-serif !important;
+    font-weight: 400 !important;
+    display: flex;
+    align-items: center;
+}
+
+.AproposBloc1:lang(ar),
+.AproposBloc:lang(ar) {
+    height: 150px;
+}
+
+.WhyTitle {
+    font-family: 'Azo sans', sans-serif !important;
+}
+
+.Title {
+    margin: 50px 0;
+}
+
+.valeur {
+    height: 450px;
+}
+
+.valeur h2 {
+    margin: 25px 0;
+}
+
+.valeur p {
+    font-size: 17px;
+}
+
+
+.partners {
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 3px 23px $shadow;
+    margin: 0 10px;
+
+    img {
+        height: 100px !important;
+        width: auto;
+    }
+}
+
+.valeur .wpb_wrapper {
+    height: 380px;
+}
+
+.cleVal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    .vc_col-sm-3 {
+        width: auto !important
+    }
+
+    .cardBody {
+
+        .vc_custom_1680173030796,
+        .vc_custom_1680173048196,
+        .vc_custom_1680173064258,
+        .vc_custom_1680172556003 {
+            border-radius: 27px;
+            height: 270px;
+            width: 240px;
+        }
+
+        padding: 0;
+        margin:20px;
+        height: 270px;
+
+        span {
+            font-size: 14px;
+        }
+
+        span:lang(ar) {
+            font-size: 16px;
+        }
+    }
+}
+
+.ValeurAjoute .vc_col-sm-3 {
+    height: 450px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    width: 25%;
+}
+
+
+.BlocTop {
+    border-radius: 0 0 0 179px;
+    margin-bottom: -30px;
+    margin-left: 0;
+    display: contents;
+}
+
+.fsi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fsiContainer {
+    background-position: left bottom !important;
+    background-repeat: no-repeat !important;
+    background-image: url(/modules/jscomposer/uploads/1111.png?id=) !important;
+    background-size: 350px !important;
+    background-color: $Jaune !important;
+    padding: 50px 0 !important;
+}
+
+.textPartners {
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+}
+
+.textPartners:lang(ar) {
+    font-size: 20px;
+}
+
+@media (max-width:1500px)and(min-width: 1200px) {
+    .partners {
+        margin: 0 10px;
+    }
+}
+
+@media(max-width:1500px) and (min-width:992px) {
+    // .Page_title{margin-left: 15px}
+}
+
+@media (max-width:1200px) and (min-width:992px) {
+    .topValues {
+        padding-left: 0;
+        padding-right: 0
+    }
+}
+
+@media(max-width:1200px) {
+    .valeur p {
+        font-size: 15px;
+    }
+
+    .ValeurAjoute .vc_col-sm-3 {
+        height: auto;
+        width: 50%;
+    }
+
+    .TopPageAbout .wpb_text_column .wpb_content_element .vc_custom_1675162765239 {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width:992px) {
+    .valeur .wpb_wrapper {
+        height: 300px;
+    }
+
+    .TopPageAbout {
+        border-radius: 0 0 0 100px;
+    }
+
+    .TopPageAbout:lang(ar) {
+        border-radius: 0 0 80px 0;
+    }
+
+    .Page_title {
+        line-height: 1;
+
+        span {
+            font-size: 40px !important
+        }
+    }
+
+    .BgTop {
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            // height: 350px;
+            height: auto;
+            width: 400px;
+        }
+    }
+}
+
+@media(max-width: 992px) and (min-width:768px) {
+
+    .AproposBloc,
+    .AproposBloc1 {
+        height: 250px;
+        font-size: 14px !important;
+    }
+
+
+
+    .TopPageAbout {
+
+        // margin-top: 87px;
+        span {
+            font-size: 35px !important
+        }
+    }
+
+    .partners {
+        padding: 20px 0 0 0;
+
+        .vc_col-sm-2 {
+            width: 30%
+        }
+    }
+
+    .ValeurAjoute .vc_col-sm-3 {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:768px) {
+    .valeur .wpb_wrapper {
+        height: auto;
+    }
+
+    .valeur p {
+        font-size: 15px;
+    }
+
+    .contactH1 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .ValeurAjoute .vc_col-sm-3 {
+        height: auto;
+        width: 100%;
+    }
+
+    .TopPageAbout1,
+    .TopPageAbout {
+        background-size: 300px;
+        border-radius: 0 0 0 80px;
+        padding: 0;
+
+        // margin-top: 87px;
+        span {
+            font-size: 30px !important
+        }
+    }
+
+    .TopPageAbout:lang(ar) {
+        border-radius: 0px
+    }
+
+    // .TopPageAbout:lang(ar) {
+    //     border-radius: 0 0 80px 0;
+    // }
+
+    .Title {
+        margin: 30px 0;
+    }
+
+    .BgTop {
+        justify-content: center;
+    }
+
+    .Page_title {
+        margin: 10px 0;
+
+        span {
+            font-size: 38px !important
+        }
+    }
+
+    .partners img {
+        // height: 100px !important;
+        // width: 150px;
+        height: 80px !important;
+        width: 130px;
+    }
+
+    .BgTop {
+        padding-top: 10px;
+
+        img {
+            // height: 300px;    
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .aproposText {
+        font-size: 17px !important
+    }
+
+    .WhyTitle span {
+        font-size: 22px
+    }
+}
+
+@media(max-width: 592px) {
+    // .BgTop img{        height: 300px;    }
+}
+
+@media(max-width: 576px) {
+    .contactH1 {
+        font-size: 30px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .aproposText {
+        font-size: 14px !important
+    }
+
+    .Page_title {
+        span {
+            font-size: 35px !important
+        }
+    }
+
+    .BgTop {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 30px;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .fsi span {
+        font-size: 20px
+    }
+
+    .TopPageAbout {
+        span {
+            font-size: 30px !important
+        }
+    }
+
+
+    .BlocTop .wpb_text_column {
+        margin-top: 0
+    }
+
+    .AproposBloc {
+        height: auto;
+        display: flex;
+        align-items: center;
+        font-size: 13px !important;
+        padding: 20px;
+
+    }
+
+    .AproposBloc1 {
+        height: auto;
+        display: flex;
+        align-items: center;
+        font-size: 13px !important;
+        padding: 20px;
+    }
+
+    .valeur h2 span {
+        font-size: 30px;
+    }
+
+    .valeur h2 span {
+        font-size: 20px;
+    }
+
+    .valeur p span {
+        font-size: 13px;
+    }
+
+    .textPartners {
+        font-size: 14PX
+    }
+
+    .partners {
+        margin: 0 5px;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 350px) {
+    .contactH1 {
+        font-size: 30px !important;
+        margin-bottom: 20px !important;
+    }
+}

@@ -1,0 +1,77 @@
+.btn {
+	span {
+		.right {
+			@include rtl-margin-left(5px);
+			font-size: 10px;
+		}
+		.left {
+			@include rtl-margin-right(5px);
+			font-size: 10px;
+		}
+
+	}
+	@include border-radius(3px);
+}
+
+.btn.button-plus,
+.btn.button-minus {
+	font-size: 14px;
+	line-height: 14px;
+	color: $button-pm-color;
+	text-shadow: 1px -1px rgba(0, 0, 0, 0.05);
+	padding: 0;
+	border: 1px solid;
+	border-color: #dedcdc #c1bfbf #b5b4b4 #dad8d8;
+	@include border-radius(0);
+	span {
+		display: block;
+		border: 1px solid $light-border-color;
+		vertical-align: middle;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		vertical-align: middle;
+		padding: 4px 0 0 0;
+		background: rgb(30, 87, 153);
+		background: rgb(255, 255, 255);
+		background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(251, 251, 251, 1)));
+		background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fbfbfb',GradientType=0);
+	}
+	&:hover {
+		color: $base-text-color;
+		span {
+			filter: none;
+			background: #f6f6f6;
+		}
+	}
+}
+.btn-default, .btn-1, .btn-2 {
+	border-color: $theme-color-default;
+	text-transform: uppercase;
+	background-color: $theme-color-default;
+}
+
+select {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url(../img/icon/bg-select.png);
+	background-position: 100% -35px;
+	background-repeat: no-repeat;
+	&:focus {
+		background-position: 100% 0;
+	}
+	.lang-rtl & {
+		background-position: 0 -35px;
+		&:focus {
+			background-position: 0 0;
+		}
+	}
+}

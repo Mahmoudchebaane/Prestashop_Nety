@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define(["exports"],function(c){function f(a){return 32+a.length}function g(a){if(!a)return 0;if(Array.isArray(a)){var b=a.length;if(0===b||"number"===typeof a[0])a=32+8*b;else{var d=32;for(let e=0;e<b;e++)d+=h(a[e]);a=d}return a}d=32;for(b in a)a.hasOwnProperty(b)&&(d+=h(a[b]));return d}function h(a){switch(typeof a){case "object":return g(a);case "string":return f(a);case "number":return 16;case "boolean":return 4;default:return 8}}c.ByteSizeUnit=void 0;(function(a){a[a.KILOBYTES=1024]="KILOBYTES";
+a[a.MEGABYTES=1048576]="MEGABYTES";a[a.GIGABYTES=1073741824]="GIGABYTES"})(c.ByteSizeUnit||(c.ByteSizeUnit={}));c.estimateAttributesObjectSize=function(a){if(!a)return 0;let b=32;for(const d in a)if(a.hasOwnProperty(d)){const e=a[d];switch(typeof e){case "string":b+=f(e);break;case "number":b+=16;break;case "boolean":b+=4}}return b};c.estimateFixedArraySize=function(a,b){return 32+a.length*b};c.estimateNestedObjectSize=g;c.estimateNumberByteSize=function(a){return 16};c.estimateStringByteSize=f;Object.defineProperties(c,
+{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}})});

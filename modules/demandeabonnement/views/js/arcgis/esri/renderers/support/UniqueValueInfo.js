@@ -1,0 +1,6 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/4.25/esri/copyright.txt for details.
+//>>built
+define("../../chunks/_rollupPluginBabelHelpers ../../chunks/tslib.es6 ../../core/JSONSupport ../../core/accessorSupport/decorators/property ../../core/arrayUtils ../../core/accessorSupport/ensureType ../../core/accessorSupport/decorators/subclass ./commonProperties".split(" "),function(l,c,b,d,n,p,m,g){var e;b=e=function(h){function f(a){a=h.call(this,a)||this;a.description=null;a.label=null;a.symbol=null;a.value=null;return a}l._inheritsLoose(f,h);var k=f.prototype;k.clone=function(){return new e({value:this.value,
+description:this.description,label:this.label,symbol:this.symbol?this.symbol.clone():null})};k.getMeshHash=function(){const a=JSON.stringify(this.symbol&&this.symbol.toJSON());return`${this.value}.${a}`};return f}(b.JSONSupport);c.__decorate([d.property({type:String,json:{write:!0}})],b.prototype,"description",void 0);c.__decorate([d.property({type:String,json:{write:!0}})],b.prototype,"label",void 0);c.__decorate([d.property(g.rendererSymbolProperty)],b.prototype,"symbol",void 0);c.__decorate([d.property(g.uniqueValueProperty)],
+b.prototype,"value",void 0);return b=e=c.__decorate([m.subclass("esri.renderers.support.UniqueValueInfo")],b)});

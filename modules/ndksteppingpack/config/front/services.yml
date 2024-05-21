@@ -1,0 +1,43 @@
+services:
+  _defaults:
+    public: true
+
+  ##############
+  # Your Module
+
+  ndksteppingpack.module:
+    class: ndksteppingpack
+    factory: ["Module", "getInstanceByName"]
+    arguments:
+      - "ndksteppingpack"
+
+  ndksteppingpack.context:
+    class: Context
+    factory: ["Context", "getContext"]
+
+  #####################
+  # PrestaShop Account
+  ndksteppingpack.ps_accounts_installer:
+    class: 'PrestaShop\PsAccountsInstaller\Installer\Installer'
+    arguments:
+      - "5.0"
+
+  ndksteppingpack.ps_accounts_facade:
+    class: 'PrestaShop\PsAccountsInstaller\Installer\Facade\PsAccounts'
+    arguments:
+      - "@ndksteppingpack.ps_accounts_installer"
+  #####################
+  # PrestaShop Billing
+
+  ndksteppingpack.ps_billings_context_wrapper:
+    class: 'PrestaShopCorp\Billing\Wrappers\BillingContextWrapper'
+    arguments:
+      - "@ndksteppingpack.ps_accounts_facade"
+      - "@ndksteppingpack.context"
+
+  ndksteppingpack.ps_billings_service:
+    class: 'PrestaShopCorp\Billing\Services\BillingService'
+    public: true
+    arguments:
+      - "@ndksteppingpack.ps_billings_context_wrapper"
+      - "@ndksteppingpack.module"
