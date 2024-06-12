@@ -49,7 +49,7 @@ RewriteEngine on
 
 #Domain: localhost
 RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule . - [E=REWRITEBASE:/nety/]
+RewriteRule . - [E=REWRITEBASE:/nety_presta/]
 RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 RewriteRule ^upload/.+$ %{ENV:REWRITEBASE}index.php [QSA,L]
 
@@ -73,21 +73,17 @@ RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBAS
 RewriteCond %{HTTP_HOST} ^localhost$
 RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^localhost$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 # Dispatcher
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{HTTP_HOST} ^localhost$
 RewriteRule ^.*$ - [NC,L]
-RewriteCond %{HTTP_HOST} ^localhost$
 RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
 
 
 #Domain: jawnet.chifco.com
-RewriteCond %{HTTP_HOST} ^jawnet.chifco.com$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 RewriteRule ^upload/.+$ %{ENV:REWRITEBASE}index.php [QSA,L]
@@ -112,21 +108,17 @@ RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBAS
 RewriteCond %{HTTP_HOST} ^jawnet.chifco.com$
 RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^jawnet.chifco.com$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 # Dispatcher
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{HTTP_HOST} ^jawnet.chifco.com$
 RewriteRule ^.*$ - [NC,L]
-RewriteCond %{HTTP_HOST} ^jawnet.chifco.com$
 RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
 
 
 #Domain: diwnet.chifco.com
-RewriteCond %{HTTP_HOST} ^diwnet.chifco.com$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 RewriteRule ^upload/.+$ %{ENV:REWRITEBASE}index.php [QSA,L]
@@ -151,21 +143,17 @@ RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBAS
 RewriteCond %{HTTP_HOST} ^diwnet.chifco.com$
 RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^diwnet.chifco.com$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 # Dispatcher
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{HTTP_HOST} ^diwnet.chifco.com$
 RewriteRule ^.*$ - [NC,L]
-RewriteCond %{HTTP_HOST} ^diwnet.chifco.com$
 RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
 
 
 #Domain: bb.nety.tn
-RewriteCond %{HTTP_HOST} ^bb.nety.tn$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 RewriteRule ^upload/.+$ %{ENV:REWRITEBASE}index.php [QSA,L]
@@ -190,21 +178,17 @@ RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBAS
 RewriteCond %{HTTP_HOST} ^bb.nety.tn$
 RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^bb.nety.tn$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 # Dispatcher
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{HTTP_HOST} ^bb.nety.tn$
 RewriteRule ^.*$ - [NC,L]
-RewriteCond %{HTTP_HOST} ^bb.nety.tn$
 RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
 
 
 #Domain: cssnet.chifco.com
-RewriteCond %{HTTP_HOST} ^cssnet.chifco.com$
 RewriteRule . - [E=REWRITEBASE:/]
 RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 RewriteRule ^upload/.+$ %{ENV:REWRITEBASE}index.php [QSA,L]
@@ -229,16 +213,13 @@ RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBAS
 RewriteCond %{HTTP_HOST} ^cssnet.chifco.com$
 RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
 # AlphaImageLoader for IE and fancybox
-RewriteCond %{HTTP_HOST} ^cssnet.chifco.com$
 RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
 
 # Dispatcher
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{HTTP_HOST} ^cssnet.chifco.com$
 RewriteRule ^.*$ - [NC,L]
-RewriteCond %{HTTP_HOST} ^cssnet.chifco.com$
 RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
 </IfModule>
 
@@ -248,25 +229,24 @@ AddType font/otf .otf
 AddType application/font-woff .woff
 AddType font/woff2 .woff2
 <IfModule mod_headers.c>
-   Header always set Access-Control-Allow-Origin "*"
-   Header always set Access-Control-Allow-Headers "Content-Type, Authorization, Io-Format, Accept"
-   Header always set Access-Control-Allow-Methods "GET,POST,HEAD,DELETE,PUT,OPTIONS"
-   Header always edit Set-Cookie (.*) "$1;Path=/nety/;SameSite=none;"
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization, Io-Format, Accept"
+Header always set Access-Control-Allow-Methods "GET,POST,HEAD,DELETE,PUT,OPTIONS"
 </IfModule>
 
-<Files composer.lock>
-    # Apache 2.2
-    <IfModule !mod_authz_core.c>
-        Order deny,allow
-        Deny from all
-    </IfModule>
-
-    # Apache 2.4
-    <IfModule mod_authz_core.c>
-        Require all denied
-    </IfModule>
-</Files>
+#<Files composer.lock>
+#    # Apache 2.2
+#    <IfModule !mod_authz_core.c>
+#        Order deny,allow
+#        Deny from all
+#    </IfModule>
+#
+#    # Apache 2.4
+#    <IfModule mod_authz_core.c>
+#        Require all denied
+#    </IfModule>
+#</Files>
 #If rewrite mod isn't enabled
-ErrorDocument 404 /nety/index.php?controller=404
+ErrorDocument 404 /nety_presta/index.php?controller=404
 
 # ~~end~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again

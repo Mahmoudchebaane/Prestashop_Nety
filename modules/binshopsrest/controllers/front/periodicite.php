@@ -8,7 +8,7 @@ class binshopsrestperiodiciteModuleFrontController extends AbstractRESTControlle
 
     protected function processGetRequest()
     {
-        $periode = ['ref_1mois', 'ref_3mois', 'ref_6mois', 'ref_1an'];
+        $periode = ['Mensuel', 'Trimestriel', 'Semestriel', 'Annuel'];
         $psdata = array(
             'success' => true,
             'data' => $periode

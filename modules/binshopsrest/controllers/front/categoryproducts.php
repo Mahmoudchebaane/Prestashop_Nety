@@ -26,8 +26,11 @@ class BinshopsrestCategoryproductsModuleFrontController extends AbstractProductL
 {
     protected function processGetRequest()
     {
+
+
         if ((int)Tools::getValue('id_category')){
             $id_category = (int)Tools::getValue('id_category');
+
         }elseif (Tools::getValue('slug')){
             $sql = 'SELECT * FROM `' . _DB_PREFIX_ . "category_lang`
             WHERE link_rewrite = '" . Tools::getValue('slug') . "'";
@@ -82,7 +85,58 @@ class BinshopsrestCategoryproductsModuleFrontController extends AbstractProductL
 
             $productList[$key] = $lazy_product->getProduct();
         }
+        if(Tools::getValue('filters'))
+        {
+            $filtersInput=Tools::getValue('filters');
+            foreach ($filtersInput as $filter) {
+                if (isset($filter['name']) && isset($filter['value'])) {
+                    $filters[] = [
+                        'name' => htmlspecialchars($filter['name']),
+                        'value' => htmlspecialchars($filter['value'])
+                    ];
+                }
+            }
 
+            if(!empty($filters))
+            {
+
+            $matchingProducts = [];
+
+            foreach ($productList as $key => $product) {
+                $filterMatchCount = 0;
+                foreach ($filters as $filter) {
+
+                    $name = $filter['name'];
+                    $values = explode(",", $filter['value']);
+
+                    $features = $product['features'];
+                     // Compte le nombre de valeurs correspondantes pour ce filtre dans ce produit
+
+                    foreach ($features as $feature) {
+                       // echo $feature["name"].'-'.$feature['value'].'**********';
+                        if ($feature["name"] == $name && in_array($feature['value'], $values)) {
+                            $filterMatchCount++;
+                            break;
+                        }
+                    }
+
+
+                }
+              // die;
+                if ($filterMatchCount>0 && $filterMatchCount == count($filters)) {
+                    $matchingProducts[] = $product;
+                }
+
+            }
+
+
+            $productList=$matchingProducts;
+            }
+
+
+
+
+        }
         $facets = array();
         if (array_key_exists('filters',$variables['facets'])){
             foreach ($variables['facets']['filters']->getFacets() as $facet) {
@@ -90,8 +144,10 @@ class BinshopsrestCategoryproductsModuleFrontController extends AbstractProductL
             }
         }
 
+
         $psdata = [
             'name' => $this->category->name,
+            'id' => $this->category->id,
             'description' => $this->category->description,
             'meta_title' => $this->category->meta_title,
             'meta_description' => $this->category->meta_description,
@@ -136,6 +192,7 @@ class BinshopsrestCategoryproductsModuleFrontController extends AbstractProductL
             'success' => true,
             'psdata' => $psdata
         ]));
+
         die;
     }
 

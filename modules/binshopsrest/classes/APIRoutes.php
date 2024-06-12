@@ -503,11 +503,31 @@ class APIRoutes
                     'module' => 'binshopsrest'
                 ]
             ],
+            //api rest to confirm my order
+            'module-binshopsrest-confirmorder' => [
+                'rule' => 'rest/confirmorder',
+                'keywords' => [],
+                'controller' => 'confirmorder',
+                'params' => [
+                    'fc' => 'module',
+                    'module' => 'binshopsrest'
+                ]
+            ],
             //liste des produits on stock
             'module-binshopsrest-productstock' => [
                 'rule' => 'rest/productstock',
                 'keywords' => [],
                 'controller' => 'productstock',
+                'params' => [
+                    'fc' => 'module',
+                    'module' => 'binshopsrest'
+                ]
+            ],
+            // Modifier mot de passe
+            'module-binshopsrest-resetpassword' => [
+                'rule' => 'rest/resetpassword',
+                'keywords' => [],
+                'controller' => 'resetpassword',
                 'params' => [
                     'fc' => 'module',
                     'module' => 'binshopsrest'

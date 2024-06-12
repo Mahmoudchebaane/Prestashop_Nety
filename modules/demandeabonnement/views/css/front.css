@@ -416,11 +416,7 @@ a.btn.disabled:focus {
   padding: 5px 45px;
 }
 
-.stepwizard-content {
-  margin: 5px auto;
-  padding: 5px 50px;
-}
-
+p
 .setup-content {
   display: flex;
   flex-flow: column;

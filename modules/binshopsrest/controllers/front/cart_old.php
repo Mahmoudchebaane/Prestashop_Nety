@@ -79,7 +79,8 @@ class BinshopsrestCartModuleFrontController extends AbstractCartRESTController
     {
         // Update the cart ONLY if $this->cookies are available, in order to avoid ghost carts created by bots
         if ($this->context->cookie->exists()
-            && !$this->errors) {
+            && !$this->errors)
+        {
             if (Tools::getIsset('add') || Tools::getIsset('update')) {
                 $this->processChangeProductInCart();
             } elseif (Tools::getIsset('delete')) {
@@ -115,7 +116,7 @@ class BinshopsrestCartModuleFrontController extends AbstractCartRESTController
                             );
                         }
                     }
-                } elseif (($id_cart_rule = (int)Tools::getValue('deleteDiscount'))
+                } elseif (($id_cart_rule = (int) Tools::getValue('deleteDiscount'))
                     && Validate::isUnsignedId($id_cart_rule)
                 ) {
                     $this->context->cart->removeCartRule($id_cart_rule);
@@ -130,77 +131,5 @@ class BinshopsrestCartModuleFrontController extends AbstractCartRESTController
             ]));
             die;
         }
-    }
-
-    protected function processPostRequest()
-    {
-        $body = file_get_contents('php://input');
-        $data = json_decode($body, true);
-       // echo 'body =', $body;
-        if ($data !== null && is_array($data)) {
-            foreach ($data as $item) {
-                if (isset($item['id'], $item['qte'])) {
-                    $productId = $item['id'];
-                    $quantity = $item['qte'];
-
-                }
-
-
-                // Check if productId and quantity are provided
-                if (!$productId || !$quantity) {
-                    $this->ajaxRender(json_encode([
-                        'code' => 400,
-                        'success' => false,
-                        'message' => $this->trans('Product ID and quantity are required.', [], 'Modules.Binshopsrest.Cart'),
-                    ]));
-                    die;
-                }
-
-                // Get the product
-                $product = new Product($productId);
-
-                $quantityexist = (int)($product->getQuantity($productId));
-                // Check if the product exists and if its quantity is null
-                if (!Validate::isLoadedObject($product) || $quantityexist === null) {
-                    $this->ajaxRender(json_encode([
-                        'code' => 400,
-                        'success' => false,
-                        'message' => $this->trans('Invalid product or product quantity is null.', [], 'Modules.Binshopsrest.Cart'),
-                    ]));
-                    die;
-                }
-
-                // Check if the desired quantity exceeds the available quantity
-
-                if ($quantity > $quantityexist) {
-                    $this->ajaxRender(json_encode([
-                        'code' => 400,
-                        'success' => false,
-                        'message' => $this->trans('Desired quantity exceeds available quantity.', [], 'Modules.Binshopsrest.Cart'),
-                    ]));
-                    die;
-                }
-
-
-                // Add the product to the cart
-                $result = $this->context->cart->updateQty($quantity, $productId);
-
-                if ($result === -1) {
-                    $this->ajaxRender(json_encode([
-                        'code' => 400,
-                        'success' => false,
-                        'message' => $this->trans('Invalid product ID or quantity.', [], 'Modules.Binshopsrest.Cart'),
-                    ]));
-                    die;
-                }
-            }
-        }
-        $this->ajaxRender(json_encode([
-            'code' => 200,
-            'success' => true,
-            'message' => $this->trans('Product added to cart successfully.', [], 'Modules.Binshopsrest.Cart'),
-            'psdata' => [],
-        ]));
-        die;
     }
 }

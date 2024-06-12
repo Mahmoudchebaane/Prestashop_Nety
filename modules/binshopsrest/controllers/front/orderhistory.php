@@ -126,7 +126,8 @@ class BinshopsrestOrderHistoryModuleFrontController extends AbstractAuthRESTCont
                 "nb_products" => $order['nb_products'],
                 "id_order_state" => $order['id_order_state'],
                 "order_state" => $order['order_state'],
-                "order_state_color" => $order['order_state_color']
+                "order_state_color" => $order['order_state_color'],
+                "date_add" => $order['date_add']
             ];
         }
         $this->ajaxRender(json_encode([
