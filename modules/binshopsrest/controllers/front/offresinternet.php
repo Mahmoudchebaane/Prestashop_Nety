@@ -18,11 +18,13 @@ class binshopsrestoffresinternetModuleFrontController extends AbstractRESTContro
                 "name" => $offre['name'],
                 "reference" => $offre['reference'],
                 "price" => $offre['price'],
+                "id"=>$offre['id_product'],
+                "details"=>$category->getAccessoryByProduct(1,$offre['id_product'])
             ];
             array_push($offres, $value);
         }
         $psdata = array(
-            'success' => false,
+            'success' => true,
             'data' => $offres
         );
         $this->ajaxRender(json_encode(

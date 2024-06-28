@@ -1054,6 +1054,7 @@ class CategoryCore extends ObjectModel
 			LIMIT ' . (((int) $pageNumber - 1) * (int) $productPerPage) . ',' . (int) $productPerPage;
         }
 
+
         $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql, true, false);
 
         if (!$result) {
@@ -1069,6 +1070,20 @@ class CategoryCore extends ObjectModel
         return Product::getProductsProperties($idLang, $result);
     }
 
+    public function getAccessoryByProduct($idLang,$id_product, Context $context = null) {
+        if (!$context) {
+            $context = Context::getContext();
+        }
+
+        $active = true;
+        $front = in_array($context->controller->controller_type, ['front', 'modulefront']);
+
+        $sql = 'SELECT a.`id_product_2` AS accessory_product_id, pl.`name` AS product_name FROM `' . _DB_PREFIX_ . 'accessory` a LEFT JOIN `' . _DB_PREFIX_ . 'product` p ON a.`id_product_2` = p.`id_product` LEFT JOIN `' . _DB_PREFIX_ . 'product_lang` pl ON p.`id_product` = pl.`id_product` AND pl.`id_lang` = ' . (int) $idLang . ' AND pl.`id_shop` = 1' .  ' WHERE a.`id_product_1` = ' . (int) $id_product . ($front ? ' AND p.`visibility` IN ("both", "catalog")' : '') . ($active ? ' AND p.`active` = 1' : '');
+
+
+        $result = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($sql, true, false);
+        return $result;
+    }
     /**
      * Return main categories.
      *
